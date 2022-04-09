@@ -1,8 +1,14 @@
 #include "ex1.h"
 
+
+
+
 __device__ void prefix_sum(int arr[], int arr_size) {
     return; // TODO
 }
+
+
+
 
 /**
  * Perform interpolation on a single image
@@ -15,16 +21,25 @@ __device__ void prefix_sum(int arr[], int arr_size) {
 __device__ 
 void interpolate_device(uchar* maps ,uchar *in_img, uchar* out_img);
 
+
+
+
 __global__ void process_image_kernel(uchar *all_in, uchar *all_out, uchar *maps) {
     // TODO
     interpolate_device(all_in, all_out, maps);
     return; 
 }
 
+
+
+
 /* Task serial context struct with necessary CPU / GPU pointers to process a single image */
 struct task_serial_context {
     // TODO define task serial memory buffers
 };
+
+
+
 
 /* Allocate GPU memory for a single input image and a single output image.
  * 
@@ -38,6 +53,9 @@ struct task_serial_context *task_serial_init()
     return context;
 }
 
+
+
+
 /* Process all the images in the given host array and return the output in the
  * provided output host array */
 void task_serial_process(struct task_serial_context *context, uchar *images_in, uchar *images_out)
@@ -48,6 +66,9 @@ void task_serial_process(struct task_serial_context *context, uchar *images_in, 
     //   3. copy output from GPU memory to relevant location in images_out_gpu_serial
 }
 
+
+
+
 /* Release allocated resources for the task-serial implementation. */
 void task_serial_free(struct task_serial_context *context)
 {
@@ -56,10 +77,16 @@ void task_serial_free(struct task_serial_context *context)
     free(context);
 }
 
+
+
+
 /* Bulk GPU context struct with necessary CPU / GPU pointers to process all the images */
 struct gpu_bulk_context {
     // TODO define bulk-GPU memory buffers
 };
+
+
+
 
 /* Allocate GPU memory for all the input images, output images, and maps.
  * 
@@ -73,6 +100,9 @@ struct gpu_bulk_context *gpu_bulk_init()
     return context;
 }
 
+
+
+
 /* Process all the images in the given host array and return the output in the
  * provided output host array */
 void gpu_bulk_process(struct gpu_bulk_context *context, uchar *images_in, uchar *images_out)
@@ -81,6 +111,9 @@ void gpu_bulk_process(struct gpu_bulk_context *context, uchar *images_in, uchar 
     //TODO: invoke a kernel with N_IMAGES threadblocks, each working on a different image
     //TODO: copy output images from GPU memory to images_out
 }
+
+
+
 
 /* Release allocated resources for the bulk GPU implementation. */
 void gpu_bulk_free(struct gpu_bulk_context *context)
