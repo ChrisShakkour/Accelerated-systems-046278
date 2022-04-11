@@ -8,3 +8,5 @@ Accelerators and accelerated systems course homework repo
 [Thread-indexing](https://cs.calvin.edu/courses/cs/374/CUDA/CUDA-Thread-Indexing-Cheatsheet.pdf)
 
 [Cheat-sheet-2](http://tubafun.bplaced.net/public/cuda_cheatsheet.pdf)
+
+[Dynamic-parallelism (nested kernels)](https://developer.download.nvidia.com/assets/cuda/docs/TechBrief_Dynamic_Parallelism_in_CUDA_v2.pdf)
