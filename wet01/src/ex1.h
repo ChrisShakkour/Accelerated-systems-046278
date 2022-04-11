@@ -14,6 +14,7 @@
 #define TILE_HALF_WIDTH (TILE_WIDTH / 2)
 #define TILE_COUNT (IMG_WIDTH / TILE_WIDTH)
 #define N_IMAGES 1000
+#define COLOR_COUNT 256
 
 
 typedef unsigned char uchar;
