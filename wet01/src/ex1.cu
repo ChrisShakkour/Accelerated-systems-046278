@@ -99,7 +99,6 @@ __global__ void process_image_kernel(uchar *all_in, uchar *all_out, uchar *maps)
 
     if (tile_tid_x == 0 && tile_tid_y == 0)
     {
-        printf("X: %d Y: %d\n", tile_tid_x, tile_tid_y);
         for (int i = 0 ; i < 256 ; i++)
         {
             printf("Hist: %d\n", 0);
