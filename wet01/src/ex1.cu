@@ -22,15 +22,19 @@ void prefix_sum(int arr[], int arr_size)
     for (int i = 1 ; i < arr_size ; i++)
     {
         arr[i] += arr[i-1];
+        printf("Arr i: %d\n", arr[i]);
     }
 }
 
 __global__
-void calc_maps(int* cdf, uchar* maps)
+void calc_maps(int* cdf, uchar* maps, int tile_x, int tile_y)
 {   
-    int tid_x = threadIdx.x;
-    
-    maps[tid_x] = cdf[tid_x] * (COLOR_COUNT - 1) / (TILE_WIDTH * TILE_WIDTH);
+    int index = tile_x * TILE_COUNT + tile_y;
+    int tid_x = threadIdx.x;    
+
+    //printf("CDF: %d, maps: %d\n", cdf[tid_x], maps[index * COLOR_COUNT + tid_x]);
+    maps[index * COLOR_COUNT + tid_x] = cdf[tid_x] * (COLOR_COUNT - 1) / (TILE_WIDTH * TILE_WIDTH);
+    //printf("CDF: %d, maps: %d\n", cdf[tid_x], maps[index * COLOR_COUNT + tid_x]);
 }
 
 /**
@@ -73,27 +77,23 @@ __global__ void process_image_kernel(uchar *all_in, uchar *all_out, uchar *maps)
 {
     int tile_tid_x = threadIdx.x;
     int tile_tid_y = threadIdx.y;
-    printf("X: %d Y: %d\n", tile_tid_x, tile_tid_y);
+    int hist_sum = 0;
 
-    //int* hist = (int*) malloc(COLOR_COUNT * sizeof(int));
-    //memset(hist, 0, COLOR_COUNT * sizeof(int));
+    int* hist = (int*) malloc(COLOR_COUNT * sizeof(int));
+    memset(hist, 0, COLOR_COUNT * sizeof(int));
 
-    //dim3 threads_count(TILE_WIDTH, TILE_HALF_WIDTH / 2);
-    // calc_histogram<<<1, threads_count>>>(hist, all_in, tile_tid_x, tile_tid_y);
-
-    // prefix_sum(hist, COLOR_COUNT); 
-
-
-    // TODO: check this
-    // dim3 threadHist(TILE_WIDTH, TILE_WIDTH);
-    // calc_histogram<<<1, threadHist>>>(hist, all_in, tile_tid_x, tile_tid_y);
-
-    //prefix_sum(hist, COLOR_COUNT);
+    dim3 threads_count(TILE_WIDTH, TILE_HALF_WIDTH / 2);
+    calc_histogram<<<1, threads_count>>>(hist, all_in, tile_tid_x, tile_tid_y);
     
-    //calc_maps<<<1, COLOR_COUNT>>>(hist, maps);
+    __syncthreads();
     
-    // TODO
-    //free(hist);
+    
+    prefix_sum(hist, COLOR_COUNT); 
+    printf("LAST HISTOGRAM: %d\n", hist[255]);
+
+    calc_maps<<<1, COLOR_COUNT>>>(hist, maps, tile_tid_x, tile_tid_y);
+    
+    free(hist);
 
     __syncthreads();
 
@@ -101,12 +101,14 @@ __global__ void process_image_kernel(uchar *all_in, uchar *all_out, uchar *maps)
     {
         for (int i = 0 ; i < 256 ; i++)
         {
-            printf("Hist: %d\n", 0);
+            //printf("maps: %d\n", maps[i]);
         }
-
         interpolate_device(maps, all_in, all_out);
+        // for (int i = 0 ; i < 1 * IMG_WIDTH * IMG_HEIGHT ; i++)
+        // {
+        //     printf("img_in: %d\n img_out: %d maps: %d\n", all_in[i], all_out[i], maps[i % 256]);
+        // }
     }
-    
 
     return; 
 }
@@ -139,15 +141,18 @@ struct task_serial_context *task_serial_init()
  * provided output host array */
 void task_serial_process(struct task_serial_context *context, uchar *images_in, uchar *images_out)
 {
-    for (int i = 0 ; i < N_IMAGES ; i++)
+    //for (int i = 0 ; i < N_IMAGES ; i++)
+    for (int i = 0 ; i < 1 ; i++)
     {
-        cudaMemcpy(context->in_img, images_in, IMG_HEIGHT * IMG_WIDTH * sizeof(uchar), cudaMemcpyHostToDevice);
+        uchar* cur_images_in = &images_in[i * IMG_WIDTH * IMG_HEIGHT];
+        uchar* cur_images_out = &images_out[i * IMG_WIDTH * IMG_HEIGHT];
+        cudaMemcpy(context->in_img, cur_images_in, IMG_HEIGHT * IMG_WIDTH * sizeof(uchar), cudaMemcpyHostToDevice);
 
         // add GPU kernel invokation here
         dim3 tiles_count(TILE_COUNT, TILE_COUNT, 1);
         process_image_kernel<<<1, tiles_count>>>(context->in_img, context->out_img, context->maps);
 
-        cudaMemcpy(images_out, context->out_img, IMG_HEIGHT * IMG_WIDTH * sizeof(uchar), cudaMemcpyDeviceToHost);
+        cudaMemcpy(cur_images_out, context->out_img, IMG_HEIGHT * IMG_WIDTH * sizeof(uchar), cudaMemcpyDeviceToHost);
     }
     //TODO: in a for loop:
     //   1. copy the relevant image from images_in to the GPU memory you allocated
