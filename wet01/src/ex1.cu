@@ -1,6 +1,6 @@
 #include "ex1.h"
 
-__device__ 
+__device__
 void prefix_sum(int arr[], int arr_size) 
 {
     // int tid = threadIdx.x; 
@@ -45,40 +45,69 @@ __device__
 void interpolate_device(uchar* maps ,uchar *in_img, uchar* out_img);
 
 
+
+
 // Note: our addition. Check if global is OK
-__global__
-void calc_histogram(int* hist, uchar* all_in, int tile_tid_x, int tile_tid_y)
+__global__ void calc_histogram(int* hist, uchar* all_in, int tile_tid_x, int tile_tid_y)
 {
+    int pixels_per_threads = 4;
     int tid_x = threadIdx.x;
     int tid_y = threadIdx.y;
-    int row = tile_tid_x * TILE_WIDTH + tid_x;
-    int col = tile_tid_y * TILE_WIDTH + tid_y;
 
-    int color_value = all_in[row * IMG_WIDTH + col];
+    int row = (tile_tid_x * TILE_WIDTH) + tid_x; 
+    int col = (tile_tid_y * TILE_WIDTH) + tid_y * pixels_per_threads;
 
-    atomicAdd(&hist[color_value], 1);
+    int index =  row * IMG_WIDTH + col; 
 
+    int color_value = 0;
+    for (int i = 0 ; i < pixels_per_threads ; i++)
+    {
+        color_value = all_in[index];
+        atomicAdd(&hist[color_value], 1);
+    }
     __syncthreads();
 }
+
 
 __global__ void process_image_kernel(uchar *all_in, uchar *all_out, uchar *maps) 
 {
     int tile_tid_x = threadIdx.x;
     int tile_tid_y = threadIdx.y;
-    int* hist = (int*) malloc(COLOR_COUNT * sizeof(uchar));
+    printf("X: %d Y: %d\n", tile_tid_x, tile_tid_y);
+
+    //int* hist = (int*) malloc(COLOR_COUNT * sizeof(int));
+    //memset(hist, 0, COLOR_COUNT * sizeof(int));
+
+    //dim3 threads_count(TILE_WIDTH, TILE_HALF_WIDTH / 2);
+    // calc_histogram<<<1, threads_count>>>(hist, all_in, tile_tid_x, tile_tid_y);
+
+    // prefix_sum(hist, COLOR_COUNT); 
+
 
     // TODO: check this
-    dim3 threadHist(TILE_WIDTH, TILE_WIDTH);
-    calc_histogram<<<1, threadHist>>>(hist, all_in, tile_tid_x, tile_tid_y);
+    // dim3 threadHist(TILE_WIDTH, TILE_WIDTH);
+    // calc_histogram<<<1, threadHist>>>(hist, all_in, tile_tid_x, tile_tid_y);
 
-    prefix_sum(hist, COLOR_COUNT);
+    //prefix_sum(hist, COLOR_COUNT);
     
-    calc_maps<<<1, COLOR_COUNT>>>(hist, maps);
+    //calc_maps<<<1, COLOR_COUNT>>>(hist, maps);
     
     // TODO
-    free(hist);
+    //free(hist);
 
-    interpolate_device(all_in, all_out, maps);
+    __syncthreads();
+
+    if (tile_tid_x == 0 && tile_tid_y == 0)
+    {
+        printf("X: %d Y: %d\n", tile_tid_x, tile_tid_y);
+        for (int i = 0 ; i < 256 ; i++)
+        {
+            printf("Hist: %d\n", 0);
+        }
+
+        interpolate_device(maps, all_in, all_out);
+    }
+    
 
     return; 
 }
@@ -116,8 +145,8 @@ void task_serial_process(struct task_serial_context *context, uchar *images_in, 
         cudaMemcpy(context->in_img, images_in, IMG_HEIGHT * IMG_WIDTH * sizeof(uchar), cudaMemcpyHostToDevice);
 
         // add GPU kernel invokation here
-        dim3 threadBlock(TILE_COUNT, TILE_COUNT);
-        process_image_kernel<<<1, threadBlock>>>(context->in_img, context->out_img, context->maps);
+        dim3 tiles_count(TILE_COUNT, TILE_COUNT, 1);
+        process_image_kernel<<<1, tiles_count>>>(context->in_img, context->out_img, context->maps);
 
         cudaMemcpy(images_out, context->out_img, IMG_HEIGHT * IMG_WIDTH * sizeof(uchar), cudaMemcpyDeviceToHost);
     }

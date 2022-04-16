@@ -9,7 +9,9 @@
 
 long long int distance_sqr_between_image_arrays(uchar *img_arr1, uchar *img_arr2) {
     long long int distance_sqr = 0;
-    for (int i = 0; i < N_IMAGES * IMG_WIDTH * IMG_HEIGHT; i++) {
+    for (int i = 0; i < N_IMAGES * IMG_WIDTH * IMG_HEIGHT; i++) 
+    {
+        distance_sqr += SQR(img_arr1[i] - img_arr2[i]);
     }
     return distance_sqr;
 }
