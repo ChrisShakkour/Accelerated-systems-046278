@@ -1,6157 +1,1037 @@
 Number of devices: 1
 
 === Randomizing images ===
-total time 480.849794 [msec]
+total time 479.922076 [msec]
 
 === CPU ===
-total time 1.425145 [msec]
+total time 1.432841 [msec]
 
 === GPU Task Serial ===
-Arr i: 2552
-Arr i: 2428
-Arr i: 2511
-Arr i: 2532
-Arr i: 2468
-Arr i: 2500
-Arr i: 2440
-Arr i: 2372
-Arr i: 2452
-Arr i: 2360
-Arr i: 2504
-Arr i: 2481
-Arr i: 2512
-Arr i: 2480
-Arr i: 2508
-Arr i: 2448
-Arr i: 2391
-Arr i: 2320
-Arr i: 2356
-Arr i: 2472
-Arr i: 2400
-Arr i: 2408
-Arr i: 2448
-Arr i: 2408
-Arr i: 2296
-Arr i: 2532
-Arr i: 2412
-Arr i: 2386
-Arr i: 2372
-Arr i: 2368
-Arr i: 2376
-Arr i: 2404
-Arr i: 2488
-Arr i: 2688
-Arr i: 2628
-Arr i: 2608
-Arr i: 2524
-Arr i: 2604
-Arr i: 2704
-Arr i: 2554
-Arr i: 2568
-Arr i: 2476
-Arr i: 2496
-Arr i: 2540
-Arr i: 2615
-Arr i: 2600
-Arr i: 2500
-Arr i: 2504
-Arr i: 2432
-Arr i: 2524
-Arr i: 2567
-Arr i: 2556
-Arr i: 2540
-Arr i: 2528
-Arr i: 2596
-Arr i: 2572
-Arr i: 2524
-Arr i: 2328
-Arr i: 2588
-Arr i: 2428
-Arr i: 2560
-Arr i: 2660
-Arr i: 2536
-Arr i: 2404
-Arr i: 2560
-Arr i: 2436
-Arr i: 2539
-Arr i: 2540
-Arr i: 2480
-Arr i: 2512
-Arr i: 2460
-Arr i: 2392
-Arr i: 2460
-Arr i: 2376
-Arr i: 2512
-Arr i: 2505
-Arr i: 2520
-Arr i: 2496
-Arr i: 2524
-Arr i: 2468
-Arr i: 2403
-Arr i: 2348
-Arr i: 2364
-Arr i: 2488
-Arr i: 2420
-Arr i: 2428
-Arr i: 2476
-Arr i: 2436
-Arr i: 2324
-Arr i: 2564
-Arr i: 2428
-Arr i: 2394
-Arr i: 2384
-Arr i: 2396
-Arr i: 2380
-Arr i: 2420
-Arr i: 2512
-Arr i: 2708
-Arr i: 2636
-Arr i: 2628
-Arr i: 2548
-Arr i: 2616
-Arr i: 2720
-Arr i: 2566
-Arr i: 2588
-Arr i: 2492
-Arr i: 2516
-Arr i: 2552
-Arr i: 2619
-Arr i: 2628
-Arr i: 2516
-Arr i: 2520
-Arr i: 2448
-Arr i: 2544
-Arr i: 2591
-Arr i: 2576
-Arr i: 2556
-Arr i: 2556
-Arr i: 2616
-Arr i: 2584
-Arr i: 2540
-Arr i: 2360
-Arr i: 2612
-Arr i: 2436
-Arr i: 2572
-Arr i: 2672
-Arr i: 2560
-Arr i: 2408
-Arr i: 2572
-Arr i: 2444
-Arr i: 2555
-Arr i: 2556
-Arr i: 2492
-Arr i: 2532
-Arr i: 2476
-Arr i: 2408
-Arr i: 2488
-Arr i: 2388
-Arr i: 2516
-Arr i: 2521
-Arr i: 2532
-Arr i: 2500
-Arr i: 2544
-Arr i: 2504
-Arr i: 2423
-Arr i: 2372
-Arr i: 2384
-Arr i: 2496
-Arr i: 2428
-Arr i: 2436
-Arr i: 2500
-Arr i: 2456
-Arr i: 2332
-Arr i: 2584
-Arr i: 2448
-Arr i: 2402
-Arr i: 2392
-Arr i: 2400
-Arr i: 2392
-Arr i: 2436
-Arr i: 2536
-Arr i: 2728
-Arr i: 2644
-Arr i: 2644
-Arr i: 2564
-Arr i: 2628
-Arr i: 2728
-Arr i: 2570
-Arr i: 2600
-Arr i: 2512
-Arr i: 2540
-Arr i: 2556
-Arr i: 2623
-Arr i: 2648
-Arr i: 2528
-Arr i: 2532
-Arr i: 2460
-Arr i: 2560
-Arr i: 2611
-Arr i: 2584
-Arr i: 2576
-Arr i: 2564
-Arr i: 2632
-Arr i: 2596
-Arr i: 2544
-Arr i: 2392
-Arr i: 2632
-Arr i: 2464
-Arr i: 2588
-Arr i: 2684
-Arr i: 2572
-Arr i: 2432
-Arr i: 2580
-Arr i: 2472
-Arr i: 2567
-Arr i: 2584
-Arr i: 2504
-Arr i: 2552
-Arr i: 2500
-Arr i: 2440
-Arr i: 2500
-Arr i: 2412
-Arr i: 2548
-Arr i: 2525
-Arr i: 2548
-Arr i: 2508
-Arr i: 2552
-Arr i: 2516
-Arr i: 2427
-Arr i: 2384
-Arr i: 2388
-Arr i: 2508
-Arr i: 2456
-Arr i: 2460
-Arr i: 2508
-Arr i: 2476
-Arr i: 2352
-Arr i: 2604
-Arr i: 2456
-Arr i: 2414
-Arr i: 2404
-Arr i: 2412
-Arr i: 2412
-Arr i: 2452
-Arr i: 2548
-Arr i: 2760
-Arr i: 2660
-Arr i: 2660
-Arr i: 2588
-Arr i: 2644
-Arr i: 2732
-Arr i: 2590
-Arr i: 2620
-Arr i: 2532
-Arr i: 2540
-Arr i: 2568
-Arr i: 2643
-Arr i: 2660
-Arr i: 2544
-Arr i: 2548
-Arr i: 2468
-Arr i: 2564
-Arr i: 2611
-Arr i: 2596
-Arr i: 2604
-Arr i: 2596
-Arr i: 2656
-Arr i: 2596
-Arr i: 2556
-Arr i: 2408
-Arr i: 2652
-Arr i: 2476
-Arr i: 2604
-Arr i: 2704
-Arr i: 2596
-Arr i: 2452
-Arr i: 2584
-Arr i: 2488
-Arr i: 2579
-Arr i: 2596
-Arr i: 2516
-Arr i: 2576
-Arr i: 2508
-Arr i: 2456
-Arr i: 2512
-Arr i: 2432
-Arr i: 2556
-Arr i: 2541
-Arr i: 2556
-Arr i: 2516
-Arr i: 2568
-Arr i: 2556
-Arr i: 2451
-Arr i: 2416
-Arr i: 2400
-Arr i: 2528
-Arr i: 2464
-Arr i: 2472
-Arr i: 2520
-Arr i: 2480
-Arr i: 2368
-Arr i: 2616
-Arr i: 2464
-Arr i: 2434
-Arr i: 2416
-Arr i: 2420
-Arr i: 2436
-Arr i: 2460
-Arr i: 2584
-Arr i: 2776
-Arr i: 2668
-Arr i: 2688
-Arr i: 2608
-Arr i: 2652
-Arr i: 2740
-Arr i: 2610
-Arr i: 2628
-Arr i: 2548
-Arr i: 2556
-Arr i: 2576
-Arr i: 2663
-Arr i: 2676
-Arr i: 2548
-Arr i: 2564
-Arr i: 2480
-Arr i: 2580
-Arr i: 2619
-Arr i: 2612
-Arr i: 2608
-Arr i: 2608
-Arr i: 2672
-Arr i: 2604
-Arr i: 2568
-Arr i: 2412
-Arr i: 2656
-Arr i: 2500
-Arr i: 2628
-Arr i: 2708
-Arr i: 2616
-Arr i: 2464
-Arr i: 2600
-Arr i: 2504
-Arr i: 2603
-Arr i: 2608
-Arr i: 2552
-Arr i: 2592
-Arr i: 2512
-Arr i: 2476
-Arr i: 2528
-Arr i: 2452
-Arr i: 2576
-Arr i: 2561
-Arr i: 2572
-Arr i: 2544
-Arr i: 2580
-Arr i: 2556
-Arr i: 2459
-Arr i: 2420
-Arr i: 2404
-Arr i: 2540
-Arr i: 2488
-Arr i: 2500
-Arr i: 2520
-Arr i: 2496
-Arr i: 2392
-Arr i: 2620
-Arr i: 2484
-Arr i: 2450
-Arr i: 2428
-Arr i: 2448
-Arr i: 2436
-Arr i: 2464
-Arr i: 2600
-Arr i: 2780
-Arr i: 2684
-Arr i: 2704
-Arr i: 2624
-Arr i: 2676
-Arr i: 2752
-Arr i: 2614
-Arr i: 2660
-Arr i: 2568
-Arr i: 2556
-Arr i: 2588
-Arr i: 2675
-Arr i: 2688
-Arr i: 2576
-Arr i: 2572
-Arr i: 2504
-Arr i: 2596
-Arr i: 2639
-Arr i: 2612
-Arr i: 2620
-Arr i: 2616
-Arr i: 2688
-Arr i: 2628
-Arr i: 2588
-Arr i: 2436
-Arr i: 2680
-Arr i: 2520
-Arr i: 2644
-Arr i: 2716
-Arr i: 2628
-Arr i: 2484
-Arr i: 2628
-Arr i: 2528
-Arr i: 2607
-Arr i: 2632
-Arr i: 2564
-Arr i: 2624
-Arr i: 2544
-Arr i: 2508
-Arr i: 2548
-Arr i: 2460
-Arr i: 2604
-Arr i: 2569
-Arr i: 2584
-Arr i: 2564
-Arr i: 2584
-Arr i: 2576
-Arr i: 2495
-Arr i: 2456
-Arr i: 2416
-Arr i: 2552
-Arr i: 2516
-Arr i: 2528
-Arr i: 2520
-Arr i: 2524
-Arr i: 2408
-Arr i: 2636
-Arr i: 2496
-Arr i: 2470
-Arr i: 2444
-Arr i: 2460
-Arr i: 2456
-Arr i: 2484
-Arr i: 2612
-Arr i: 2792
-Arr i: 2692
-Arr i: 2736
-Arr i: 2636
-Arr i: 2700
-Arr i: 2764
-Arr i: 2622
-Arr i: 2680
-Arr i: 2596
-Arr i: 2568
-Arr i: 2612
-Arr i: 2699
-Arr i: 2700
-Arr i: 2588
-Arr i: 2596
-Arr i: 2524
-Arr i: 2624
-Arr i: 2651
-Arr i: 2632
-Arr i: 2632
-Arr i: 2636
-Arr i: 2704
-Arr i: 2648
-Arr i: 2608
-Arr i: 2456
-Arr i: 2688
-Arr i: 2536
-Arr i: 2648
-Arr i: 2728
-Arr i: 2644
-Arr i: 2508
-Arr i: 2640
-Arr i: 2552
-Arr i: 2627
-Arr i: 2652
-Arr i: 2580
-Arr i: 2628
-Arr i: 2556
-Arr i: 2524
-Arr i: 2564
-Arr i: 2480
-Arr i: 2612
-Arr i: 2605
-Arr i: 2600
-Arr i: 2572
-Arr i: 2604
-Arr i: 2592
-Arr i: 2515
-Arr i: 2476
-Arr i: 2436
-Arr i: 2568
-Arr i: 2528
-Arr i: 2548
-Arr i: 2524
-Arr i: 2536
-Arr i: 2420
-Arr i: 2644
-Arr i: 2500
-Arr i: 2498
-Arr i: 2472
-Arr i: 2484
-Arr i: 2472
-Arr i: 2496
-Arr i: 2632
-Arr i: 2808
-Arr i: 2704
-Arr i: 2756
-Arr i: 2648
-Arr i: 2708
-Arr i: 2776
-Arr i: 2642
-Arr i: 2696
-Arr i: 2600
-Arr i: 2592
-Arr i: 2624
-Arr i: 2723
-Arr i: 2704
-Arr i: 2604
-Arr i: 2612
-Arr i: 2528
-Arr i: 2636
-Arr i: 2655
-Arr i: 2656
-Arr i: 2648
-Arr i: 2664
-Arr i: 2732
-Arr i: 2668
-Arr i: 2628
-Arr i: 2476
-Arr i: 2704
-Arr i: 2544
-Arr i: 2668
-Arr i: 2744
-Arr i: 2656
-Arr i: 2520
-Arr i: 2660
-Arr i: 2568
-Arr i: 2643
-Arr i: 2664
-Arr i: 2588
-Arr i: 2652
-Arr i: 2572
-Arr i: 2540
-Arr i: 2576
-Arr i: 2492
-Arr i: 2616
-Arr i: 2613
-Arr i: 2608
-Arr i: 2576
-Arr i: 2632
-Arr i: 2616
-Arr i: 2523
-Arr i: 2504
-Arr i: 2444
-Arr i: 2592
-Arr i: 2552
-Arr i: 2568
-Arr i: 2532
-Arr i: 2548
-Arr i: 2440
-Arr i: 2664
-Arr i: 2512
-Arr i: 2498
-Arr i: 2488
-Arr i: 2512
-Arr i: 2488
-Arr i: 2508
-Arr i: 2652
-Arr i: 2828
-Arr i: 2720
-Arr i: 2772
-Arr i: 2656
-Arr i: 2716
-Arr i: 2792
-Arr i: 2654
-Arr i: 2716
-Arr i: 2600
-Arr i: 2608
-Arr i: 2636
-Arr i: 2743
-Arr i: 2732
-Arr i: 2612
-Arr i: 2628
-Arr i: 2552
-Arr i: 2644
-Arr i: 2683
-Arr i: 2672
-Arr i: 2656
-Arr i: 2676
-Arr i: 2760
-Arr i: 2688
-Arr i: 2652
-Arr i: 2500
-Arr i: 2720
-Arr i: 2552
-Arr i: 2680
-Arr i: 2752
-Arr i: 2680
-Arr i: 2540
-Arr i: 2668
-Arr i: 2588
-Arr i: 2667
-Arr i: 2684
-Arr i: 2596
-Arr i: 2664
-Arr i: 2596
-Arr i: 2560
-Arr i: 2600
-Arr i: 2508
-Arr i: 2632
-Arr i: 2637
-Arr i: 2632
-Arr i: 2588
-Arr i: 2652
-Arr i: 2624
-Arr i: 2527
-Arr i: 2528
-Arr i: 2464
-Arr i: 2604
-Arr i: 2576
-Arr i: 2584
-Arr i: 2536
-Arr i: 2564
-Arr i: 2456
-Arr i: 2692
-Arr i: 2524
-Arr i: 2506
-Arr i: 2500
-Arr i: 2536
-Arr i: 2496
-Arr i: 2520
-Arr i: 2660
-Arr i: 2844
-Arr i: 2748
-Arr i: 2788
-Arr i: 2676
-Arr i: 2752
-Arr i: 2796
-Arr i: 2670
-Arr i: 2748
-Arr i: 2632
-Arr i: 2644
-Arr i: 2648
-Arr i: 2755
-Arr i: 2756
-Arr i: 2624
-Arr i: 2640
-Arr i: 2572
-Arr i: 2656
-Arr i: 2703
-Arr i: 2688
-Arr i: 2688
-Arr i: 2688
-Arr i: 2780
-Arr i: 2708
-Arr i: 2668
-Arr i: 2508
-Arr i: 2732
-Arr i: 2572
-Arr i: 2696
-Arr i: 2776
-Arr i: 2700
-Arr i: 2572
-Arr i: 2684
-Arr i: 2616
-Arr i: 2691
-Arr i: 2696
-Arr i: 2612
-Arr i: 2676
-Arr i: 2632
-Arr i: 2564
-Arr i: 2616
-Arr i: 2516
-Arr i: 2664
-Arr i: 2649
-Arr i: 2660
-Arr i: 2604
-Arr i: 2656
-Arr i: 2640
-Arr i: 2539
-Arr i: 2560
-Arr i: 2492
-Arr i: 2628
-Arr i: 2584
-Arr i: 2600
-Arr i: 2556
-Arr i: 2580
-Arr i: 2472
-Arr i: 2712
-Arr i: 2532
-Arr i: 2526
-Arr i: 2512
-Arr i: 2552
-Arr i: 2500
-Arr i: 2532
-Arr i: 2676
-Arr i: 2856
-Arr i: 2764
-Arr i: 2812
-Arr i: 2700
-Arr i: 2764
-Arr i: 2812
-Arr i: 2686
-Arr i: 2764
-Arr i: 2644
-Arr i: 2676
-Arr i: 2660
-Arr i: 2763
-Arr i: 2764
-Arr i: 2652
-Arr i: 2648
-Arr i: 2592
-Arr i: 2680
-Arr i: 2711
-Arr i: 2712
-Arr i: 2704
-Arr i: 2704
-Arr i: 2808
-Arr i: 2716
-Arr i: 2676
-Arr i: 2532
-Arr i: 2740
-Arr i: 2588
-Arr i: 2704
-Arr i: 2796
-Arr i: 2708
-Arr i: 2588
-Arr i: 2704
-Arr i: 2628
-Arr i: 2695
-Arr i: 2724
-Arr i: 2632
-Arr i: 2680
-Arr i: 2668
-Arr i: 2576
-Arr i: 2640
-Arr i: 2528
-Arr i: 2688
-Arr i: 2657
-Arr i: 2672
-Arr i: 2620
-Arr i: 2664
-Arr i: 2652
-Arr i: 2551
-Arr i: 2584
-Arr i: 2512
-Arr i: 2660
-Arr i: 2596
-Arr i: 2612
-Arr i: 2580
-Arr i: 2592
-Arr i: 2484
-Arr i: 2716
-Arr i: 2548
-Arr i: 2546
-Arr i: 2516
-Arr i: 2556
-Arr i: 2512
-Arr i: 2548
-Arr i: 2688
-Arr i: 2880
-Arr i: 2772
-Arr i: 2816
-Arr i: 2716
-Arr i: 2796
-Arr i: 2832
-Arr i: 2714
-Arr i: 2780
-Arr i: 2668
-Arr i: 2700
-Arr i: 2680
-Arr i: 2787
-Arr i: 2772
-Arr i: 2668
-Arr i: 2656
-Arr i: 2620
-Arr i: 2704
-Arr i: 2719
-Arr i: 2728
-Arr i: 2740
-Arr i: 2704
-Arr i: 2816
-Arr i: 2724
-Arr i: 2680
-Arr i: 2552
-Arr i: 2748
-Arr i: 2596
-Arr i: 2712
-Arr i: 2808
-Arr i: 2732
-Arr i: 2596
-Arr i: 2716
-Arr i: 2644
-Arr i: 2707
-Arr i: 2728
-Arr i: 2652
-Arr i: 2708
-Arr i: 2684
-Arr i: 2596
-Arr i: 2648
-Arr i: 2556
-Arr i: 2700
-Arr i: 2665
-Arr i: 2684
-Arr i: 2628
-Arr i: 2684
-Arr i: 2676
-Arr i: 2559
-Arr i: 2596
-Arr i: 2520
-Arr i: 2676
-Arr i: 2608
-Arr i: 2632
-Arr i: 2596
-Arr i: 2608
-Arr i: 2500
-Arr i: 2724
-Arr i: 2568
-Arr i: 2570
-Arr i: 2528
-Arr i: 2576
-Arr i: 2532
-Arr i: 2580
-Arr i: 2704
-Arr i: 2896
-Arr i: 2780
-Arr i: 2832
-Arr i: 2740
-Arr i: 2812
-Arr i: 2864
-Arr i: 2726
-Arr i: 2788
-Arr i: 2676
-Arr i: 2712
-Arr i: 2692
-Arr i: 2799
-Arr i: 2776
-Arr i: 2692
-Arr i: 2668
-Arr i: 2632
-Arr i: 2720
-Arr i: 2719
-Arr i: 2748
-Arr i: 2764
-Arr i: 2724
-Arr i: 2820
-Arr i: 2744
-Arr i: 2692
-Arr i: 2572
-Arr i: 2776
-Arr i: 2608
-Arr i: 2716
-Arr i: 2816
-Arr i: 2764
-Arr i: 2608
-Arr i: 2744
-Arr i: 2648
-Arr i: 2731
-Arr i: 2744
-Arr i: 2668
-Arr i: 2720
-Arr i: 2688
-Arr i: 2608
-Arr i: 2672
-Arr i: 2568
-Arr i: 2716
-Arr i: 2677
-Arr i: 2700
-Arr i: 2656
-Arr i: 2692
-Arr i: 2696
-Arr i: 2571
-Arr i: 2608
-Arr i: 2532
-Arr i: 2688
-Arr i: 2628
-Arr i: 2660
-Arr i: 2600
-Arr i: 2624
-Arr i: 2520
-Arr i: 2752
-Arr i: 2600
-Arr i: 2582
-Arr i: 2536
-Arr i: 2588
-Arr i: 2548
-Arr i: 2588
-Arr i: 2732
-Arr i: 2912
-Arr i: 2808
-Arr i: 2844
-Arr i: 2768
-Arr i: 2824
-Arr i: 2872
-Arr i: 2742
-Arr i: 2792
-Arr i: 2716
-Arr i: 2744
-Arr i: 2720
-Arr i: 2823
-Arr i: 2792
-Arr i: 2708
-Arr i: 2688
-Arr i: 2644
-Arr i: 2740
-Arr i: 2735
-Arr i: 2756
-Arr i: 2776
-Arr i: 2752
-Arr i: 2824
-Arr i: 2760
-Arr i: 2700
-Arr i: 2592
-Arr i: 2780
-Arr i: 2616
-Arr i: 2716
-Arr i: 2844
-Arr i: 2768
-Arr i: 2624
-Arr i: 2744
-Arr i: 2672
-Arr i: 2739
-Arr i: 2760
-Arr i: 2672
-Arr i: 2720
-Arr i: 2704
-Arr i: 2640
-Arr i: 2688
-Arr i: 2576
-Arr i: 2744
-Arr i: 2689
-Arr i: 2720
-Arr i: 2688
-Arr i: 2700
-Arr i: 2708
-Arr i: 2583
-Arr i: 2624
-Arr i: 2552
-Arr i: 2704
-Arr i: 2644
-Arr i: 2672
-Arr i: 2616
-Arr i: 2656
-Arr i: 2540
-Arr i: 2780
-Arr i: 2624
-Arr i: 2602
-Arr i: 2548
-Arr i: 2608
-Arr i: 2572
-Arr i: 2600
-Arr i: 2748
-Arr i: 2936
-Arr i: 2828
-Arr i: 2864
-Arr i: 2792
-Arr i: 2828
-Arr i: 2884
-Arr i: 2770
-Arr i: 2816
-Arr i: 2736
-Arr i: 2752
-Arr i: 2732
-Arr i: 2855
-Arr i: 2804
-Arr i: 2736
-Arr i: 2708
-Arr i: 2656
-Arr i: 2764
-Arr i: 2751
-Arr i: 2768
-Arr i: 2788
-Arr i: 2768
-Arr i: 2840
-Arr i: 2788
-Arr i: 2712
-Arr i: 2620
-Arr i: 2788
-Arr i: 2624
-Arr i: 2724
-Arr i: 2856
-Arr i: 2780
-Arr i: 2648
-Arr i: 2744
-Arr i: 2692
-Arr i: 2763
-Arr i: 2768
-Arr i: 2708
-Arr i: 2736
-Arr i: 2712
-Arr i: 2652
-Arr i: 2700
-Arr i: 2604
-Arr i: 2764
-Arr i: 2709
-Arr i: 2736
-Arr i: 2700
-Arr i: 2720
-Arr i: 2728
-Arr i: 2603
-Arr i: 2628
-Arr i: 2572
-Arr i: 2720
-Arr i: 2660
-Arr i: 2680
-Arr i: 2632
-Arr i: 2668
-Arr i: 2556
-Arr i: 2784
-Arr i: 2656
-Arr i: 2614
-Arr i: 2568
-Arr i: 2628
-Arr i: 2580
-Arr i: 2620
-Arr i: 2764
-Arr i: 2948
-Arr i: 2836
-Arr i: 2884
-Arr i: 2804
-Arr i: 2840
-Arr i: 2900
-Arr i: 2774
-Arr i: 2840
-Arr i: 2752
-Arr i: 2776
-Arr i: 2748
-Arr i: 2859
-Arr i: 2812
-Arr i: 2768
-Arr i: 2740
-Arr i: 2680
-Arr i: 2796
-Arr i: 2779
-Arr i: 2792
-Arr i: 2800
-Arr i: 2800
-Arr i: 2844
-Arr i: 2804
-Arr i: 2724
-Arr i: 2632
-Arr i: 2792
-Arr i: 2656
-Arr i: 2744
-Arr i: 2872
-Arr i: 2800
-Arr i: 2664
-Arr i: 2764
-Arr i: 2700
-Arr i: 2775
-Arr i: 2788
-Arr i: 2732
-Arr i: 2740
-Arr i: 2732
-Arr i: 2672
-Arr i: 2720
-Arr i: 2624
-Arr i: 2784
-Arr i: 2729
-Arr i: 2748
-Arr i: 2720
-Arr i: 2740
-Arr i: 2740
-Arr i: 2607
-Arr i: 2636
-Arr i: 2596
-Arr i: 2736
-Arr i: 2672
-Arr i: 2684
-Arr i: 2668
-Arr i: 2688
-Arr i: 2576
-Arr i: 2804
-Arr i: 2668
-Arr i: 2626
-Arr i: 2588
-Arr i: 2632
-Arr i: 2592
-Arr i: 2644
-Arr i: 2776
-Arr i: 2960
-Arr i: 2840
-Arr i: 2904
-Arr i: 2808
-Arr i: 2848
-Arr i: 2912
-Arr i: 2786
-Arr i: 2856
-Arr i: 2772
-Arr i: 2788
-Arr i: 2764
-Arr i: 2879
-Arr i: 2816
-Arr i: 2788
-Arr i: 2760
-Arr i: 2708
-Arr i: 2808
-Arr i: 2791
-Arr i: 2808
-Arr i: 2812
-Arr i: 2800
-Arr i: 2852
-Arr i: 2820
-Arr i: 2752
-Arr i: 2652
-Arr i: 2812
-Arr i: 2676
-Arr i: 2756
-Arr i: 2880
-Arr i: 2816
-Arr i: 2684
-Arr i: 2780
-Arr i: 2704
-Arr i: 2795
-Arr i: 2800
-Arr i: 2752
-Arr i: 2752
-Arr i: 2744
-Arr i: 2684
-Arr i: 2724
-Arr i: 2636
-Arr i: 2816
-Arr i: 2741
-Arr i: 2768
-Arr i: 2756
-Arr i: 2748
-Arr i: 2756
-Arr i: 2635
-Arr i: 2656
-Arr i: 2624
-Arr i: 2760
-Arr i: 2672
-Arr i: 2712
-Arr i: 2676
-Arr i: 2724
-Arr i: 2596
-Arr i: 2812
-Arr i: 2688
-Arr i: 2634
-Arr i: 2612
-Arr i: 2660
-Arr i: 2604
-Arr i: 2672
-Arr i: 2804
-Arr i: 2960
-Arr i: 2856
-Arr i: 2928
-Arr i: 2824
-Arr i: 2880
-Arr i: 2932
-Arr i: 2814
-Arr i: 2880
-Arr i: 2788
-Arr i: 2800
-Arr i: 2780
-Arr i: 2903
-Arr i: 2844
-Arr i: 2796
-Arr i: 2768
-Arr i: 2720
-Arr i: 2820
-Arr i: 2803
-Arr i: 2816
-Arr i: 2820
-Arr i: 2808
-Arr i: 2880
-Arr i: 2836
-Arr i: 2772
-Arr i: 2664
-Arr i: 2840
-Arr i: 2688
-Arr i: 2776
-Arr i: 2884
-Arr i: 2836
-Arr i: 2700
-Arr i: 2796
-Arr i: 2716
-Arr i: 2807
-Arr i: 2820
-Arr i: 2768
-Arr i: 2768
-Arr i: 2756
-Arr i: 2692
-Arr i: 2732
-Arr i: 2652
-Arr i: 2824
-Arr i: 2761
-Arr i: 2780
-Arr i: 2792
-Arr i: 2768
-Arr i: 2760
-Arr i: 2647
-Arr i: 2680
-Arr i: 2640
-Arr i: 2772
-Arr i: 2688
-Arr i: 2720
-Arr i: 2696
-Arr i: 2736
-Arr i: 2616
-Arr i: 2824
-Arr i: 2708
-Arr i: 2650
-Arr i: 2620
-Arr i: 2676
-Arr i: 2616
-Arr i: 2692
-Arr i: 2808
-Arr i: 2980
-Arr i: 2860
-Arr i: 2936
-Arr i: 2840
-Arr i: 2888
-Arr i: 2948
-Arr i: 2834
-Arr i: 2888
-Arr i: 2816
-Arr i: 2832
-Arr i: 2804
-Arr i: 2919
-Arr i: 2856
-Arr i: 2804
-Arr i: 2780
-Arr i: 2728
-Arr i: 2848
-Arr i: 2831
-Arr i: 2836
-Arr i: 2840
-Arr i: 2824
-Arr i: 2900
-Arr i: 2844
-Arr i: 2792
-Arr i: 2676
-Arr i: 2864
-Arr i: 2704
-Arr i: 2788
-Arr i: 2900
-Arr i: 2860
-Arr i: 2724
-Arr i: 2812
-Arr i: 2736
-Arr i: 2815
-Arr i: 2832
-Arr i: 2788
-Arr i: 2792
-Arr i: 2776
-Arr i: 2704
-Arr i: 2752
-Arr i: 2688
-Arr i: 2844
-Arr i: 2785
-Arr i: 2788
-Arr i: 2820
-Arr i: 2784
-Arr i: 2780
-Arr i: 2671
-Arr i: 2688
-Arr i: 2648
-Arr i: 2776
-Arr i: 2712
-Arr i: 2736
-Arr i: 2704
-Arr i: 2760
-Arr i: 2628
-Arr i: 2832
-Arr i: 2720
-Arr i: 2658
-Arr i: 2624
-Arr i: 2684
-Arr i: 2624
-Arr i: 2712
-Arr i: 2820
-Arr i: 3000
-Arr i: 2872
-Arr i: 2948
-Arr i: 2856
-Arr i: 2896
-Arr i: 2964
-Arr i: 2846
-Arr i: 2900
-Arr i: 2844
-Arr i: 2856
-Arr i: 2816
-Arr i: 2935
-Arr i: 2880
-Arr i: 2836
-Arr i: 2804
-Arr i: 2748
-Arr i: 2852
-Arr i: 2855
-Arr i: 2848
-Arr i: 2844
-Arr i: 2852
-Arr i: 2912
-Arr i: 2876
-Arr i: 2800
-Arr i: 2684
-Arr i: 2872
-Arr i: 2724
-Arr i: 2804
-Arr i: 2912
-Arr i: 2868
-Arr i: 2740
-Arr i: 2828
-Arr i: 2744
-Arr i: 2839
-Arr i: 2852
-Arr i: 2796
-Arr i: 2804
-Arr i: 2796
-Arr i: 2712
-Arr i: 2776
-Arr i: 2704
-Arr i: 2856
-Arr i: 2797
-Arr i: 2816
-Arr i: 2828
-Arr i: 2804
-Arr i: 2800
-Arr i: 2687
-Arr i: 2708
-Arr i: 2668
-Arr i: 2776
-Arr i: 2724
-Arr i: 2744
-Arr i: 2720
-Arr i: 2764
-Arr i: 2636
-Arr i: 2852
-Arr i: 2752
-Arr i: 2678
-Arr i: 2640
-Arr i: 2704
-Arr i: 2640
-Arr i: 2724
-Arr i: 2856
-Arr i: 3016
-Arr i: 2892
-Arr i: 2948
-Arr i: 2876
-Arr i: 2908
-Arr i: 2976
-Arr i: 2866
-Arr i: 2912
-Arr i: 2856
-Arr i: 2864
-Arr i: 2844
-Arr i: 2947
-Arr i: 2880
-Arr i: 2860
-Arr i: 2820
-Arr i: 2764
-Arr i: 2864
-Arr i: 2883
-Arr i: 2864
-Arr i: 2860
-Arr i: 2880
-Arr i: 2928
-Arr i: 2888
-Arr i: 2808
-Arr i: 2700
-Arr i: 2892
-Arr i: 2748
-Arr i: 2824
-Arr i: 2932
-Arr i: 2888
-Arr i: 2764
-Arr i: 2836
-Arr i: 2776
-Arr i: 2847
-Arr i: 2860
-Arr i: 2824
-Arr i: 2828
-Arr i: 2808
-Arr i: 2724
-Arr i: 2816
-Arr i: 2712
-Arr i: 2884
-Arr i: 2805
-Arr i: 2836
-Arr i: 2852
-Arr i: 2808
-Arr i: 2820
-Arr i: 2707
-Arr i: 2740
-Arr i: 2696
-Arr i: 2788
-Arr i: 2744
-Arr i: 2764
-Arr i: 2748
-Arr i: 2780
-Arr i: 2664
-Arr i: 2872
-Arr i: 2764
-Arr i: 2702
-Arr i: 2640
-Arr i: 2716
-Arr i: 2660
-Arr i: 2740
-Arr i: 2868
-Arr i: 3024
-Arr i: 2904
-Arr i: 2960
-Arr i: 2880
-Arr i: 2924
-Arr i: 2980
-Arr i: 2882
-Arr i: 2932
-Arr i: 2868
-Arr i: 2888
-Arr i: 2864
-Arr i: 2967
-Arr i: 2892
-Arr i: 2880
-Arr i: 2836
-Arr i: 2780
-Arr i: 2876
-Arr i: 2915
-Arr i: 2884
-Arr i: 2876
-Arr i: 2900
-Arr i: 2940
-Arr i: 2912
-Arr i: 2836
-Arr i: 2708
-Arr i: 2904
-Arr i: 2772
-Arr i: 2836
-Arr i: 2940
-Arr i: 2904
-Arr i: 2792
-Arr i: 2844
-Arr i: 2788
-Arr i: 2875
-Arr i: 2876
-Arr i: 2856
-Arr i: 2836
-Arr i: 2832
-Arr i: 2748
-Arr i: 2820
-Arr i: 2728
-Arr i: 2892
-Arr i: 2817
-Arr i: 2844
-Arr i: 2872
-Arr i: 2828
-Arr i: 2824
-Arr i: 2731
-Arr i: 2740
-Arr i: 2708
-Arr i: 2816
-Arr i: 2756
-Arr i: 2780
-Arr i: 2772
-Arr i: 2788
-Arr i: 2680
-Arr i: 2888
-Arr i: 2772
-Arr i: 2722
-Arr i: 2656
-Arr i: 2748
-Arr i: 2684
-Arr i: 2756
-Arr i: 2896
-Arr i: 3040
-Arr i: 2916
-Arr i: 2964
-Arr i: 2892
-Arr i: 2936
-Arr i: 2992
-Arr i: 2894
-Arr i: 2936
-Arr i: 2880
-Arr i: 2896
-Arr i: 2872
-Arr i: 2987
-Arr i: 2900
-Arr i: 2892
-Arr i: 2852
-Arr i: 2796
-Arr i: 2888
-Arr i: 2931
-Arr i: 2900
-Arr i: 2896
-Arr i: 2920
-Arr i: 2972
-Arr i: 2936
-Arr i: 2856
-Arr i: 2724
-Arr i: 2924
-Arr i: 2788
-Arr i: 2844
-Arr i: 2952
-Arr i: 2916
-Arr i: 2812
-Arr i: 2860
-Arr i: 2816
-Arr i: 2895
-Arr i: 2900
-Arr i: 2876
-Arr i: 2844
-Arr i: 2856
-Arr i: 2756
-Arr i: 2824
-Arr i: 2744
-Arr i: 2900
-Arr i: 2829
-Arr i: 2868
-Arr i: 2880
-Arr i: 2832
-Arr i: 2832
-Arr i: 2739
-Arr i: 2752
-Arr i: 2728
-Arr i: 2832
-Arr i: 2760
-Arr i: 2796
-Arr i: 2796
-Arr i: 2804
-Arr i: 2704
-Arr i: 2908
-Arr i: 2788
-Arr i: 2742
-Arr i: 2680
-Arr i: 2768
-Arr i: 2684
-Arr i: 2768
-Arr i: 2904
-Arr i: 3060
-Arr i: 2952
-Arr i: 2992
-Arr i: 2908
-Arr i: 2948
-Arr i: 3004
-Arr i: 2914
-Arr i: 2952
-Arr i: 2892
-Arr i: 2904
-Arr i: 2876
-Arr i: 2999
-Arr i: 2928
-Arr i: 2924
-Arr i: 2860
-Arr i: 2808
-Arr i: 2892
-Arr i: 2935
-Arr i: 2912
-Arr i: 2900
-Arr i: 2940
-Arr i: 2976
-Arr i: 2948
-Arr i: 2872
-Arr i: 2728
-Arr i: 2944
-Arr i: 2804
-Arr i: 2868
-Arr i: 2964
-Arr i: 2928
-Arr i: 2828
-Arr i: 2884
-Arr i: 2836
-Arr i: 2915
-Arr i: 2916
-Arr i: 2884
-Arr i: 2852
-Arr i: 2864
-Arr i: 2772
-Arr i: 2836
-Arr i: 2764
-Arr i: 2924
-Arr i: 2849
-Arr i: 2880
-Arr i: 2900
-Arr i: 2840
-Arr i: 2868
-Arr i: 2755
-Arr i: 2756
-Arr i: 2752
-Arr i: 2852
-Arr i: 2788
-Arr i: 2820
-Arr i: 2808
-Arr i: 2820
-Arr i: 2716
-Arr i: 2920
-Arr i: 2792
-Arr i: 2758
-Arr i: 2696
-Arr i: 2784
-Arr i: 2704
-Arr i: 2780
-Arr i: 2924
-Arr i: 3072
-Arr i: 2956
-Arr i: 3004
-Arr i: 2928
-Arr i: 2956
-Arr i: 3016
-Arr i: 2938
-Arr i: 2956
-Arr i: 2896
-Arr i: 2924
-Arr i: 2896
-Arr i: 3011
-Arr i: 2944
-Arr i: 2924
-Arr i: 2888
-Arr i: 2820
-Arr i: 2924
-Arr i: 2943
-Arr i: 2924
-Arr i: 2916
-Arr i: 2960
-Arr i: 2984
-Arr i: 2964
-Arr i: 2888
-Arr i: 2748
-Arr i: 2956
-Arr i: 2812
-Arr i: 2884
-Arr i: 2976
-Arr i: 2952
-Arr i: 2852
-Arr i: 2896
-Arr i: 2844
-Arr i: 2927
-Arr i: 2928
-Arr i: 2912
-Arr i: 2872
-Arr i: 2884
-Arr i: 2780
-Arr i: 2860
-Arr i: 2784
-Arr i: 2936
-Arr i: 2853
-Arr i: 2904
-Arr i: 2928
-Arr i: 2852
-Arr i: 2880
-Arr i: 2775
-Arr i: 2780
-Arr i: 2764
-Arr i: 2872
-Arr i: 2812
-Arr i: 2824
-Arr i: 2824
-Arr i: 2832
-Arr i: 2752
-Arr i: 2940
-Arr i: 2816
-Arr i: 2778
-Arr i: 2708
-Arr i: 2808
-Arr i: 2728
-Arr i: 2788
-Arr i: 2948
-Arr i: 3088
-Arr i: 2964
-Arr i: 3020
-Arr i: 2952
-Arr i: 2964
-Arr i: 3028
-Arr i: 2966
-Arr i: 2960
-Arr i: 2924
-Arr i: 2932
-Arr i: 2908
-Arr i: 3031
-Arr i: 2964
-Arr i: 2936
-Arr i: 2912
-Arr i: 2840
-Arr i: 2940
-Arr i: 2955
-Arr i: 2936
-Arr i: 2940
-Arr i: 2988
-Arr i: 2996
-Arr i: 2992
-Arr i: 2912
-Arr i: 2768
-Arr i: 2988
-Arr i: 2824
-Arr i: 2904
-Arr i: 2992
-Arr i: 2968
-Arr i: 2864
-Arr i: 2904
-Arr i: 2856
-Arr i: 2943
-Arr i: 2940
-Arr i: 2932
-Arr i: 2900
-Arr i: 2900
-Arr i: 2792
-Arr i: 2868
-Arr i: 2816
-Arr i: 2948
-Arr i: 2873
-Arr i: 2924
-Arr i: 2936
-Arr i: 2860
-Arr i: 2888
-Arr i: 2791
-Arr i: 2796
-Arr i: 2776
-Arr i: 2908
-Arr i: 2832
-Arr i: 2844
-Arr i: 2836
-Arr i: 2852
-Arr i: 2764
-Arr i: 2972
-Arr i: 2828
-Arr i: 2810
-Arr i: 2720
-Arr i: 2820
-Arr i: 2740
-Arr i: 2792
-Arr i: 2956
-Arr i: 3100
-Arr i: 2964
-Arr i: 3036
-Arr i: 2984
-Arr i: 2972
-Arr i: 3032
-Arr i: 2990
-Arr i: 2968
-Arr i: 2944
-Arr i: 2956
-Arr i: 2920
-Arr i: 3047
-Arr i: 2992
-Arr i: 2952
-Arr i: 2928
-Arr i: 2848
-Arr i: 2952
-Arr i: 2967
-Arr i: 2948
-Arr i: 2944
-Arr i: 3008
-Arr i: 3016
-Arr i: 3012
-Arr i: 2916
-Arr i: 2784
-Arr i: 3000
-Arr i: 2856
-Arr i: 2908
-Arr i: 3004
-Arr i: 2988
-Arr i: 2876
-Arr i: 2920
-Arr i: 2864
-Arr i: 2971
-Arr i: 2960
-Arr i: 2948
-Arr i: 2908
-Arr i: 2916
-Arr i: 2812
-Arr i: 2876
-Arr i: 2836
-Arr i: 2964
-Arr i: 2889
-Arr i: 2940
-Arr i: 2956
-Arr i: 2864
-Arr i: 2900
-Arr i: 2795
-Arr i: 2820
-Arr i: 2780
-Arr i: 2920
-Arr i: 2840
-Arr i: 2852
-Arr i: 2860
-Arr i: 2876
-Arr i: 2776
-Arr i: 2976
-Arr i: 2840
-Arr i: 2822
-Arr i: 2736
-Arr i: 2840
-Arr i: 2752
-Arr i: 2804
-Arr i: 2980
-Arr i: 3108
-Arr i: 2988
-Arr i: 3052
-Arr i: 2996
-Arr i: 2992
-Arr i: 3048
-Arr i: 3002
-Arr i: 2984
-Arr i: 2980
-Arr i: 2964
-Arr i: 2944
-Arr i: 3059
-Arr i: 3016
-Arr i: 2960
-Arr i: 2932
-Arr i: 2872
-Arr i: 2972
-Arr i: 2979
-Arr i: 2968
-Arr i: 2956
-Arr i: 3028
-Arr i: 3044
-Arr i: 3036
-Arr i: 2928
-Arr i: 2828
-Arr i: 3024
-Arr i: 2860
-Arr i: 2924
-Arr i: 3012
-Arr i: 3004
-Arr i: 2896
-Arr i: 2932
-Arr i: 2876
-Arr i: 2983
-Arr i: 2976
-Arr i: 2968
-Arr i: 2916
-Arr i: 2932
-Arr i: 2832
-Arr i: 2880
-Arr i: 2848
-Arr i: 2976
-Arr i: 2901
-Arr i: 2960
-Arr i: 2968
-Arr i: 2872
-Arr i: 2916
-Arr i: 2815
-Arr i: 2836
-Arr i: 2800
-Arr i: 2932
-Arr i: 2864
-Arr i: 2872
-Arr i: 2872
-Arr i: 2892
-Arr i: 2804
-Arr i: 2992
-Arr i: 2856
-Arr i: 2846
-Arr i: 2760
-Arr i: 2860
-Arr i: 2760
-Arr i: 2820
-Arr i: 3004
-Arr i: 3144
-Arr i: 3000
-Arr i: 3052
-Arr i: 3008
-Arr i: 3012
-Arr i: 3072
-Arr i: 3014
-Arr i: 3004
-Arr i: 3000
-Arr i: 2988
-Arr i: 2956
-Arr i: 3067
-Arr i: 3036
-Arr i: 2996
-Arr i: 2948
-Arr i: 2884
-Arr i: 2988
-Arr i: 3007
-Arr i: 2972
-Arr i: 2964
-Arr i: 3036
-Arr i: 3052
-Arr i: 3044
-Arr i: 2940
-Arr i: 2848
-Arr i: 3044
-Arr i: 2872
-Arr i: 2936
-Arr i: 3012
-Arr i: 3016
-Arr i: 2908
-Arr i: 2940
-Arr i: 2888
-Arr i: 2991
-Arr i: 2988
-Arr i: 2984
-Arr i: 2952
-Arr i: 2936
-Arr i: 2856
-Arr i: 2904
-Arr i: 2868
-Arr i: 2992
-Arr i: 2913
-Arr i: 2968
-Arr i: 2980
-Arr i: 2892
-Arr i: 2924
-Arr i: 2851
-Arr i: 2872
-Arr i: 2816
-Arr i: 2944
-Arr i: 2872
-Arr i: 2900
-Arr i: 2904
-Arr i: 2904
-Arr i: 2828
-Arr i: 3016
-Arr i: 2864
-Arr i: 2866
-Arr i: 2788
-Arr i: 2872
-Arr i: 2780
-Arr i: 2828
-Arr i: 3024
-Arr i: 3156
-Arr i: 3032
-Arr i: 3064
-Arr i: 3036
-Arr i: 3028
-Arr i: 3092
-Arr i: 3022
-Arr i: 3024
-Arr i: 3032
-Arr i: 3012
-Arr i: 2968
-Arr i: 3079
-Arr i: 3052
-Arr i: 3008
-Arr i: 2960
-Arr i: 2896
-Arr i: 3008
-Arr i: 3031
-Arr i: 2976
-Arr i: 2972
-Arr i: 3048
-Arr i: 3076
-Arr i: 3056
-Arr i: 2964
-Arr i: 2848
-Arr i: 3068
-Arr i: 2884
-Arr i: 2960
-Arr i: 3020
-Arr i: 3036
-Arr i: 2916
-Arr i: 2944
-Arr i: 2908
-Arr i: 3003
-Arr i: 3008
-Arr i: 3016
-Arr i: 2968
-Arr i: 2956
-Arr i: 2868
-Arr i: 2916
-Arr i: 2884
-Arr i: 3008
-Arr i: 2929
-Arr i: 2972
-Arr i: 2984
-Arr i: 2892
-Arr i: 2932
-Arr i: 2863
-Arr i: 2888
-Arr i: 2836
-Arr i: 2960
-Arr i: 2888
-Arr i: 2924
-Arr i: 2924
-Arr i: 2916
-Arr i: 2840
-Arr i: 3032
-Arr i: 2876
-Arr i: 2890
-Arr i: 2792
-Arr i: 2880
-Arr i: 2808
-Arr i: 2856
-Arr i: 3044
-Arr i: 3164
-Arr i: 3048
-Arr i: 3084
-Arr i: 3044
-Arr i: 3036
-Arr i: 3104
-Arr i: 3030
-Arr i: 3040
-Arr i: 3044
-Arr i: 3028
-Arr i: 2988
-Arr i: 3083
-Arr i: 3080
-Arr i: 3024
-Arr i: 2976
-Arr i: 2940
-Arr i: 3020
-Arr i: 3051
-Arr i: 2992
-Arr i: 2972
-Arr i: 3064
-Arr i: 3104
-Arr i: 3068
-Arr i: 2992
-Arr i: 2868
-Arr i: 3068
-Arr i: 2892
-Arr i: 2964
-Arr i: 3032
-Arr i: 3048
-Arr i: 2936
-Arr i: 2964
-Arr i: 2936
-Arr i: 3019
-Arr i: 3032
-Arr i: 3028
-Arr i: 2988
-Arr i: 2976
-Arr i: 2896
-Arr i: 2928
-Arr i: 2920
-Arr i: 3016
-Arr i: 2953
-Arr i: 2980
-Arr i: 3004
-Arr i: 2916
-Arr i: 2936
-Arr i: 2879
-Arr i: 2900
-Arr i: 2852
-Arr i: 2972
-Arr i: 2900
-Arr i: 2948
-Arr i: 2952
-Arr i: 2924
-Arr i: 2868
-Arr i: 3048
-Arr i: 2888
-Arr i: 2906
-Arr i: 2812
-Arr i: 2884
-Arr i: 2812
-Arr i: 2868
-Arr i: 3048
-Arr i: 3176
-Arr i: 3080
-Arr i: 3092
-Arr i: 3064
-Arr i: 3036
-Arr i: 3116
-Arr i: 3038
-Arr i: 3056
-Arr i: 3060
-Arr i: 3056
-Arr i: 3012
-Arr i: 3107
-Arr i: 3100
-Arr i: 3040
-Arr i: 2984
-Arr i: 2964
-Arr i: 3040
-Arr i: 3059
-Arr i: 3016
-Arr i: 2984
-Arr i: 3076
-Arr i: 3112
-Arr i: 3080
-Arr i: 3004
-Arr i: 2880
-Arr i: 3100
-Arr i: 2920
-Arr i: 2980
-Arr i: 3040
-Arr i: 3072
-Arr i: 2948
-Arr i: 2972
-Arr i: 2944
-Arr i: 3027
-Arr i: 3044
-Arr i: 3040
-Arr i: 3008
-Arr i: 2988
-Arr i: 2908
-Arr i: 2952
-Arr i: 2932
-Arr i: 3036
-Arr i: 2969
-Arr i: 2992
-Arr i: 3028
-Arr i: 2924
-Arr i: 2960
-Arr i: 2891
-Arr i: 2904
-Arr i: 2860
-Arr i: 2992
-Arr i: 2916
-Arr i: 2956
-Arr i: 2988
-Arr i: 2936
-Arr i: 2880
-Arr i: 3060
-Arr i: 2896
-Arr i: 2914
-Arr i: 2832
-Arr i: 2888
-Arr i: 2824
-Arr i: 2880
-Arr i: 3088
-Arr i: 3180
-Arr i: 3108
-Arr i: 3100
-Arr i: 3080
-Arr i: 3052
-Arr i: 3132
-Arr i: 3058
-Arr i: 3064
-Arr i: 3080
-Arr i: 3072
-Arr i: 3048
-Arr i: 3119
-Arr i: 3112
-Arr i: 3044
-Arr i: 2988
-Arr i: 2972
-Arr i: 3056
-Arr i: 3067
-Arr i: 3028
-Arr i: 2996
-Arr i: 3084
-Arr i: 3128
-Arr i: 3096
-Arr i: 3012
-Arr i: 2920
-Arr i: 3108
-Arr i: 2944
-Arr i: 2996
-Arr i: 3068
-Arr i: 3084
-Arr i: 2960
-Arr i: 2980
-Arr i: 2968
-Arr i: 3051
-Arr i: 3044
-Arr i: 3056
-Arr i: 3020
-Arr i: 3008
-Arr i: 2924
-Arr i: 2960
-Arr i: 2944
-Arr i: 3056
-Arr i: 2993
-Arr i: 3008
-Arr i: 3044
-Arr i: 2932
-Arr i: 2972
-Arr i: 2903
-Arr i: 2912
-Arr i: 2884
-Arr i: 3000
-Arr i: 2936
-Arr i: 2972
-Arr i: 3004
-Arr i: 2952
-Arr i: 2896
-Arr i: 3068
-Arr i: 2916
-Arr i: 2934
-Arr i: 2848
-Arr i: 2912
-Arr i: 2840
-Arr i: 2888
-Arr i: 3100
-Arr i: 3200
-Arr i: 3120
-Arr i: 3128
-Arr i: 3100
-Arr i: 3056
-Arr i: 3144
-Arr i: 3070
-Arr i: 3100
-Arr i: 3096
-Arr i: 3080
-Arr i: 3064
-Arr i: 3131
-Arr i: 3128
-Arr i: 3072
-Arr i: 3008
-Arr i: 3004
-Arr i: 3072
-Arr i: 3071
-Arr i: 3052
-Arr i: 3016
-Arr i: 3096
-Arr i: 3144
-Arr i: 3108
-Arr i: 3028
-Arr i: 2932
-Arr i: 3140
-Arr i: 2960
-Arr i: 3020
-Arr i: 3076
-Arr i: 3104
-Arr i: 2976
-Arr i: 2992
-Arr i: 2980
-Arr i: 3079
-Arr i: 3060
-Arr i: 3076
-Arr i: 3032
-Arr i: 3028
-Arr i: 2944
-Arr i: 2976
-Arr i: 2956
-Arr i: 3076
-Arr i: 3013
-Arr i: 3020
-Arr i: 3060
-Arr i: 2952
-Arr i: 2984
-Arr i: 2907
-Arr i: 2932
-Arr i: 2912
-Arr i: 3004
-Arr i: 2972
-Arr i: 2984
-Arr i: 3012
-Arr i: 2964
-Arr i: 2908
-Arr i: 3076
-Arr i: 2924
-Arr i: 2942
-Arr i: 2868
-Arr i: 2920
-Arr i: 2860
-Arr i: 2916
-Arr i: 3124
-Arr i: 3204
-Arr i: 3124
-Arr i: 3144
-Arr i: 3120
-Arr i: 3072
-Arr i: 3160
-Arr i: 3086
-Arr i: 3108
-Arr i: 3108
-Arr i: 3096
-Arr i: 3076
-Arr i: 3163
-Arr i: 3148
-Arr i: 3088
-Arr i: 3016
-Arr i: 3008
-Arr i: 3104
-Arr i: 3079
-Arr i: 3092
-Arr i: 3048
-Arr i: 3112
-Arr i: 3156
-Arr i: 3136
-Arr i: 3048
-Arr i: 2952
-Arr i: 3156
-Arr i: 2976
-Arr i: 3032
-Arr i: 3100
-Arr i: 3120
-Arr i: 2988
-Arr i: 3012
-Arr i: 3004
-Arr i: 3103
-Arr i: 3064
-Arr i: 3088
-Arr i: 3060
-Arr i: 3044
-Arr i: 2948
-Arr i: 2980
-Arr i: 2972
-Arr i: 3092
-Arr i: 3033
-Arr i: 3032
-Arr i: 3084
-Arr i: 2972
-Arr i: 3000
-Arr i: 2911
-Arr i: 2948
-Arr i: 2924
-Arr i: 3032
-Arr i: 2992
-Arr i: 2996
-Arr i: 3024
-Arr i: 2972
-Arr i: 2916
-Arr i: 3092
-Arr i: 2948
-Arr i: 2950
-Arr i: 2884
-Arr i: 2928
-Arr i: 2868
-Arr i: 2928
-Arr i: 3132
-Arr i: 3216
-Arr i: 3136
-Arr i: 3172
-Arr i: 3132
-Arr i: 3084
-Arr i: 3172
-Arr i: 3106
-Arr i: 3128
-Arr i: 3124
-Arr i: 3108
-Arr i: 3088
-Arr i: 3183
-Arr i: 3160
-Arr i: 3112
-Arr i: 3040
-Arr i: 3020
-Arr i: 3120
-Arr i: 3095
-Arr i: 3104
-Arr i: 3064
-Arr i: 3136
-Arr i: 3176
-Arr i: 3160
-Arr i: 3060
-Arr i: 2980
-Arr i: 3168
-Arr i: 2992
-Arr i: 3040
-Arr i: 3100
-Arr i: 3140
-Arr i: 3012
-Arr i: 3028
-Arr i: 3020
-Arr i: 3123
-Arr i: 3064
-Arr i: 3096
-Arr i: 3076
-Arr i: 3068
-Arr i: 2964
-Arr i: 3016
-Arr i: 2980
-Arr i: 3100
-Arr i: 3045
-Arr i: 3048
-Arr i: 3100
-Arr i: 2980
-Arr i: 3012
-Arr i: 2927
-Arr i: 2952
-Arr i: 2952
-Arr i: 3044
-Arr i: 3012
-Arr i: 3016
-Arr i: 3044
-Arr i: 2984
-Arr i: 2924
-Arr i: 3096
-Arr i: 2968
-Arr i: 2954
-Arr i: 2900
-Arr i: 2956
-Arr i: 2884
-Arr i: 2940
-Arr i: 3148
-Arr i: 3232
-Arr i: 3152
-Arr i: 3192
-Arr i: 3160
-Arr i: 3112
-Arr i: 3192
-Arr i: 3110
-Arr i: 3128
-Arr i: 3148
-Arr i: 3128
-Arr i: 3112
-Arr i: 3195
-Arr i: 3168
-Arr i: 3128
-Arr i: 3060
-Arr i: 3040
-Arr i: 3136
-Arr i: 3123
-Arr i: 3116
-Arr i: 3084
-Arr i: 3156
-Arr i: 3192
-Arr i: 3176
-Arr i: 3068
-Arr i: 2988
-Arr i: 3180
-Arr i: 3024
-Arr i: 3068
-Arr i: 3116
-Arr i: 3160
-Arr i: 3028
-Arr i: 3044
-Arr i: 3036
-Arr i: 3135
-Arr i: 3084
-Arr i: 3108
-Arr i: 3084
-Arr i: 3088
-Arr i: 2980
-Arr i: 3028
-Arr i: 3012
-Arr i: 3104
-Arr i: 3069
-Arr i: 3068
-Arr i: 3112
-Arr i: 2996
-Arr i: 3016
-Arr i: 2951
-Arr i: 2964
-Arr i: 2964
-Arr i: 3072
-Arr i: 3016
-Arr i: 3032
-Arr i: 3048
-Arr i: 2996
-Arr i: 2940
-Arr i: 3100
-Arr i: 2972
-Arr i: 2966
-Arr i: 2936
-Arr i: 2976
-Arr i: 2908
-Arr i: 2964
-Arr i: 3172
-Arr i: 3248
-Arr i: 3160
-Arr i: 3208
-Arr i: 3168
-Arr i: 3128
-Arr i: 3200
-Arr i: 3138
-Arr i: 3132
-Arr i: 3172
-Arr i: 3144
-Arr i: 3132
-Arr i: 3211
-Arr i: 3184
-Arr i: 3140
-Arr i: 3072
-Arr i: 3068
-Arr i: 3144
-Arr i: 3139
-Arr i: 3132
-Arr i: 3092
-Arr i: 3180
-Arr i: 3208
-Arr i: 3192
-Arr i: 3088
-Arr i: 3008
-Arr i: 3188
-Arr i: 3032
-Arr i: 3080
-Arr i: 3128
-Arr i: 3176
-Arr i: 3032
-Arr i: 3060
-Arr i: 3060
-Arr i: 3147
-Arr i: 3096
-Arr i: 3116
-Arr i: 3100
-Arr i: 3100
-Arr i: 2996
-Arr i: 3048
-Arr i: 3044
-Arr i: 3124
-Arr i: 3077
-Arr i: 3072
-Arr i: 3124
-Arr i: 3004
-Arr i: 3048
-Arr i: 2979
-Arr i: 2976
-Arr i: 2980
-Arr i: 3092
-Arr i: 3052
-Arr i: 3040
-Arr i: 3060
-Arr i: 3020
-Arr i: 2956
-Arr i: 3116
-Arr i: 3000
-Arr i: 2974
-Arr i: 2956
-Arr i: 2988
-Arr i: 2916
-Arr i: 2980
-Arr i: 3184
-Arr i: 3260
-Arr i: 3176
-Arr i: 3220
-Arr i: 3192
-Arr i: 3144
-Arr i: 3208
-Arr i: 3154
-Arr i: 3152
-Arr i: 3184
-Arr i: 3160
-Arr i: 3148
-Arr i: 3219
-Arr i: 3200
-Arr i: 3152
-Arr i: 3084
-Arr i: 3072
-Arr i: 3152
-Arr i: 3155
-Arr i: 3160
-Arr i: 3092
-Arr i: 3208
-Arr i: 3244
-Arr i: 3204
-Arr i: 3100
-Arr i: 3024
-Arr i: 3204
-Arr i: 3048
-Arr i: 3100
-Arr i: 3156
-Arr i: 3180
-Arr i: 3048
-Arr i: 3060
-Arr i: 3068
-Arr i: 3147
-Arr i: 3108
-Arr i: 3140
-Arr i: 3112
-Arr i: 3116
-Arr i: 3020
-Arr i: 3080
-Arr i: 3056
-Arr i: 3144
-Arr i: 3081
-Arr i: 3092
-Arr i: 3144
-Arr i: 3032
-Arr i: 3072
-Arr i: 2987
-Arr i: 3000
-Arr i: 3000
-Arr i: 3112
-Arr i: 3068
-Arr i: 3052
-Arr i: 3072
-Arr i: 3036
-Arr i: 2972
-Arr i: 3136
-Arr i: 3040
-Arr i: 2990
-Arr i: 2972
-Arr i: 3004
-Arr i: 2944
-Arr i: 3004
-Arr i: 3188
-Arr i: 3280
-Arr i: 3180
-Arr i: 3232
-Arr i: 3212
-Arr i: 3156
-Arr i: 3220
-Arr i: 3166
-Arr i: 3168
-Arr i: 3188
-Arr i: 3180
-Arr i: 3180
-Arr i: 3227
-Arr i: 3212
-Arr i: 3164
-Arr i: 3096
-Arr i: 3096
-Arr i: 3172
-Arr i: 3191
-Arr i: 3180
-Arr i: 3112
-Arr i: 3224
-Arr i: 3260
-Arr i: 3224
-Arr i: 3116
-Arr i: 3044
-Arr i: 3212
-Arr i: 3056
-Arr i: 3116
-Arr i: 3172
-Arr i: 3188
-Arr i: 3064
-Arr i: 3064
-Arr i: 3076
-Arr i: 3151
-Arr i: 3116
-Arr i: 3160
-Arr i: 3124
-Arr i: 3136
-Arr i: 3028
-Arr i: 3084
-Arr i: 3060
-Arr i: 3152
-Arr i: 3093
-Arr i: 3100
-Arr i: 3156
-Arr i: 3040
-Arr i: 3096
-Arr i: 3011
-Arr i: 3016
-Arr i: 3020
-Arr i: 3140
-Arr i: 3080
-Arr i: 3072
-Arr i: 3088
-Arr i: 3044
-Arr i: 2976
-Arr i: 3148
-Arr i: 3056
-Arr i: 3010
-Arr i: 2980
-Arr i: 3028
-Arr i: 2968
-Arr i: 3020
-Arr i: 3196
-Arr i: 3288
-Arr i: 3196
-Arr i: 3248
-Arr i: 3216
-Arr i: 3172
-Arr i: 3256
-Arr i: 3178
-Arr i: 3184
-Arr i: 3200
-Arr i: 3200
-Arr i: 3196
-Arr i: 3247
-Arr i: 3224
-Arr i: 3180
-Arr i: 3096
-Arr i: 3112
-Arr i: 3176
-Arr i: 3207
-Arr i: 3204
-Arr i: 3132
-Arr i: 3236
-Arr i: 3268
-Arr i: 3228
-Arr i: 3132
-Arr i: 3060
-Arr i: 3220
-Arr i: 3084
-Arr i: 3132
-Arr i: 3188
-Arr i: 3228
-Arr i: 3100
-Arr i: 3084
-Arr i: 3092
-Arr i: 3167
-Arr i: 3124
-Arr i: 3172
-Arr i: 3132
-Arr i: 3160
-Arr i: 3048
-Arr i: 3092
-Arr i: 3076
-Arr i: 3168
-Arr i: 3109
-Arr i: 3108
-Arr i: 3168
-Arr i: 3060
-Arr i: 3116
-Arr i: 3015
-Arr i: 3048
-Arr i: 3032
-Arr i: 3160
-Arr i: 3096
-Arr i: 3080
-Arr i: 3100
-Arr i: 3064
-Arr i: 2996
-Arr i: 3156
-Arr i: 3064
-Arr i: 3022
-Arr i: 2992
-Arr i: 3040
-Arr i: 2984
-Arr i: 3040
-Arr i: 3216
-Arr i: 3312
-Arr i: 3232
-Arr i: 3252
-Arr i: 3228
-Arr i: 3180
-Arr i: 3268
-Arr i: 3194
-Arr i: 3196
-Arr i: 3208
-Arr i: 3216
-Arr i: 3208
-Arr i: 3275
-Arr i: 3252
-Arr i: 3192
-Arr i: 3104
-Arr i: 3124
-Arr i: 3196
-Arr i: 3231
-Arr i: 3228
-Arr i: 3148
-Arr i: 3244
-Arr i: 3292
-Arr i: 3248
-Arr i: 3140
-Arr i: 3072
-Arr i: 3236
-Arr i: 3092
-Arr i: 3152
-Arr i: 3188
-Arr i: 3240
-Arr i: 3112
-Arr i: 3104
-Arr i: 3108
-Arr i: 3191
-Arr i: 3140
-Arr i: 3180
-Arr i: 3152
-Arr i: 3176
-Arr i: 3068
-Arr i: 3116
-Arr i: 3080
-Arr i: 3172
-Arr i: 3125
-Arr i: 3116
-Arr i: 3196
-Arr i: 3072
-Arr i: 3136
-Arr i: 3039
-Arr i: 3060
-Arr i: 3060
-Arr i: 3164
-Arr i: 3116
-Arr i: 3100
-Arr i: 3120
-Arr i: 3076
-Arr i: 3008
-Arr i: 3172
-Arr i: 3076
-Arr i: 3030
-Arr i: 3004
-Arr i: 3064
-Arr i: 3008
-Arr i: 3052
-Arr i: 3232
-Arr i: 3328
-Arr i: 3244
-Arr i: 3280
-Arr i: 3244
-Arr i: 3200
-Arr i: 3280
-Arr i: 3206
-Arr i: 3208
-Arr i: 3232
-Arr i: 3248
-Arr i: 3220
-Arr i: 3283
-Arr i: 3272
-Arr i: 3200
-Arr i: 3132
-Arr i: 3140
-Arr i: 3204
-Arr i: 3247
-Arr i: 3244
-Arr i: 3160
-Arr i: 3264
-Arr i: 3304
-Arr i: 3260
-Arr i: 3144
-Arr i: 3088
-Arr i: 3240
-Arr i: 3096
-Arr i: 3160
-Arr i: 3208
-Arr i: 3244
-Arr i: 3140
-Arr i: 3120
-Arr i: 3120
-Arr i: 3207
-Arr i: 3156
-Arr i: 3208
-Arr i: 3172
-Arr i: 3196
-Arr i: 3088
-Arr i: 3140
-Arr i: 3092
-Arr i: 3192
-Arr i: 3145
-Arr i: 3132
-Arr i: 3204
-Arr i: 3076
-Arr i: 3144
-Arr i: 3087
-Arr i: 3072
-Arr i: 3072
-Arr i: 3192
-Arr i: 3136
-Arr i: 3108
-Arr i: 3128
-Arr i: 3088
-Arr i: 3012
-Arr i: 3184
-Arr i: 3092
-Arr i: 3046
-Arr i: 3028
-Arr i: 3076
-Arr i: 3020
-Arr i: 3056
-Arr i: 3240
-Arr i: 3344
-Arr i: 3260
-Arr i: 3300
-Arr i: 3260
-Arr i: 3200
-Arr i: 3308
-Arr i: 3222
-Arr i: 3240
-Arr i: 3248
-Arr i: 3260
-Arr i: 3224
-Arr i: 3303
-Arr i: 3280
-Arr i: 3208
-Arr i: 3136
-Arr i: 3144
-Arr i: 3224
-Arr i: 3255
-Arr i: 3256
-Arr i: 3172
-Arr i: 3284
-Arr i: 3316
-Arr i: 3268
-Arr i: 3172
-Arr i: 3112
-Arr i: 3248
-Arr i: 3128
-Arr i: 3164
-Arr i: 3220
-Arr i: 3252
-Arr i: 3160
-Arr i: 3140
-Arr i: 3148
-Arr i: 3223
-Arr i: 3164
-Arr i: 3228
-Arr i: 3192
-Arr i: 3208
-Arr i: 3104
-Arr i: 3148
-Arr i: 3116
-Arr i: 3200
-Arr i: 3173
-Arr i: 3160
-Arr i: 3220
-Arr i: 3080
-Arr i: 3156
-Arr i: 3123
-Arr i: 3080
-Arr i: 3092
-Arr i: 3204
-Arr i: 3156
-Arr i: 3120
-Arr i: 3152
-Arr i: 3104
-Arr i: 3040
-Arr i: 3200
-Arr i: 3112
-Arr i: 3062
-Arr i: 3040
-Arr i: 3104
-Arr i: 3032
-Arr i: 3080
-Arr i: 3256
-Arr i: 3348
-Arr i: 3276
-Arr i: 3312
-Arr i: 3284
-Arr i: 3208
-Arr i: 3316
-Arr i: 3226
-Arr i: 3284
-Arr i: 3276
-Arr i: 3276
-Arr i: 3252
-Arr i: 3323
-Arr i: 3284
-Arr i: 3228
-Arr i: 3156
-Arr i: 3160
-Arr i: 3240
-Arr i: 3259
-Arr i: 3280
-Arr i: 3172
-Arr i: 3304
-Arr i: 3340
-Arr i: 3292
-Arr i: 3184
-Arr i: 3120
-Arr i: 3256
-Arr i: 3140
-Arr i: 3176
-Arr i: 3244
-Arr i: 3272
-Arr i: 3168
-Arr i: 3160
-Arr i: 3156
-Arr i: 3235
-Arr i: 3172
-Arr i: 3232
-Arr i: 3212
-Arr i: 3232
-Arr i: 3116
-Arr i: 3148
-Arr i: 3144
-Arr i: 3220
-Arr i: 3185
-Arr i: 3176
-Arr i: 3236
-Arr i: 3096
-Arr i: 3160
-Arr i: 3143
-Arr i: 3084
-Arr i: 3120
-Arr i: 3224
-Arr i: 3172
-Arr i: 3144
-Arr i: 3168
-Arr i: 3128
-Arr i: 3044
-Arr i: 3216
-Arr i: 3124
-Arr i: 3066
-Arr i: 3044
-Arr i: 3108
-Arr i: 3044
-Arr i: 3088
-Arr i: 3264
-Arr i: 3360
-Arr i: 3296
-Arr i: 3340
-Arr i: 3304
-Arr i: 3224
-Arr i: 3320
-Arr i: 3234
-Arr i: 3292
-Arr i: 3280
-Arr i: 3296
-Arr i: 3276
-Arr i: 3339
-Arr i: 3304
-Arr i: 3240
-Arr i: 3188
-Arr i: 3180
-Arr i: 3264
-Arr i: 3275
-Arr i: 3296
-Arr i: 3192
-Arr i: 3324
-Arr i: 3352
-Arr i: 3308
-Arr i: 3192
-Arr i: 3136
-Arr i: 3260
-Arr i: 3168
-Arr i: 3192
-Arr i: 3252
-Arr i: 3276
-Arr i: 3180
-Arr i: 3200
-Arr i: 3180
-Arr i: 3255
-Arr i: 3184
-Arr i: 3264
-Arr i: 3228
-Arr i: 3240
-Arr i: 3140
-Arr i: 3160
-Arr i: 3148
-Arr i: 3236
-Arr i: 3193
-Arr i: 3196
-Arr i: 3240
-Arr i: 3108
-Arr i: 3180
-Arr i: 3151
-Arr i: 3100
-Arr i: 3144
-Arr i: 3232
-Arr i: 3180
-Arr i: 3160
-Arr i: 3188
-Arr i: 3140
-Arr i: 3056
-Arr i: 3232
-Arr i: 3140
-Arr i: 3078
-Arr i: 3068
-Arr i: 3140
-Arr i: 3064
-Arr i: 3104
-Arr i: 3272
-Arr i: 3368
-Arr i: 3304
-Arr i: 3352
-Arr i: 3324
-Arr i: 3240
-Arr i: 3340
-Arr i: 3258
-Arr i: 3304
-Arr i: 3312
-Arr i: 3312
-Arr i: 3296
-Arr i: 3363
-Arr i: 3328
-Arr i: 3264
-Arr i: 3200
-Arr i: 3180
-Arr i: 3264
-Arr i: 3299
-Arr i: 3304
-Arr i: 3204
-Arr i: 3328
-Arr i: 3380
-Arr i: 3320
-Arr i: 3204
-Arr i: 3144
-Arr i: 3268
-Arr i: 3200
-Arr i: 3208
-Arr i: 3276
-Arr i: 3284
-Arr i: 3196
-Arr i: 3208
-Arr i: 3200
-Arr i: 3267
-Arr i: 3204
-Arr i: 3292
-Arr i: 3240
-Arr i: 3256
-Arr i: 3152
-Arr i: 3188
-Arr i: 3160
-Arr i: 3236
-Arr i: 3201
-Arr i: 3212
-Arr i: 3252
-Arr i: 3116
-Arr i: 3184
-Arr i: 3183
-Arr i: 3104
-Arr i: 3144
-Arr i: 3252
-Arr i: 3196
-Arr i: 3168
-Arr i: 3208
-Arr i: 3140
-Arr i: 3096
-Arr i: 3244
-Arr i: 3160
-Arr i: 3098
-Arr i: 3092
-Arr i: 3156
-Arr i: 3080
-Arr i: 3136
-Arr i: 3284
-Arr i: 3396
-Arr i: 3308
-Arr i: 3372
-Arr i: 3344
-Arr i: 3268
-Arr i: 3364
-Arr i: 3278
-Arr i: 3328
-Arr i: 3320
-Arr i: 3320
-Arr i: 3308
-Arr i: 3375
-Arr i: 3344
-Arr i: 3288
-Arr i: 3204
-Arr i: 3192
-Arr i: 3288
-Arr i: 3315
-Arr i: 3312
-Arr i: 3220
-Arr i: 3344
-Arr i: 3388
-Arr i: 3336
-Arr i: 3216
-Arr i: 3160
-Arr i: 3292
-Arr i: 3228
-Arr i: 3236
-Arr i: 3292
-Arr i: 3300
-Arr i: 3212
-Arr i: 3224
-Arr i: 3216
-Arr i: 3295
-Arr i: 3220
-Arr i: 3300
-Arr i: 3248
-Arr i: 3272
-Arr i: 3184
-Arr i: 3208
-Arr i: 3172
-Arr i: 3248
-Arr i: 3209
-Arr i: 3236
-Arr i: 3272
-Arr i: 3140
-Arr i: 3208
-Arr i: 3215
-Arr i: 3132
-Arr i: 3184
-Arr i: 3256
-Arr i: 3208
-Arr i: 3172
-Arr i: 3228
-Arr i: 3156
-Arr i: 3112
-Arr i: 3256
-Arr i: 3180
-Arr i: 3106
-Arr i: 3108
-Arr i: 3188
-Arr i: 3096
-Arr i: 3160
-Arr i: 3304
-Arr i: 3412
-Arr i: 3328
-Arr i: 3372
-Arr i: 3348
-Arr i: 3272
-Arr i: 3376
-Arr i: 3290
-Arr i: 3348
-Arr i: 3356
-Arr i: 3356
-Arr i: 3332
-Arr i: 3375
-Arr i: 3356
-Arr i: 3308
-Arr i: 3228
-Arr i: 3196
-Arr i: 3292
-Arr i: 3331
-Arr i: 3324
-Arr i: 3232
-Arr i: 3368
-Arr i: 3396
-Arr i: 3344
-Arr i: 3224
-Arr i: 3180
-Arr i: 3312
-Arr i: 3244
-Arr i: 3272
-Arr i: 3316
-Arr i: 3304
-Arr i: 3220
-Arr i: 3244
-Arr i: 3236
-Arr i: 3323
-Arr i: 3240
-Arr i: 3312
-Arr i: 3272
-Arr i: 3280
-Arr i: 3200
-Arr i: 3212
-Arr i: 3184
-Arr i: 3260
-Arr i: 3221
-Arr i: 3240
-Arr i: 3292
-Arr i: 3152
-Arr i: 3224
-Arr i: 3243
-Arr i: 3156
-Arr i: 3200
-Arr i: 3268
-Arr i: 3228
-Arr i: 3196
-Arr i: 3236
-Arr i: 3168
-Arr i: 3140
-Arr i: 3264
-Arr i: 3184
-Arr i: 3126
-Arr i: 3128
-Arr i: 3204
-Arr i: 3100
-Arr i: 3172
-Arr i: 3332
-Arr i: 3428
-Arr i: 3336
-Arr i: 3388
-Arr i: 3368
-Arr i: 3304
-Arr i: 3396
-Arr i: 3302
-Arr i: 3364
-Arr i: 3388
-Arr i: 3368
-Arr i: 3344
-Arr i: 3387
-Arr i: 3368
-Arr i: 3320
-Arr i: 3248
-Arr i: 3212
-Arr i: 3316
-Arr i: 3343
-Arr i: 3332
-Arr i: 3236
-Arr i: 3408
-Arr i: 3408
-Arr i: 3372
-Arr i: 3240
-Arr i: 3204
-Arr i: 3316
-Arr i: 3252
-Arr i: 3272
-Arr i: 3324
-Arr i: 3332
-Arr i: 3232
-Arr i: 3260
-Arr i: 3256
-Arr i: 3363
-Arr i: 3264
-Arr i: 3324
-Arr i: 3284
-Arr i: 3304
-Arr i: 3216
-Arr i: 3236
-Arr i: 3204
-Arr i: 3276
-Arr i: 3229
-Arr i: 3256
-Arr i: 3296
-Arr i: 3160
-Arr i: 3244
-Arr i: 3247
-Arr i: 3180
-Arr i: 3212
-Arr i: 3280
-Arr i: 3252
-Arr i: 3208
-Arr i: 3244
-Arr i: 3196
-Arr i: 3164
-Arr i: 3280
-Arr i: 3212
-Arr i: 3150
-Arr i: 3144
-Arr i: 3212
-Arr i: 3112
-Arr i: 3176
-Arr i: 3344
-Arr i: 3444
-Arr i: 3356
-Arr i: 3392
-Arr i: 3376
-Arr i: 3320
-Arr i: 3400
-Arr i: 3314
-Arr i: 3380
-Arr i: 3392
-Arr i: 3384
-Arr i: 3364
-Arr i: 3399
-Arr i: 3376
-Arr i: 3332
-Arr i: 3276
-Arr i: 3224
-Arr i: 3328
-Arr i: 3355
-Arr i: 3344
-Arr i: 3256
-Arr i: 3428
-Arr i: 3412
-Arr i: 3384
-Arr i: 3260
-Arr i: 3212
-Arr i: 3328
-Arr i: 3268
-Arr i: 3284
-Arr i: 3336
-Arr i: 3356
-Arr i: 3248
-Arr i: 3284
-Arr i: 3268
-Arr i: 3379
-Arr i: 3276
-Arr i: 3328
-Arr i: 3304
-Arr i: 3324
-Arr i: 3224
-Arr i: 3252
-Arr i: 3224
-Arr i: 3292
-Arr i: 3249
-Arr i: 3276
-Arr i: 3316
-Arr i: 3184
-Arr i: 3260
-Arr i: 3255
-Arr i: 3208
-Arr i: 3224
-Arr i: 3300
-Arr i: 3260
-Arr i: 3220
-Arr i: 3272
-Arr i: 3208
-Arr i: 3180
-Arr i: 3300
-Arr i: 3216
-Arr i: 3162
-Arr i: 3160
-Arr i: 3228
-Arr i: 3128
-Arr i: 3184
-Arr i: 3372
-Arr i: 3456
-Arr i: 3364
-Arr i: 3400
-Arr i: 3400
-Arr i: 3328
-Arr i: 3428
-Arr i: 3326
-Arr i: 3400
-Arr i: 3416
-Arr i: 3404
-Arr i: 3368
-Arr i: 3403
-Arr i: 3388
-Arr i: 3360
-Arr i: 3288
-Arr i: 3244
-Arr i: 3340
-Arr i: 3359
-Arr i: 3356
-Arr i: 3284
-Arr i: 3448
-Arr i: 3444
-Arr i: 3396
-Arr i: 3284
-Arr i: 3240
-Arr i: 3336
-Arr i: 3280
-Arr i: 3296
-Arr i: 3348
-Arr i: 3372
-Arr i: 3256
-Arr i: 3308
-Arr i: 3296
-Arr i: 3395
-Arr i: 3288
-Arr i: 3332
-Arr i: 3332
-Arr i: 3332
-Arr i: 3276
-Arr i: 3264
-Arr i: 3240
-Arr i: 3308
-Arr i: 3285
-Arr i: 3284
-Arr i: 3328
-Arr i: 3192
-Arr i: 3284
-Arr i: 3279
-Arr i: 3228
-Arr i: 3236
-Arr i: 3316
-Arr i: 3272
-Arr i: 3232
-Arr i: 3296
-Arr i: 3212
-Arr i: 3192
-Arr i: 3320
-Arr i: 3228
-Arr i: 3182
-Arr i: 3176
-Arr i: 3240
-Arr i: 3160
-Arr i: 3192
-Arr i: 3388
-Arr i: 3480
-Arr i: 3392
-Arr i: 3424
-Arr i: 3420
-Arr i: 3352
-Arr i: 3440
-Arr i: 3334
-Arr i: 3420
-Arr i: 3432
-Arr i: 3440
-Arr i: 3380
-Arr i: 3419
-Arr i: 3404
-Arr i: 3388
-Arr i: 3320
-Arr i: 3260
-Arr i: 3352
-Arr i: 3383
-Arr i: 3368
-Arr i: 3300
-Arr i: 3460
-Arr i: 3456
-Arr i: 3420
-Arr i: 3296
-Arr i: 3264
-Arr i: 3364
-Arr i: 3312
-Arr i: 3300
-Arr i: 3352
-Arr i: 3380
-Arr i: 3276
-Arr i: 3324
-Arr i: 3312
-Arr i: 3399
-Arr i: 3304
-Arr i: 3344
-Arr i: 3344
-Arr i: 3356
-Arr i: 3308
-Arr i: 3284
-Arr i: 3260
-Arr i: 3316
-Arr i: 3301
-Arr i: 3296
-Arr i: 3348
-Arr i: 3200
-Arr i: 3296
-Arr i: 3291
-Arr i: 3252
-Arr i: 3252
-Arr i: 3324
-Arr i: 3280
-Arr i: 3232
-Arr i: 3312
-Arr i: 3232
-Arr i: 3204
-Arr i: 3344
-Arr i: 3252
-Arr i: 3198
-Arr i: 3188
-Arr i: 3260
-Arr i: 3172
-Arr i: 3212
-Arr i: 3404
-Arr i: 3492
-Arr i: 3404
-Arr i: 3432
-Arr i: 3424
-Arr i: 3384
-Arr i: 3456
-Arr i: 3354
-Arr i: 3424
-Arr i: 3440
-Arr i: 3448
-Arr i: 3416
-Arr i: 3423
-Arr i: 3408
-Arr i: 3400
-Arr i: 3344
-Arr i: 3280
-Arr i: 3364
-Arr i: 3395
-Arr i: 3384
-Arr i: 3332
-Arr i: 3468
-Arr i: 3484
-Arr i: 3452
-Arr i: 3324
-Arr i: 3268
-Arr i: 3380
-Arr i: 3328
-Arr i: 3316
-Arr i: 3368
-Arr i: 3400
-Arr i: 3300
-Arr i: 3348
-Arr i: 3324
-Arr i: 3411
-Arr i: 3336
-Arr i: 3344
-Arr i: 3352
-Arr i: 3368
-Arr i: 3324
-Arr i: 3308
-Arr i: 3272
-Arr i: 3332
-Arr i: 3321
-Arr i: 3300
-Arr i: 3380
-Arr i: 3220
-Arr i: 3320
-Arr i: 3311
-Arr i: 3268
-Arr i: 3272
-Arr i: 3344
-Arr i: 3296
-Arr i: 3240
-Arr i: 3324
-Arr i: 3256
-Arr i: 3216
-Arr i: 3360
-Arr i: 3260
-Arr i: 3230
-Arr i: 3212
-Arr i: 3276
-Arr i: 3188
-Arr i: 3228
-Arr i: 3420
-Arr i: 3500
-Arr i: 3444
-Arr i: 3444
-Arr i: 3424
-Arr i: 3392
-Arr i: 3480
-Arr i: 3374
-Arr i: 3448
-Arr i: 3452
-Arr i: 3460
-Arr i: 3424
-Arr i: 3431
-Arr i: 3416
-Arr i: 3416
-Arr i: 3360
-Arr i: 3300
-Arr i: 3388
-Arr i: 3419
-Arr i: 3388
-Arr i: 3368
-Arr i: 3480
-Arr i: 3488
-Arr i: 3460
-Arr i: 3336
-Arr i: 3268
-Arr i: 3392
-Arr i: 3352
-Arr i: 3324
-Arr i: 3388
-Arr i: 3420
-Arr i: 3316
-Arr i: 3352
-Arr i: 3336
-Arr i: 3415
-Arr i: 3344
-Arr i: 3352
-Arr i: 3368
-Arr i: 3384
-Arr i: 3340
-Arr i: 3328
-Arr i: 3292
-Arr i: 3360
-Arr i: 3341
-Arr i: 3324
-Arr i: 3392
-Arr i: 3232
-Arr i: 3348
-Arr i: 3323
-Arr i: 3276
-Arr i: 3280
-Arr i: 3368
-Arr i: 3320
-Arr i: 3256
-Arr i: 3340
-Arr i: 3264
-Arr i: 3236
-Arr i: 3368
-Arr i: 3272
-Arr i: 3254
-Arr i: 3236
-Arr i: 3284
-Arr i: 3216
-Arr i: 3236
-Arr i: 3428
-Arr i: 3520
-Arr i: 3472
-Arr i: 3468
-Arr i: 3440
-Arr i: 3416
-Arr i: 3492
-Arr i: 3390
-Arr i: 3460
-Arr i: 3476
-Arr i: 3472
-Arr i: 3432
-Arr i: 3435
-Arr i: 3432
-Arr i: 3432
-Arr i: 3364
-Arr i: 3328
-Arr i: 3396
-Arr i: 3427
-Arr i: 3400
-Arr i: 3384
-Arr i: 3504
-Arr i: 3528
-Arr i: 3488
-Arr i: 3360
-Arr i: 3276
-Arr i: 3400
-Arr i: 3364
-Arr i: 3328
-Arr i: 3420
-Arr i: 3444
-Arr i: 3344
-Arr i: 3376
-Arr i: 3356
-Arr i: 3427
-Arr i: 3360
-Arr i: 3356
-Arr i: 3380
-Arr i: 3408
-Arr i: 3344
-Arr i: 3356
-Arr i: 3324
-Arr i: 3376
-Arr i: 3349
-Arr i: 3348
-Arr i: 3408
-Arr i: 3268
-Arr i: 3364
-Arr i: 3335
-Arr i: 3292
-Arr i: 3280
-Arr i: 3372
-Arr i: 3336
-Arr i: 3268
-Arr i: 3348
-Arr i: 3272
-Arr i: 3244
-Arr i: 3380
-Arr i: 3292
-Arr i: 3262
-Arr i: 3256
-Arr i: 3292
-Arr i: 3228
-Arr i: 3252
-Arr i: 3436
-Arr i: 3540
-Arr i: 3476
-Arr i: 3496
-Arr i: 3452
-Arr i: 3420
-Arr i: 3524
-Arr i: 3406
-Arr i: 3472
-Arr i: 3500
-Arr i: 3496
-Arr i: 3452
-Arr i: 3459
-Arr i: 3448
-Arr i: 3444
-Arr i: 3380
-Arr i: 3360
-Arr i: 3408
-Arr i: 3455
-Arr i: 3408
-Arr i: 3404
-Arr i: 3528
-Arr i: 3540
-Arr i: 3492
-Arr i: 3372
-Arr i: 3284
-Arr i: 3404
-Arr i: 3380
-Arr i: 3352
-Arr i: 3436
-Arr i: 3460
-Arr i: 3352
-Arr i: 3392
-Arr i: 3364
-Arr i: 3439
-Arr i: 3376
-Arr i: 3380
-Arr i: 3392
-Arr i: 3444
-Arr i: 3376
-Arr i: 3376
-Arr i: 3340
-Arr i: 3388
-Arr i: 3361
-Arr i: 3364
-Arr i: 3424
-Arr i: 3272
-Arr i: 3384
-Arr i: 3359
-Arr i: 3312
-Arr i: 3292
-Arr i: 3376
-Arr i: 3340
-Arr i: 3284
-Arr i: 3364
-Arr i: 3276
-Arr i: 3260
-Arr i: 3396
-Arr i: 3296
-Arr i: 3286
-Arr i: 3264
-Arr i: 3296
-Arr i: 3272
-Arr i: 3268
-Arr i: 3436
-Arr i: 3552
-Arr i: 3484
-Arr i: 3500
-Arr i: 3468
-Arr i: 3436
-Arr i: 3540
-Arr i: 3418
-Arr i: 3496
-Arr i: 3512
-Arr i: 3516
-Arr i: 3480
-Arr i: 3487
-Arr i: 3468
-Arr i: 3452
-Arr i: 3396
-Arr i: 3380
-Arr i: 3444
-Arr i: 3471
-Arr i: 3428
-Arr i: 3420
-Arr i: 3552
-Arr i: 3548
-Arr i: 3508
-Arr i: 3396
-Arr i: 3312
-Arr i: 3408
-Arr i: 3400
-Arr i: 3368
-Arr i: 3444
-Arr i: 3464
-Arr i: 3364
-Arr i: 3404
-Arr i: 3364
-Arr i: 3439
-Arr i: 3380
-Arr i: 3392
-Arr i: 3408
-Arr i: 3448
-Arr i: 3388
-Arr i: 3392
-Arr i: 3364
-Arr i: 3400
-Arr i: 3373
-Arr i: 3380
-Arr i: 3440
-Arr i: 3280
-Arr i: 3396
-Arr i: 3375
-Arr i: 3316
-Arr i: 3316
-Arr i: 3396
-Arr i: 3356
-Arr i: 3292
-Arr i: 3372
-Arr i: 3296
-Arr i: 3276
-Arr i: 3408
-Arr i: 3320
-Arr i: 3302
-Arr i: 3284
-Arr i: 3312
-Arr i: 3284
-Arr i: 3284
-Arr i: 3444
-Arr i: 3580
-Arr i: 3508
-Arr i: 3512
-Arr i: 3480
-Arr i: 3472
-Arr i: 3556
-Arr i: 3438
-Arr i: 3504
-Arr i: 3512
-Arr i: 3520
-Arr i: 3488
-Arr i: 3511
-Arr i: 3472
-Arr i: 3468
-Arr i: 3404
-Arr i: 3412
-Arr i: 3468
-Arr i: 3479
-Arr i: 3460
-Arr i: 3424
-Arr i: 3564
-Arr i: 3560
-Arr i: 3520
-Arr i: 3420
-Arr i: 3324
-Arr i: 3420
-Arr i: 3420
-Arr i: 3384
-Arr i: 3460
-Arr i: 3488
-Arr i: 3388
-Arr i: 3432
-Arr i: 3388
-Arr i: 3447
-Arr i: 3388
-Arr i: 3412
-Arr i: 3420
-Arr i: 3464
-Arr i: 3392
-Arr i: 3420
-Arr i: 3376
-Arr i: 3412
-Arr i: 3385
-Arr i: 3404
-Arr i: 3444
-Arr i: 3296
-Arr i: 3404
-Arr i: 3407
-Arr i: 3340
-Arr i: 3324
-Arr i: 3404
-Arr i: 3380
-Arr i: 3308
-Arr i: 3384
-Arr i: 3316
-Arr i: 3296
-Arr i: 3424
-Arr i: 3332
-Arr i: 3314
-Arr i: 3308
-Arr i: 3320
-Arr i: 3312
-Arr i: 3292
-Arr i: 3472
-Arr i: 3588
-Arr i: 3524
-Arr i: 3536
-Arr i: 3488
-Arr i: 3476
-Arr i: 3580
-Arr i: 3462
-Arr i: 3520
-Arr i: 3532
-Arr i: 3544
-Arr i: 3496
-Arr i: 3527
-Arr i: 3492
-Arr i: 3480
-Arr i: 3420
-Arr i: 3436
-Arr i: 3492
-Arr i: 3495
-Arr i: 3476
-Arr i: 3444
-Arr i: 3576
-Arr i: 3580
-Arr i: 3536
-Arr i: 3440
-Arr i: 3344
-Arr i: 3444
-Arr i: 3440
-Arr i: 3408
-Arr i: 3476
-Arr i: 3508
-Arr i: 3400
-Arr i: 3432
-Arr i: 3396
-Arr i: 3471
-Arr i: 3400
-Arr i: 3424
-Arr i: 3428
-Arr i: 3472
-Arr i: 3400
-Arr i: 3432
-Arr i: 3380
-Arr i: 3420
-Arr i: 3409
-Arr i: 3424
-Arr i: 3444
-Arr i: 3316
-Arr i: 3404
-Arr i: 3423
-Arr i: 3364
-Arr i: 3344
-Arr i: 3424
-Arr i: 3388
-Arr i: 3328
-Arr i: 3396
-Arr i: 3336
-Arr i: 3312
-Arr i: 3448
-Arr i: 3336
-Arr i: 3338
-Arr i: 3320
-Arr i: 3332
-Arr i: 3324
-Arr i: 3304
-Arr i: 3496
-Arr i: 3600
-Arr i: 3536
-Arr i: 3560
-Arr i: 3504
-Arr i: 3500
-Arr i: 3588
-Arr i: 3470
-Arr i: 3532
-Arr i: 3540
-Arr i: 3552
-Arr i: 3496
-Arr i: 3547
-Arr i: 3520
-Arr i: 3496
-Arr i: 3452
-Arr i: 3448
-Arr i: 3512
-Arr i: 3511
-Arr i: 3496
-Arr i: 3464
-Arr i: 3580
-Arr i: 3612
-Arr i: 3548
-Arr i: 3448
-Arr i: 3356
-Arr i: 3456
-Arr i: 3452
-Arr i: 3428
-Arr i: 3484
-Arr i: 3516
-Arr i: 3420
-Arr i: 3452
-Arr i: 3428
-Arr i: 3495
-Arr i: 3404
-Arr i: 3432
-Arr i: 3444
-Arr i: 3488
-Arr i: 3412
-Arr i: 3440
-Arr i: 3388
-Arr i: 3428
-Arr i: 3417
-Arr i: 3440
-Arr i: 3452
-Arr i: 3340
-Arr i: 3436
-Arr i: 3427
-Arr i: 3404
-Arr i: 3364
-Arr i: 3436
-Arr i: 3404
-Arr i: 3328
-Arr i: 3412
-Arr i: 3356
-Arr i: 3332
-Arr i: 3460
-Arr i: 3344
-Arr i: 3342
-Arr i: 3320
-Arr i: 3344
-Arr i: 3344
-Arr i: 3316
-Arr i: 3508
-Arr i: 3612
-Arr i: 3568
-Arr i: 3580
-Arr i: 3520
-Arr i: 3504
-Arr i: 3600
-Arr i: 3482
-Arr i: 3544
-Arr i: 3568
-Arr i: 3568
-Arr i: 3524
-Arr i: 3555
-Arr i: 3540
-Arr i: 3520
-Arr i: 3472
-Arr i: 3464
-Arr i: 3520
-Arr i: 3535
-Arr i: 3504
-Arr i: 3480
-Arr i: 3604
-Arr i: 3624
-Arr i: 3560
-Arr i: 3464
-Arr i: 3368
-Arr i: 3472
-Arr i: 3456
-Arr i: 3440
-Arr i: 3492
-Arr i: 3532
-Arr i: 3432
-Arr i: 3464
-Arr i: 3472
-Arr i: 3503
-Arr i: 3428
-Arr i: 3456
-Arr i: 3464
-Arr i: 3496
-Arr i: 3432
-Arr i: 3452
-Arr i: 3412
-Arr i: 3436
-Arr i: 3437
-Arr i: 3460
-Arr i: 3464
-Arr i: 3360
-Arr i: 3452
-Arr i: 3443
-Arr i: 3424
-Arr i: 3388
-Arr i: 3448
-Arr i: 3416
-Arr i: 3352
-Arr i: 3436
-Arr i: 3372
-Arr i: 3340
-Arr i: 3480
-Arr i: 3364
-Arr i: 3362
-Arr i: 3348
-Arr i: 3364
-Arr i: 3360
-Arr i: 3324
-Arr i: 3516
-Arr i: 3624
-Arr i: 3588
-Arr i: 3592
-Arr i: 3548
-Arr i: 3524
-Arr i: 3616
-Arr i: 3502
-Arr i: 3552
-Arr i: 3572
-Arr i: 3584
-Arr i: 3532
-Arr i: 3559
-Arr i: 3556
-Arr i: 3552
-Arr i: 3492
-Arr i: 3488
-Arr i: 3528
-Arr i: 3555
-Arr i: 3516
-Arr i: 3512
-Arr i: 3620
-Arr i: 3640
-Arr i: 3580
-Arr i: 3476
-Arr i: 3376
-Arr i: 3488
-Arr i: 3468
-Arr i: 3464
-Arr i: 3524
-Arr i: 3540
-Arr i: 3452
-Arr i: 3480
-Arr i: 3492
-Arr i: 3535
-Arr i: 3436
-Arr i: 3464
-Arr i: 3488
-Arr i: 3508
-Arr i: 3492
-Arr i: 3464
-Arr i: 3444
-Arr i: 3448
-Arr i: 3445
-Arr i: 3480
-Arr i: 3488
-Arr i: 3384
-Arr i: 3468
-Arr i: 3459
-Arr i: 3444
-Arr i: 3420
-Arr i: 3464
-Arr i: 3440
-Arr i: 3364
-Arr i: 3444
-Arr i: 3392
-Arr i: 3352
-Arr i: 3488
-Arr i: 3384
-Arr i: 3370
-Arr i: 3364
-Arr i: 3376
-Arr i: 3368
-Arr i: 3340
-Arr i: 3544
-Arr i: 3644
-Arr i: 3612
-Arr i: 3600
-Arr i: 3564
-Arr i: 3536
-Arr i: 3660
-Arr i: 3510
-Arr i: 3568
-Arr i: 3588
-Arr i: 3600
-Arr i: 3548
-Arr i: 3575
-Arr i: 3572
-Arr i: 3580
-Arr i: 3512
-Arr i: 3524
-Arr i: 3548
-Arr i: 3571
-Arr i: 3536
-Arr i: 3536
-Arr i: 3628
-Arr i: 3648
-Arr i: 3600
-Arr i: 3484
-Arr i: 3380
-Arr i: 3504
-Arr i: 3496
-Arr i: 3484
-Arr i: 3528
-Arr i: 3560
-Arr i: 3476
-Arr i: 3496
-Arr i: 3504
-Arr i: 3547
-Arr i: 3444
-Arr i: 3484
-Arr i: 3488
-Arr i: 3512
-Arr i: 3500
-Arr i: 3492
-Arr i: 3456
-Arr i: 3456
-Arr i: 3461
-Arr i: 3512
-Arr i: 3488
-Arr i: 3392
-Arr i: 3492
-Arr i: 3467
-Arr i: 3460
-Arr i: 3436
-Arr i: 3492
-Arr i: 3452
-Arr i: 3400
-Arr i: 3468
-Arr i: 3408
-Arr i: 3372
-Arr i: 3512
-Arr i: 3396
-Arr i: 3390
-Arr i: 3384
-Arr i: 3380
-Arr i: 3392
-Arr i: 3352
-Arr i: 3568
-Arr i: 3660
-Arr i: 3624
-Arr i: 3616
-Arr i: 3572
-Arr i: 3564
-Arr i: 3672
-Arr i: 3530
-Arr i: 3600
-Arr i: 3596
-Arr i: 3616
-Arr i: 3576
-Arr i: 3595
-Arr i: 3592
-Arr i: 3596
-Arr i: 3556
-Arr i: 3540
-Arr i: 3560
-Arr i: 3587
-Arr i: 3564
-Arr i: 3556
-Arr i: 3640
-Arr i: 3656
-Arr i: 3612
-Arr i: 3504
-Arr i: 3392
-Arr i: 3528
-Arr i: 3504
-Arr i: 3496
-Arr i: 3540
-Arr i: 3576
-Arr i: 3500
-Arr i: 3512
-Arr i: 3524
-Arr i: 3559
-Arr i: 3476
-Arr i: 3504
-Arr i: 3500
-Arr i: 3528
-Arr i: 3504
-Arr i: 3504
-Arr i: 3476
-Arr i: 3480
-Arr i: 3477
-Arr i: 3524
-Arr i: 3492
-Arr i: 3404
-Arr i: 3524
-Arr i: 3479
-Arr i: 3488
-Arr i: 3448
-Arr i: 3496
-Arr i: 3476
-Arr i: 3412
-Arr i: 3496
-Arr i: 3424
-Arr i: 3384
-Arr i: 3524
-Arr i: 3404
-Arr i: 3418
-Arr i: 3400
-Arr i: 3396
-Arr i: 3408
-Arr i: 3372
-Arr i: 3580
-Arr i: 3668
-Arr i: 3648
-Arr i: 3632
-Arr i: 3592
-Arr i: 3592
-Arr i: 3680
-Arr i: 3534
-Arr i: 3600
-Arr i: 3608
-Arr i: 3632
-Arr i: 3596
-Arr i: 3603
-Arr i: 3632
-Arr i: 3624
-Arr i: 3572
-Arr i: 3564
-Arr i: 3560
-Arr i: 3595
-Arr i: 3580
-Arr i: 3568
-Arr i: 3652
-Arr i: 3672
-Arr i: 3628
-Arr i: 3532
-Arr i: 3408
-Arr i: 3536
-Arr i: 3524
-Arr i: 3512
-Arr i: 3564
-Arr i: 3588
-Arr i: 3532
-Arr i: 3528
-Arr i: 3536
-Arr i: 3575
-Arr i: 3492
-Arr i: 3508
-Arr i: 3512
-Arr i: 3532
-Arr i: 3532
-Arr i: 3524
-Arr i: 3480
-Arr i: 3500
-Arr i: 3489
-Arr i: 3548
-Arr i: 3520
-Arr i: 3420
-Arr i: 3544
-Arr i: 3495
-Arr i: 3504
-Arr i: 3456
-Arr i: 3500
-Arr i: 3508
-Arr i: 3428
-Arr i: 3512
-Arr i: 3436
-Arr i: 3404
-Arr i: 3540
-Arr i: 3424
-Arr i: 3442
-Arr i: 3416
-Arr i: 3400
-Arr i: 3440
-Arr i: 3408
-Arr i: 3612
-Arr i: 3688
-Arr i: 3668
-Arr i: 3644
-Arr i: 3612
-Arr i: 3612
-Arr i: 3700
-Arr i: 3538
-Arr i: 3608
-Arr i: 3616
-Arr i: 3652
-Arr i: 3604
-Arr i: 3619
-Arr i: 3644
-Arr i: 3636
-Arr i: 3584
-Arr i: 3584
-Arr i: 3580
-Arr i: 3595
-Arr i: 3584
-Arr i: 3608
-Arr i: 3664
-Arr i: 3680
-Arr i: 3644
-Arr i: 3556
-Arr i: 3416
-Arr i: 3544
-Arr i: 3556
-Arr i: 3524
-Arr i: 3588
-Arr i: 3596
-Arr i: 3536
-Arr i: 3536
-Arr i: 3564
-Arr i: 3599
-Arr i: 3512
-Arr i: 3536
-Arr i: 3520
-Arr i: 3548
-Arr i: 3536
-Arr i: 3540
-Arr i: 3492
-Arr i: 3520
-Arr i: 3497
-Arr i: 3560
-Arr i: 3544
-Arr i: 3444
-Arr i: 3564
-Arr i: 3515
-Arr i: 3528
-Arr i: 3476
-Arr i: 3504
-Arr i: 3524
-Arr i: 3448
-Arr i: 3532
-Arr i: 3448
-Arr i: 3428
-Arr i: 3564
-Arr i: 3436
-Arr i: 3466
-Arr i: 3424
-Arr i: 3416
-Arr i: 3452
-Arr i: 3424
-Arr i: 3624
-Arr i: 3712
-Arr i: 3676
-Arr i: 3652
-Arr i: 3628
-Arr i: 3620
-Arr i: 3708
-Arr i: 3558
-Arr i: 3624
-Arr i: 3636
-Arr i: 3656
-Arr i: 3612
-Arr i: 3647
-Arr i: 3676
-Arr i: 3644
-Arr i: 3600
-Arr i: 3584
-Arr i: 3600
-Arr i: 3627
-Arr i: 3596
-Arr i: 3616
-Arr i: 3680
-Arr i: 3692
-Arr i: 3660
-Arr i: 3572
-Arr i: 3444
-Arr i: 3552
-Arr i: 3592
-Arr i: 3536
-Arr i: 3600
-Arr i: 3616
-Arr i: 3556
-Arr i: 3552
-Arr i: 3576
-Arr i: 3619
-Arr i: 3516
-Arr i: 3572
-Arr i: 3524
-Arr i: 3564
-Arr i: 3540
-Arr i: 3560
-Arr i: 3504
-Arr i: 3520
-Arr i: 3521
-Arr i: 3568
-Arr i: 3564
-Arr i: 3464
-Arr i: 3580
-Arr i: 3543
-Arr i: 3556
-Arr i: 3484
-Arr i: 3516
-Arr i: 3528
-Arr i: 3464
-Arr i: 3540
-Arr i: 3476
-Arr i: 3440
-Arr i: 3588
-Arr i: 3444
-Arr i: 3486
-Arr i: 3440
-Arr i: 3428
-Arr i: 3476
-Arr i: 3432
-Arr i: 3632
-Arr i: 3720
-Arr i: 3688
-Arr i: 3656
-Arr i: 3648
-Arr i: 3648
-Arr i: 3752
-Arr i: 3582
-Arr i: 3636
-Arr i: 3660
-Arr i: 3672
-Arr i: 3624
-Arr i: 3667
-Arr i: 3684
-Arr i: 3644
-Arr i: 3616
-Arr i: 3600
-Arr i: 3620
-Arr i: 3647
-Arr i: 3616
-Arr i: 3640
-Arr i: 3708
-Arr i: 3700
-Arr i: 3676
-Arr i: 3584
-Arr i: 3448
-Arr i: 3568
-Arr i: 3604
-Arr i: 3548
-Arr i: 3604
-Arr i: 3628
-Arr i: 3576
-Arr i: 3572
-Arr i: 3600
-Arr i: 3627
-Arr i: 3524
-Arr i: 3576
-Arr i: 3532
-Arr i: 3580
-Arr i: 3556
-Arr i: 3592
-Arr i: 3524
-Arr i: 3536
-Arr i: 3549
-Arr i: 3576
-Arr i: 3584
-Arr i: 3472
-Arr i: 3604
-Arr i: 3555
-Arr i: 3564
-Arr i: 3504
-Arr i: 3536
-Arr i: 3536
-Arr i: 3476
-Arr i: 3572
-Arr i: 3492
-Arr i: 3448
-Arr i: 3592
-Arr i: 3468
-Arr i: 3498
-Arr i: 3456
-Arr i: 3436
-Arr i: 3512
-Arr i: 3448
-Arr i: 3652
-Arr i: 3736
-Arr i: 3696
-Arr i: 3676
-Arr i: 3664
-Arr i: 3660
-Arr i: 3764
-Arr i: 3610
-Arr i: 3648
-Arr i: 3680
-Arr i: 3688
-Arr i: 3628
-Arr i: 3699
-Arr i: 3712
-Arr i: 3664
-Arr i: 3636
-Arr i: 3616
-Arr i: 3628
-Arr i: 3663
-Arr i: 3636
-Arr i: 3656
-Arr i: 3716
-Arr i: 3708
-Arr i: 3700
-Arr i: 3612
-Arr i: 3484
-Arr i: 3584
-Arr i: 3620
-Arr i: 3568
-Arr i: 3620
-Arr i: 3640
-Arr i: 3592
-Arr i: 3584
-Arr i: 3616
-Arr i: 3631
-Arr i: 3536
-Arr i: 3592
-Arr i: 3560
-Arr i: 3600
-Arr i: 3572
-Arr i: 3620
-Arr i: 3552
-Arr i: 3552
-Arr i: 3565
-Arr i: 3588
-Arr i: 3616
-Arr i: 3492
-Arr i: 3620
-Arr i: 3563
-Arr i: 3572
-Arr i: 3536
-Arr i: 3544
-Arr i: 3552
-Arr i: 3488
-Arr i: 3580
-Arr i: 3504
-Arr i: 3472
-Arr i: 3604
-Arr i: 3484
-Arr i: 3510
-Arr i: 3472
-Arr i: 3460
-Arr i: 3536
-Arr i: 3448
-Arr i: 3684
-Arr i: 3744
-Arr i: 3704
-Arr i: 3692
-Arr i: 3692
-Arr i: 3684
-Arr i: 3772
-Arr i: 3646
-Arr i: 3660
-Arr i: 3700
-Arr i: 3696
-Arr i: 3644
-Arr i: 3707
-Arr i: 3724
-Arr i: 3668
-Arr i: 3652
-Arr i: 3636
-Arr i: 3652
-Arr i: 3675
-Arr i: 3656
-Arr i: 3668
-Arr i: 3724
-Arr i: 3716
-Arr i: 3728
-Arr i: 3624
-Arr i: 3500
-Arr i: 3600
-Arr i: 3636
-Arr i: 3584
-Arr i: 3640
-Arr i: 3664
-Arr i: 3604
-Arr i: 3616
-Arr i: 3632
-Arr i: 3647
-Arr i: 3552
-Arr i: 3596
-Arr i: 3584
-Arr i: 3624
-Arr i: 3596
-Arr i: 3640
-Arr i: 3576
-Arr i: 3572
-Arr i: 3589
-Arr i: 3608
-Arr i: 3640
-Arr i: 3512
-Arr i: 3640
-Arr i: 3567
-Arr i: 3584
-Arr i: 3556
-Arr i: 3564
-Arr i: 3568
-Arr i: 3504
-Arr i: 3600
-Arr i: 3516
-Arr i: 3480
-Arr i: 3632
-Arr i: 3500
-Arr i: 3530
-Arr i: 3500
-Arr i: 3476
-Arr i: 3548
-Arr i: 3464
-Arr i: 3684
-Arr i: 3764
-Arr i: 3728
-Arr i: 3716
-Arr i: 3716
-Arr i: 3704
-Arr i: 3792
-Arr i: 3662
-Arr i: 3676
-Arr i: 3732
-Arr i: 3720
-Arr i: 3668
-Arr i: 3735
-Arr i: 3744
-Arr i: 3684
-Arr i: 3688
-Arr i: 3640
-Arr i: 3668
-Arr i: 3687
-Arr i: 3676
-Arr i: 3688
-Arr i: 3740
-Arr i: 3724
-Arr i: 3752
-Arr i: 3636
-Arr i: 3512
-Arr i: 3628
-Arr i: 3648
-Arr i: 3612
-Arr i: 3656
-Arr i: 3668
-Arr i: 3624
-Arr i: 3624
-Arr i: 3640
-Arr i: 3671
-Arr i: 3580
-Arr i: 3604
-Arr i: 3596
-Arr i: 3636
-Arr i: 3596
-Arr i: 3648
-Arr i: 3592
-Arr i: 3580
-Arr i: 3609
-Arr i: 3624
-Arr i: 3652
-Arr i: 3516
-Arr i: 3652
-Arr i: 3579
-Arr i: 3600
-Arr i: 3564
-Arr i: 3584
-Arr i: 3592
-Arr i: 3520
-Arr i: 3612
-Arr i: 3532
-Arr i: 3504
-Arr i: 3656
-Arr i: 3516
-Arr i: 3554
-Arr i: 3524
-Arr i: 3492
-Arr i: 3564
-Arr i: 3476
-Arr i: 3688
-Arr i: 3768
-Arr i: 3752
-Arr i: 3728
-Arr i: 3736
-Arr i: 3744
-Arr i: 3804
-Arr i: 3674
-Arr i: 3688
-Arr i: 3740
-Arr i: 3740
-Arr i: 3672
-Arr i: 3759
-Arr i: 3748
-Arr i: 3696
-Arr i: 3704
-Arr i: 3656
-Arr i: 3692
-Arr i: 3695
-Arr i: 3680
-Arr i: 3700
-Arr i: 3756
-Arr i: 3736
-Arr i: 3756
-Arr i: 3652
-Arr i: 3520
-Arr i: 3652
-Arr i: 3660
-Arr i: 3636
-Arr i: 3668
-Arr i: 3684
-Arr i: 3640
-Arr i: 3628
-Arr i: 3656
-Arr i: 3687
-Arr i: 3588
-Arr i: 3616
-Arr i: 3612
-Arr i: 3664
-Arr i: 3616
-Arr i: 3660
-Arr i: 3604
-Arr i: 3612
-Arr i: 3625
-Arr i: 3652
-Arr i: 3668
-Arr i: 3536
-Arr i: 3676
-Arr i: 3587
-Arr i: 3608
-Arr i: 3592
-Arr i: 3600
-Arr i: 3604
-Arr i: 3544
-Arr i: 3632
-Arr i: 3560
-Arr i: 3516
-Arr i: 3668
-Arr i: 3536
-Arr i: 3566
-Arr i: 3544
-Arr i: 3508
-Arr i: 3572
-Arr i: 3500
-Arr i: 3696
-Arr i: 3772
-Arr i: 3776
-Arr i: 3740
-Arr i: 3752
-Arr i: 3756
-Arr i: 3816
-Arr i: 3694
-Arr i: 3696
-Arr i: 3752
-Arr i: 3752
-Arr i: 3692
-Arr i: 3779
-Arr i: 3756
-Arr i: 3708
-Arr i: 3712
-Arr i: 3672
-Arr i: 3704
-Arr i: 3715
-Arr i: 3684
-Arr i: 3728
-Arr i: 3768
-Arr i: 3752
-Arr i: 3768
-Arr i: 3692
-Arr i: 3540
-Arr i: 3676
-Arr i: 3676
-Arr i: 3648
-Arr i: 3684
-Arr i: 3684
-Arr i: 3652
-Arr i: 3644
-Arr i: 3672
-Arr i: 3699
-Arr i: 3596
-Arr i: 3640
-Arr i: 3628
-Arr i: 3676
-Arr i: 3632
-Arr i: 3672
-Arr i: 3636
-Arr i: 3636
-Arr i: 3645
-Arr i: 3660
-Arr i: 3684
-Arr i: 3556
-Arr i: 3684
-Arr i: 3595
-Arr i: 3628
-Arr i: 3600
-Arr i: 3612
-Arr i: 3624
-Arr i: 3560
-Arr i: 3640
-Arr i: 3572
-Arr i: 3532
-Arr i: 3680
-Arr i: 3556
-Arr i: 3594
-Arr i: 3572
-Arr i: 3516
-Arr i: 3592
-Arr i: 3508
-Arr i: 3720
-Arr i: 3780
-Arr i: 3776
-Arr i: 3780
-Arr i: 3760
-Arr i: 3764
-Arr i: 3820
-Arr i: 3714
-Arr i: 3732
-Arr i: 3764
-Arr i: 3772
-Arr i: 3704
-Arr i: 3783
-Arr i: 3776
-Arr i: 3740
-Arr i: 3728
-Arr i: 3696
-Arr i: 3724
-Arr i: 3715
-Arr i: 3712
-Arr i: 3752
-Arr i: 3776
-Arr i: 3764
-Arr i: 3780
-Arr i: 3696
-Arr i: 3568
-Arr i: 3696
-Arr i: 3692
-Arr i: 3660
-Arr i: 3684
-Arr i: 3700
-Arr i: 3660
-Arr i: 3664
-Arr i: 3688
-Arr i: 3707
-Arr i: 3628
-Arr i: 3648
-Arr i: 3636
-Arr i: 3692
-Arr i: 3648
-Arr i: 3692
-Arr i: 3640
-Arr i: 3652
-Arr i: 3653
-Arr i: 3668
-Arr i: 3696
-Arr i: 3564
-Arr i: 3688
-Arr i: 3607
-Arr i: 3640
-Arr i: 3620
-Arr i: 3616
-Arr i: 3636
-Arr i: 3576
-Arr i: 3648
-Arr i: 3596
-Arr i: 3552
-Arr i: 3696
-Arr i: 3564
-Arr i: 3614
-Arr i: 3588
-Arr i: 3536
-Arr i: 3604
-Arr i: 3528
-Arr i: 3740
-Arr i: 3800
-Arr i: 3792
-Arr i: 3788
-Arr i: 3768
-Arr i: 3780
-Arr i: 3836
-Arr i: 3734
-Arr i: 3748
-Arr i: 3776
-Arr i: 3780
-Arr i: 3728
-Arr i: 3795
-Arr i: 3784
-Arr i: 3764
-Arr i: 3748
-Arr i: 3700
-Arr i: 3744
-Arr i: 3731
-Arr i: 3724
-Arr i: 3752
-Arr i: 3792
-Arr i: 3776
-Arr i: 3784
-Arr i: 3700
-Arr i: 3596
-Arr i: 3712
-Arr i: 3708
-Arr i: 3684
-Arr i: 3696
-Arr i: 3708
-Arr i: 3692
-Arr i: 3672
-Arr i: 3704
-Arr i: 3727
-Arr i: 3640
-Arr i: 3656
-Arr i: 3648
-Arr i: 3704
-Arr i: 3668
-Arr i: 3704
-Arr i: 3668
-Arr i: 3664
-Arr i: 3661
-Arr i: 3688
-Arr i: 3704
-Arr i: 3584
-Arr i: 3704
-Arr i: 3631
-Arr i: 3652
-Arr i: 3632
-Arr i: 3628
-Arr i: 3652
-Arr i: 3592
-Arr i: 3656
-Arr i: 3612
-Arr i: 3576
-Arr i: 3712
-Arr i: 3584
-Arr i: 3646
-Arr i: 3600
-Arr i: 3568
-Arr i: 3624
-Arr i: 3540
-Arr i: 3756
-Arr i: 3804
-Arr i: 3812
-Arr i: 3804
-Arr i: 3780
-Arr i: 3800
-Arr i: 3844
-Arr i: 3758
-Arr i: 3768
-Arr i: 3796
-Arr i: 3796
-Arr i: 3744
-Arr i: 3807
-Arr i: 3796
-Arr i: 3792
-Arr i: 3756
-Arr i: 3712
-Arr i: 3760
-Arr i: 3751
-Arr i: 3740
-Arr i: 3756
-Arr i: 3808
-Arr i: 3788
-Arr i: 3800
-Arr i: 3720
-Arr i: 3620
-Arr i: 3720
-Arr i: 3712
-Arr i: 3708
-Arr i: 3716
-Arr i: 3716
-Arr i: 3716
-Arr i: 3676
-Arr i: 3724
-Arr i: 3739
-Arr i: 3652
-Arr i: 3684
-Arr i: 3680
-Arr i: 3708
-Arr i: 3680
-Arr i: 3708
-Arr i: 3692
-Arr i: 3688
-Arr i: 3665
-Arr i: 3700
-Arr i: 3704
-Arr i: 3604
-Arr i: 3712
-Arr i: 3643
-Arr i: 3680
-Arr i: 3652
-Arr i: 3636
-Arr i: 3656
-Arr i: 3612
-Arr i: 3668
-Arr i: 3624
-Arr i: 3584
-Arr i: 3732
-Arr i: 3608
-Arr i: 3650
-Arr i: 3620
-Arr i: 3576
-Arr i: 3644
-Arr i: 3548
-Arr i: 3772
-Arr i: 3804
-Arr i: 3828
-Arr i: 3828
-Arr i: 3792
-Arr i: 3824
-Arr i: 3864
-Arr i: 3770
-Arr i: 3776
-Arr i: 3820
-Arr i: 3820
-Arr i: 3776
-Arr i: 3823
-Arr i: 3812
-Arr i: 3800
-Arr i: 3764
-Arr i: 3736
-Arr i: 3784
-Arr i: 3775
-Arr i: 3752
-Arr i: 3768
-Arr i: 3828
-Arr i: 3804
-Arr i: 3816
-Arr i: 3732
-Arr i: 3644
-Arr i: 3728
-Arr i: 3732
-Arr i: 3732
-Arr i: 3724
-Arr i: 3740
-Arr i: 3756
-Arr i: 3692
-Arr i: 3740
-Arr i: 3759
-Arr i: 3668
-Arr i: 3696
-Arr i: 3684
-Arr i: 3740
-Arr i: 3688
-Arr i: 3732
-Arr i: 3716
-Arr i: 3708
-Arr i: 3665
-Arr i: 3716
-Arr i: 3712
-Arr i: 3624
-Arr i: 3712
-Arr i: 3659
-Arr i: 3696
-Arr i: 3668
-Arr i: 3664
-Arr i: 3676
-Arr i: 3628
-Arr i: 3688
-Arr i: 3640
-Arr i: 3604
-Arr i: 3756
-Arr i: 3640
-Arr i: 3678
-Arr i: 3632
-Arr i: 3596
-Arr i: 3660
-Arr i: 3572
-Arr i: 3780
-Arr i: 3824
-Arr i: 3832
-Arr i: 3848
-Arr i: 3800
-Arr i: 3856
-Arr i: 3884
-Arr i: 3786
-Arr i: 3812
-Arr i: 3840
-Arr i: 3824
-Arr i: 3780
-Arr i: 3827
-Arr i: 3820
-Arr i: 3812
-Arr i: 3788
-Arr i: 3752
-Arr i: 3804
-Arr i: 3783
-Arr i: 3772
-Arr i: 3804
-Arr i: 3836
-Arr i: 3812
-Arr i: 3832
-Arr i: 3740
-Arr i: 3668
-Arr i: 3744
-Arr i: 3748
-Arr i: 3740
-Arr i: 3736
-Arr i: 3748
-Arr i: 3760
-Arr i: 3708
-Arr i: 3784
-Arr i: 3771
-Arr i: 3688
-Arr i: 3716
-Arr i: 3696
-Arr i: 3752
-Arr i: 3696
-Arr i: 3744
-Arr i: 3736
-Arr i: 3716
-Arr i: 3693
-Arr i: 3724
-Arr i: 3732
-Arr i: 3672
-Arr i: 3724
-Arr i: 3679
-Arr i: 3704
-Arr i: 3672
-Arr i: 3680
-Arr i: 3688
-Arr i: 3644
-Arr i: 3696
-Arr i: 3664
-Arr i: 3612
-Arr i: 3760
-Arr i: 3648
-Arr i: 3690
-Arr i: 3656
-Arr i: 3620
-Arr i: 3688
-Arr i: 3588
-Arr i: 3792
-Arr i: 3844
-Arr i: 3852
-Arr i: 3868
-Arr i: 3816
-Arr i: 3864
-Arr i: 3900
-Arr i: 3794
-Arr i: 3824
-Arr i: 3844
-Arr i: 3840
-Arr i: 3796
-Arr i: 3843
-Arr i: 3832
-Arr i: 3816
-Arr i: 3808
-Arr i: 3772
-Arr i: 3840
-Arr i: 3799
-Arr i: 3780
-Arr i: 3820
-Arr i: 3848
-Arr i: 3840
-Arr i: 3848
-Arr i: 3756
-Arr i: 3680
-Arr i: 3756
-Arr i: 3764
-Arr i: 3756
-Arr i: 3752
-Arr i: 3760
-Arr i: 3772
-Arr i: 3724
-Arr i: 3804
-Arr i: 3779
-Arr i: 3708
-Arr i: 3736
-Arr i: 3712
-Arr i: 3772
-Arr i: 3716
-Arr i: 3752
-Arr i: 3760
-Arr i: 3724
-Arr i: 3717
-Arr i: 3732
-Arr i: 3744
-Arr i: 3692
-Arr i: 3748
-Arr i: 3691
-Arr i: 3724
-Arr i: 3680
-Arr i: 3692
-Arr i: 3700
-Arr i: 3652
-Arr i: 3708
-Arr i: 3684
-Arr i: 3640
-Arr i: 3768
-Arr i: 3668
-Arr i: 3714
-Arr i: 3660
-Arr i: 3628
-Arr i: 3696
-Arr i: 3596
-Arr i: 3820
-Arr i: 3864
-Arr i: 3872
-Arr i: 3868
-Arr i: 3832
-Arr i: 3884
-Arr i: 3904
-Arr i: 3806
-Arr i: 3832
-Arr i: 3856
-Arr i: 3864
-Arr i: 3812
-Arr i: 3847
-Arr i: 3852
-Arr i: 3832
-Arr i: 3824
-Arr i: 3788
-Arr i: 3844
-Arr i: 3807
-Arr i: 3788
-Arr i: 3832
-Arr i: 3868
-Arr i: 3852
-Arr i: 3864
-Arr i: 3776
-Arr i: 3712
-Arr i: 3780
-Arr i: 3776
-Arr i: 3776
-Arr i: 3764
-Arr i: 3772
-Arr i: 3776
-Arr i: 3736
-Arr i: 3816
-Arr i: 3803
-Arr i: 3720
-Arr i: 3752
-Arr i: 3732
-Arr i: 3784
-Arr i: 3748
-Arr i: 3768
-Arr i: 3784
-Arr i: 3736
-Arr i: 3737
-Arr i: 3744
-Arr i: 3752
-Arr i: 3720
-Arr i: 3776
-Arr i: 3707
-Arr i: 3732
-Arr i: 3696
-Arr i: 3704
-Arr i: 3708
-Arr i: 3668
-Arr i: 3728
-Arr i: 3704
-Arr i: 3656
-Arr i: 3772
-Arr i: 3676
-Arr i: 3730
-Arr i: 3672
-Arr i: 3636
-Arr i: 3716
-Arr i: 3600
-Arr i: 3840
-Arr i: 3872
-Arr i: 3896
-Arr i: 3880
-Arr i: 3844
-Arr i: 3892
-Arr i: 3928
-Arr i: 3814
-Arr i: 3844
-Arr i: 3876
-Arr i: 3876
-Arr i: 3836
-Arr i: 3863
-Arr i: 3868
-Arr i: 3856
-Arr i: 3840
-Arr i: 3804
-Arr i: 3856
-Arr i: 3839
-Arr i: 3804
-Arr i: 3860
-Arr i: 3876
-Arr i: 3856
-Arr i: 3872
-Arr i: 3792
-Arr i: 3740
-Arr i: 3796
-Arr i: 3796
-Arr i: 3788
-Arr i: 3804
-Arr i: 3784
-Arr i: 3792
-Arr i: 3764
-Arr i: 3828
-Arr i: 3815
-Arr i: 3740
-Arr i: 3768
-Arr i: 3748
-Arr i: 3792
-Arr i: 3764
-Arr i: 3780
-Arr i: 3804
-Arr i: 3760
-Arr i: 3753
-Arr i: 3752
-Arr i: 3772
-Arr i: 3756
-Arr i: 3792
-Arr i: 3731
-Arr i: 3748
-Arr i: 3716
-Arr i: 3708
-Arr i: 3716
-Arr i: 3684
-Arr i: 3748
-Arr i: 3720
-Arr i: 3680
-Arr i: 3792
-Arr i: 3700
-Arr i: 3742
-Arr i: 3692
-Arr i: 3652
-Arr i: 3732
-Arr i: 3628
-Arr i: 3840
-Arr i: 3896
-Arr i: 3904
-Arr i: 3896
-Arr i: 3868
-Arr i: 3912
-Arr i: 3928
-Arr i: 3834
-Arr i: 3864
-Arr i: 3892
-Arr i: 3900
-Arr i: 3844
-Arr i: 3871
-Arr i: 3876
-Arr i: 3876
-Arr i: 3852
-Arr i: 3812
-Arr i: 3876
-Arr i: 3855
-Arr i: 3816
-Arr i: 3884
-Arr i: 3888
-Arr i: 3868
-Arr i: 3880
-Arr i: 3804
-Arr i: 3760
-Arr i: 3816
-Arr i: 3808
-Arr i: 3828
-Arr i: 3820
-Arr i: 3796
-Arr i: 3808
-Arr i: 3796
-Arr i: 3832
-Arr i: 3831
-Arr i: 3756
-Arr i: 3788
-Arr i: 3768
-Arr i: 3808
-Arr i: 3780
-Arr i: 3812
-Arr i: 3812
-Arr i: 3780
-Arr i: 3761
-Arr i: 3768
-Arr i: 3788
-Arr i: 3764
-Arr i: 3796
-Arr i: 3755
-Arr i: 3764
-Arr i: 3728
-Arr i: 3728
-Arr i: 3740
-Arr i: 3696
-Arr i: 3752
-Arr i: 3736
-Arr i: 3708
-Arr i: 3804
-Arr i: 3720
-Arr i: 3758
-Arr i: 3700
-Arr i: 3656
-Arr i: 3740
-Arr i: 3632
-Arr i: 3868
-Arr i: 3908
-Arr i: 3924
-Arr i: 3916
-Arr i: 3892
-Arr i: 3928
-Arr i: 3940
-Arr i: 3858
-Arr i: 3880
-Arr i: 3912
-Arr i: 3904
-Arr i: 3860
-Arr i: 3895
-Arr i: 3880
-Arr i: 3904
-Arr i: 3868
-Arr i: 3832
-Arr i: 3896
-Arr i: 3879
-Arr i: 3840
-Arr i: 3904
-Arr i: 3888
-Arr i: 3880
-Arr i: 3900
-Arr i: 3828
-Arr i: 3772
-Arr i: 3836
-Arr i: 3820
-Arr i: 3868
-Arr i: 3840
-Arr i: 3812
-Arr i: 3816
-Arr i: 3816
-Arr i: 3832
-Arr i: 3839
-Arr i: 3772
-Arr i: 3812
-Arr i: 3780
-Arr i: 3824
-Arr i: 3800
-Arr i: 3832
-Arr i: 3832
-Arr i: 3792
-Arr i: 3785
-Arr i: 3780
-Arr i: 3796
-Arr i: 3772
-Arr i: 3812
-Arr i: 3779
-Arr i: 3772
-Arr i: 3748
-Arr i: 3732
-Arr i: 3764
-Arr i: 3720
-Arr i: 3764
-Arr i: 3768
-Arr i: 3720
-Arr i: 3820
-Arr i: 3728
-Arr i: 3774
-Arr i: 3720
-Arr i: 3668
-Arr i: 3740
-Arr i: 3652
-Arr i: 3888
-Arr i: 3920
-Arr i: 3948
-Arr i: 3924
-Arr i: 3916
-Arr i: 3928
-Arr i: 3952
-Arr i: 3870
-Arr i: 3892
-Arr i: 3920
-Arr i: 3916
-Arr i: 3884
-Arr i: 3923
-Arr i: 3896
-Arr i: 3920
-Arr i: 3892
-Arr i: 3856
-Arr i: 3912
-Arr i: 3887
-Arr i: 3864
-Arr i: 3912
-Arr i: 3896
-Arr i: 3892
-Arr i: 3904
-Arr i: 3836
-Arr i: 3780
-Arr i: 3852
-Arr i: 3840
-Arr i: 3884
-Arr i: 3844
-Arr i: 3828
-Arr i: 3840
-Arr i: 3828
-Arr i: 3860
-Arr i: 3855
-Arr i: 3792
-Arr i: 3828
-Arr i: 3812
-Arr i: 3832
-Arr i: 3804
-Arr i: 3844
-Arr i: 3848
-Arr i: 3812
-Arr i: 3801
-Arr i: 3792
-Arr i: 3796
-Arr i: 3804
-Arr i: 3832
-Arr i: 3799
-Arr i: 3796
-Arr i: 3768
-Arr i: 3752
-Arr i: 3780
-Arr i: 3740
-Arr i: 3780
-Arr i: 3776
-Arr i: 3744
-Arr i: 3828
-Arr i: 3752
-Arr i: 3778
-Arr i: 3756
-Arr i: 3676
-Arr i: 3748
-Arr i: 3656
-Arr i: 3920
-Arr i: 3932
-Arr i: 3964
-Arr i: 3936
-Arr i: 3932
-Arr i: 3952
-Arr i: 3968
-Arr i: 3890
-Arr i: 3904
-Arr i: 3940
-Arr i: 3924
-Arr i: 3892
-Arr i: 3935
-Arr i: 3904
-Arr i: 3928
-Arr i: 3904
-Arr i: 3884
-Arr i: 3932
-Arr i: 3891
-Arr i: 3880
-Arr i: 3916
-Arr i: 3908
-Arr i: 3904
-Arr i: 3920
-Arr i: 3864
-Arr i: 3804
-Arr i: 3860
-Arr i: 3856
-Arr i: 3896
-Arr i: 3876
-Arr i: 3848
-Arr i: 3864
-Arr i: 3852
-Arr i: 3884
-Arr i: 3883
-Arr i: 3812
-Arr i: 3856
-Arr i: 3836
-Arr i: 3840
-Arr i: 3820
-Arr i: 3872
-Arr i: 3860
-Arr i: 3824
-Arr i: 3821
-Arr i: 3808
-Arr i: 3804
-Arr i: 3824
-Arr i: 3836
-Arr i: 3807
-Arr i: 3808
-Arr i: 3784
-Arr i: 3764
-Arr i: 3796
-Arr i: 3760
-Arr i: 3792
-Arr i: 3780
-Arr i: 3768
-Arr i: 3844
-Arr i: 3768
-Arr i: 3782
-Arr i: 3772
-Arr i: 3692
-Arr i: 3764
-Arr i: 3672
-Arr i: 3956
-Arr i: 3944
-Arr i: 3968
-Arr i: 3964
-Arr i: 3960
-Arr i: 3964
-Arr i: 3980
-Arr i: 3910
-Arr i: 3912
-Arr i: 3952
-Arr i: 3952
-Arr i: 3916
-Arr i: 3955
-Arr i: 3928
-Arr i: 3944
-Arr i: 3912
-Arr i: 3892
-Arr i: 3956
-Arr i: 3899
-Arr i: 3896
-Arr i: 3932
-Arr i: 3924
-Arr i: 3920
-Arr i: 3932
-Arr i: 3884
-Arr i: 3820
-Arr i: 3872
-Arr i: 3872
-Arr i: 3896
-Arr i: 3888
-Arr i: 3868
-Arr i: 3872
-Arr i: 3868
-Arr i: 3920
-Arr i: 3895
-Arr i: 3832
-Arr i: 3868
-Arr i: 3856
-Arr i: 3848
-Arr i: 3832
-Arr i: 3888
-Arr i: 3888
-Arr i: 3844
-Arr i: 3829
-Arr i: 3816
-Arr i: 3816
-Arr i: 3848
-Arr i: 3856
-Arr i: 3831
-Arr i: 3820
-Arr i: 3808
-Arr i: 3800
-Arr i: 3808
-Arr i: 3776
-Arr i: 3816
-Arr i: 3808
-Arr i: 3784
-Arr i: 3860
-Arr i: 3780
-Arr i: 3782
-Arr i: 3776
-Arr i: 3716
-Arr i: 3788
-Arr i: 3696
-Arr i: 3968
-Arr i: 3952
-Arr i: 3984
-Arr i: 3984
-Arr i: 3976
-Arr i: 3984
-Arr i: 3980
-Arr i: 3934
-Arr i: 3932
-Arr i: 3964
-Arr i: 3964
-Arr i: 3924
-Arr i: 3963
-Arr i: 3944
-Arr i: 3952
-Arr i: 3932
-Arr i: 3908
-Arr i: 3968
-Arr i: 3903
-Arr i: 3912
-Arr i: 3936
-Arr i: 3940
-Arr i: 3936
-Arr i: 3936
-Arr i: 3896
-Arr i: 3840
-Arr i: 3888
-Arr i: 3896
-Arr i: 3904
-Arr i: 3904
-Arr i: 3880
-Arr i: 3900
-Arr i: 3896
-Arr i: 3956
-Arr i: 3915
-Arr i: 3848
-Arr i: 3876
-Arr i: 3872
-Arr i: 3864
-Arr i: 3848
-Arr i: 3916
-Arr i: 3912
-Arr i: 3868
-Arr i: 3841
-Arr i: 3836
-Arr i: 3832
-Arr i: 3864
-Arr i: 3872
-Arr i: 3847
-Arr i: 3836
-Arr i: 3840
-Arr i: 3824
-Arr i: 3816
-Arr i: 3780
-Arr i: 3840
-Arr i: 3820
-Arr i: 3792
-Arr i: 3872
-Arr i: 3804
-Arr i: 3794
-Arr i: 3800
-Arr i: 3744
-Arr i: 3816
-Arr i: 3716
-Arr i: 3996
-Arr i: 3972
-Arr i: 4000
-Arr i: 3992
-Arr i: 3988
-Arr i: 4008
-Arr i: 3996
-Arr i: 3938
-Arr i: 3956
-Arr i: 3972
-Arr i: 3980
-Arr i: 3944
-Arr i: 3975
-Arr i: 3956
-Arr i: 3956
-Arr i: 3952
-Arr i: 3932
-Arr i: 3980
-Arr i: 3927
-Arr i: 3924
-Arr i: 3936
-Arr i: 3956
-Arr i: 3944
-Arr i: 3948
-Arr i: 3908
-Arr i: 3868
-Arr i: 3896
-Arr i: 3916
-Arr i: 3920
-Arr i: 3920
-Arr i: 3884
-Arr i: 3916
-Arr i: 3920
-Arr i: 3964
-Arr i: 3931
-Arr i: 3872
-Arr i: 3896
-Arr i: 3872
-Arr i: 3884
-Arr i: 3856
-Arr i: 3932
-Arr i: 3924
-Arr i: 3888
-Arr i: 3853
-Arr i: 3852
-Arr i: 3860
-Arr i: 3884
-Arr i: 3896
-Arr i: 3859
-Arr i: 3864
-Arr i: 3852
-Arr i: 3856
-Arr i: 3852
-Arr i: 3788
-Arr i: 3868
-Arr i: 3836
-Arr i: 3804
-Arr i: 3880
-Arr i: 3812
-Arr i: 3830
-Arr i: 3820
-Arr i: 3768
-Arr i: 3840
-Arr i: 3724
-Arr i: 4008
-Arr i: 3988
-Arr i: 4008
-Arr i: 3996
-Arr i: 4016
-Arr i: 4028
-Arr i: 3996
-Arr i: 3954
-Arr i: 3956
-Arr i: 3984
-Arr i: 3984
-Arr i: 3968
-Arr i: 3979
-Arr i: 3984
-Arr i: 3964
-Arr i: 3960
-Arr i: 3956
-Arr i: 3996
-Arr i: 3967
-Arr i: 3944
-Arr i: 3948
-Arr i: 3976
-Arr i: 3956
-Arr i: 3980
-Arr i: 3920
-Arr i: 3892
-Arr i: 3900
-Arr i: 3928
-Arr i: 3932
-Arr i: 3936
-Arr i: 3912
-Arr i: 3936
-Arr i: 3940
-Arr i: 3976
-Arr i: 3947
-Arr i: 3880
-Arr i: 3900
-Arr i: 3884
-Arr i: 3904
-Arr i: 3876
-Arr i: 3956
-Arr i: 3948
-Arr i: 3900
-Arr i: 3861
-Arr i: 3872
-Arr i: 3884
-Arr i: 3916
-Arr i: 3904
-Arr i: 3863
-Arr i: 3864
-Arr i: 3876
-Arr i: 3868
-Arr i: 3868
-Arr i: 3804
-Arr i: 3880
-Arr i: 3860
-Arr i: 3820
-Arr i: 3892
-Arr i: 3832
-Arr i: 3858
-Arr i: 3828
-Arr i: 3776
-Arr i: 3848
-Arr i: 3736
-Arr i: 4016
-Arr i: 3992
-Arr i: 4024
-Arr i: 4016
-Arr i: 4032
-Arr i: 4048
-Arr i: 4012
-Arr i: 3974
-Arr i: 3964
-Arr i: 4000
-Arr i: 4004
-Arr i: 3984
-Arr i: 3991
-Arr i: 4004
-Arr i: 3980
-Arr i: 3984
-Arr i: 3972
-Arr i: 4008
-Arr i: 3991
-Arr i: 3968
-Arr i: 3972
-Arr i: 3996
-Arr i: 3984
-Arr i: 3988
-Arr i: 3940
-Arr i: 3904
-Arr i: 3912
-Arr i: 3936
-Arr i: 3952
-Arr i: 3956
-Arr i: 3928
-Arr i: 3964
-Arr i: 3956
-Arr i: 4004
-Arr i: 3971
-Arr i: 3916
-Arr i: 3912
-Arr i: 3892
-Arr i: 3928
-Arr i: 3884
-Arr i: 3960
-Arr i: 3956
-Arr i: 3912
-Arr i: 3873
-Arr i: 3888
-Arr i: 3896
-Arr i: 3936
-Arr i: 3920
-Arr i: 3887
-Arr i: 3876
-Arr i: 3888
-Arr i: 3880
-Arr i: 3880
-Arr i: 3820
-Arr i: 3892
-Arr i: 3868
-Arr i: 3828
-Arr i: 3900
-Arr i: 3836
-Arr i: 3878
-Arr i: 3836
-Arr i: 3800
-Arr i: 3868
-Arr i: 3756
-Arr i: 4036
-Arr i: 4012
-Arr i: 4032
-Arr i: 4028
-Arr i: 4036
-Arr i: 4072
-Arr i: 4028
-Arr i: 4002
-Arr i: 3972
-Arr i: 4008
-Arr i: 4020
-Arr i: 3996
-Arr i: 3999
-Arr i: 4024
-Arr i: 4016
-Arr i: 3996
-Arr i: 3984
-Arr i: 4028
-Arr i: 4011
-Arr i: 3988
-Arr i: 3996
-Arr i: 4012
-Arr i: 4000
-Arr i: 3996
-Arr i: 3956
-Arr i: 3920
-Arr i: 3928
-Arr i: 3956
-Arr i: 3972
-Arr i: 3960
-Arr i: 3952
-Arr i: 3980
-Arr i: 3968
-Arr i: 4020
-Arr i: 3987
-Arr i: 3928
-Arr i: 3932
-Arr i: 3928
-Arr i: 3940
-Arr i: 3896
-Arr i: 3968
-Arr i: 3960
-Arr i: 3932
-Arr i: 3893
-Arr i: 3916
-Arr i: 3924
-Arr i: 3948
-Arr i: 3940
-Arr i: 3899
-Arr i: 3904
-Arr i: 3888
-Arr i: 3908
-Arr i: 3896
-Arr i: 3828
-Arr i: 3912
-Arr i: 3880
-Arr i: 3852
-Arr i: 3928
-Arr i: 3860
-Arr i: 3894
-Arr i: 3848
-Arr i: 3824
-Arr i: 3892
-Arr i: 3772
-Arr i: 4048
-Arr i: 4036
-Arr i: 4040
-Arr i: 4052
-Arr i: 4060
-Arr i: 4084
-Arr i: 4036
-Arr i: 4022
-Arr i: 3992
-Arr i: 4032
-Arr i: 4024
-Arr i: 4012
-Arr i: 4019
-Arr i: 4032
-Arr i: 4044
-Arr i: 4020
-Arr i: 4000
-Arr i: 4040
-Arr i: 4023
-Arr i: 3996
-Arr i: 4028
-Arr i: 4028
-Arr i: 4012
-Arr i: 4008
-Arr i: 3968
-Arr i: 3936
-Arr i: 3944
-Arr i: 3980
-Arr i: 3988
-Arr i: 3972
-Arr i: 3968
-Arr i: 3988
-Arr i: 3984
-Arr i: 4040
-Arr i: 4003
-Arr i: 3960
-Arr i: 3952
-Arr i: 3944
-Arr i: 3952
-Arr i: 3908
-Arr i: 3980
-Arr i: 3980
-Arr i: 3944
-Arr i: 3897
-Arr i: 3928
-Arr i: 3928
-Arr i: 3972
-Arr i: 3964
-Arr i: 3911
-Arr i: 3916
-Arr i: 3900
-Arr i: 3912
-Arr i: 3916
-Arr i: 3844
-Arr i: 3924
-Arr i: 3900
-Arr i: 3868
-Arr i: 3936
-Arr i: 3884
-Arr i: 3898
-Arr i: 3876
-Arr i: 3844
-Arr i: 3904
-Arr i: 3792
-Arr i: 4056
-Arr i: 4052
-Arr i: 4060
-Arr i: 4068
-Arr i: 4072
-Arr i: 4096
-Arr i: 4044
-Arr i: 4046
-Arr i: 4036
-Arr i: 4044
-Arr i: 4044
-Arr i: 4036
-Arr i: 4031
-Arr i: 4048
-Arr i: 4052
-Arr i: 4028
-Arr i: 4016
-Arr i: 4044
-Arr i: 4047
-Arr i: 4012
-Arr i: 4040
-Arr i: 4032
-Arr i: 4036
-Arr i: 4028
-Arr i: 3972
-Arr i: 3948
-Arr i: 3972
-Arr i: 3988
-Arr i: 4000
-Arr i: 3992
-Arr i: 3984
-Arr i: 4000
-Arr i: 3996
-Arr i: 4052
-Arr i: 4011
-Arr i: 3992
-Arr i: 3960
-Arr i: 3956
-Arr i: 3964
-Arr i: 3948
-Arr i: 3980
-Arr i: 3988
-Arr i: 3964
-Arr i: 3921
-Arr i: 3948
-Arr i: 3944
-Arr i: 3976
-Arr i: 3968
-Arr i: 3915
-Arr i: 3928
-Arr i: 3912
-Arr i: 3924
-Arr i: 3936
-Arr i: 3860
-Arr i: 3936
-Arr i: 3912
-Arr i: 3884
-Arr i: 3948
-Arr i: 3892
-Arr i: 3926
-Arr i: 3892
-Arr i: 3876
-Arr i: 3916
-Arr i: 3808
-Arr i: 4080
-Arr i: 4080
-Arr i: 4076
-Arr i: 4080
-Arr i: 4080
-Arr i: 4096
-Arr i: 4080
-Arr i: 4058
-Arr i: 4060
-Arr i: 4064
-Arr i: 4064
-Arr i: 4052
-Arr i: 4047
-Arr i: 4056
-Arr i: 4068
-Arr i: 4040
-Arr i: 4040
-Arr i: 4048
-Arr i: 4051
-Arr i: 4028
-Arr i: 4048
-Arr i: 4040
-Arr i: 4068
-Arr i: 4048
-Arr i: 4008
-Arr i: 3960
-Arr i: 4000
-Arr i: 4004
-Arr i: 4016
-Arr i: 4004
-Arr i: 3992
-Arr i: 4012
-Arr i: 4012
-Arr i: 4052
-Arr i: 4027
-Arr i: 4000
-Arr i: 3972
-Arr i: 3972
-Arr i: 3976
-Arr i: 3952
-Arr i: 4008
-Arr i: 4000
-Arr i: 3976
-Arr i: 3941
-Arr i: 3964
-Arr i: 3960
-Arr i: 3988
-Arr i: 3984
-Arr i: 3931
-Arr i: 3940
-Arr i: 3928
-Arr i: 3932
-Arr i: 3956
-Arr i: 3884
-Arr i: 3952
-Arr i: 3916
-Arr i: 3908
-Arr i: 3964
-Arr i: 3908
-Arr i: 3926
-Arr i: 3900
-Arr i: 3888
-Arr i: 3928
-Arr i: 3844
-Arr i: 4096
-Arr i: 4096
-Arr i: 4096
-Arr i: 4096
-Arr i: 4096
-Arr i: 4096
-Arr i: 4096
-Arr i: 4086
-Arr i: 4088
-Arr i: 4088
-Arr i: 4072
-Arr i: 4076
-Arr i: 4067
-Arr i: 4076
-Arr i: 4076
-Arr i: 4052
-Arr i: 4064
-Arr i: 4060
-Arr i: 4063
-Arr i: 4048
-Arr i: 4056
-Arr i: 4060
-Arr i: 4068
-Arr i: 4060
-Arr i: 4028
-Arr i: 4004
-Arr i: 4016
-Arr i: 4016
-Arr i: 4028
-Arr i: 4012
-Arr i: 4020
-Arr i: 4028
-total time 22.108702 [msec]  distance from baseline 5651985506 (should be zero)
+histogram[0]: 64
+histogram[1]: 64
+histogram[2]: 64
+histogram[3]: 64
+histogram[4]: 64
+histogram[5]: 64
+histogram[6]: 64
+histogram[7]: 64
+histogram[8]: 64
+histogram[9]: 64
+histogram[10]: 64
+histogram[11]: 64
+histogram[12]: 64
+histogram[13]: 64
+histogram[14]: 64
+histogram[15]: 64
+histogram[16]: 64
+histogram[17]: 64
+histogram[18]: 64
+histogram[19]: 64
+histogram[20]: 64
+histogram[21]: 64
+histogram[22]: 64
+histogram[23]: 64
+histogram[24]: 64
+histogram[25]: 64
+histogram[26]: 64
+histogram[27]: 64
+histogram[28]: 64
+histogram[29]: 64
+histogram[30]: 64
+histogram[31]: 64
+histogram[32]: 64
+histogram[33]: 64
+histogram[34]: 64
+histogram[35]: 64
+histogram[36]: 64
+histogram[37]: 64
+histogram[38]: 64
+histogram[39]: 64
+histogram[40]: 64
+histogram[41]: 64
+histogram[42]: 64
+histogram[43]: 64
+histogram[44]: 64
+histogram[45]: 64
+histogram[46]: 64
+histogram[47]: 64
+histogram[48]: 64
+histogram[49]: 64
+histogram[50]: 64
+histogram[51]: 64
+histogram[52]: 64
+histogram[53]: 64
+histogram[54]: 64
+histogram[55]: 64
+histogram[56]: 64
+histogram[57]: 64
+histogram[58]: 64
+histogram[59]: 64
+histogram[60]: 64
+histogram[61]: 64
+histogram[62]: 64
+histogram[63]: 64
+histogram[64]: 0
+histogram[65]: 0
+histogram[66]: 0
+histogram[67]: 0
+histogram[68]: 0
+histogram[69]: 0
+histogram[70]: 0
+histogram[71]: 0
+histogram[72]: 0
+histogram[73]: 0
+histogram[74]: 0
+histogram[75]: 0
+histogram[76]: 0
+histogram[77]: 0
+histogram[78]: 0
+histogram[79]: 0
+histogram[80]: 0
+histogram[81]: 0
+histogram[82]: 0
+histogram[83]: 0
+histogram[84]: 0
+histogram[85]: 0
+histogram[86]: 0
+histogram[87]: 0
+histogram[88]: 0
+histogram[89]: 0
+histogram[90]: 0
+histogram[91]: 0
+histogram[92]: 0
+histogram[93]: 0
+histogram[94]: 0
+histogram[95]: 0
+histogram[96]: 0
+histogram[97]: 0
+histogram[98]: 0
+histogram[99]: 0
+histogram[100]: 0
+histogram[101]: 0
+histogram[102]: 0
+histogram[103]: 0
+histogram[104]: 0
+histogram[105]: 0
+histogram[106]: 0
+histogram[107]: 0
+histogram[108]: 0
+histogram[109]: 0
+histogram[110]: 0
+histogram[111]: 0
+histogram[112]: 0
+histogram[113]: 0
+histogram[114]: 0
+histogram[115]: 0
+histogram[116]: 0
+histogram[117]: 0
+histogram[118]: 0
+histogram[119]: 0
+histogram[120]: 0
+histogram[121]: 0
+histogram[122]: 0
+histogram[123]: 0
+histogram[124]: 0
+histogram[125]: 0
+histogram[126]: 0
+histogram[127]: 0
+histogram[128]: 0
+histogram[129]: 0
+histogram[130]: 0
+histogram[131]: 0
+histogram[132]: 0
+histogram[133]: 0
+histogram[134]: 0
+histogram[135]: 0
+histogram[136]: 0
+histogram[137]: 0
+histogram[138]: 0
+histogram[139]: 0
+histogram[140]: 0
+histogram[141]: 0
+histogram[142]: 0
+histogram[143]: 0
+histogram[144]: 0
+histogram[145]: 0
+histogram[146]: 0
+histogram[147]: 0
+histogram[148]: 0
+histogram[149]: 0
+histogram[150]: 0
+histogram[151]: 0
+histogram[152]: 0
+histogram[153]: 0
+histogram[154]: 0
+histogram[155]: 0
+histogram[156]: 0
+histogram[157]: 0
+histogram[158]: 0
+histogram[159]: 0
+histogram[160]: 0
+histogram[161]: 0
+histogram[162]: 0
+histogram[163]: 0
+histogram[164]: 0
+histogram[165]: 0
+histogram[166]: 0
+histogram[167]: 0
+histogram[168]: 0
+histogram[169]: 0
+histogram[170]: 0
+histogram[171]: 0
+histogram[172]: 0
+histogram[173]: 0
+histogram[174]: 0
+histogram[175]: 0
+histogram[176]: 0
+histogram[177]: 0
+histogram[178]: 0
+histogram[179]: 0
+histogram[180]: 0
+histogram[181]: 0
+histogram[182]: 0
+histogram[183]: 0
+histogram[184]: 0
+histogram[185]: 0
+histogram[186]: 0
+histogram[187]: 0
+histogram[188]: 0
+histogram[189]: 0
+histogram[190]: 0
+histogram[191]: 0
+histogram[192]: 0
+histogram[193]: 0
+histogram[194]: 0
+histogram[195]: 0
+histogram[196]: 0
+histogram[197]: 0
+histogram[198]: 0
+histogram[199]: 0
+histogram[200]: 0
+histogram[201]: 0
+histogram[202]: 0
+histogram[203]: 0
+histogram[204]: 0
+histogram[205]: 0
+histogram[206]: 0
+histogram[207]: 0
+histogram[208]: 0
+histogram[209]: 0
+histogram[210]: 0
+histogram[211]: 0
+histogram[212]: 0
+histogram[213]: 0
+histogram[214]: 0
+histogram[215]: 0
+histogram[216]: 0
+histogram[217]: 0
+histogram[218]: 0
+histogram[219]: 0
+histogram[220]: 0
+histogram[221]: 0
+histogram[222]: 0
+histogram[223]: 0
+histogram[224]: 0
+histogram[225]: 0
+histogram[226]: 0
+histogram[227]: 0
+histogram[228]: 0
+histogram[229]: 0
+histogram[230]: 0
+histogram[231]: 0
+histogram[232]: 0
+histogram[233]: 0
+histogram[234]: 0
+histogram[235]: 0
+histogram[236]: 0
+histogram[237]: 0
+histogram[238]: 0
+histogram[239]: 0
+histogram[240]: 0
+histogram[241]: 0
+histogram[242]: 0
+histogram[243]: 0
+histogram[244]: 0
+histogram[245]: 0
+histogram[246]: 0
+histogram[247]: 0
+histogram[248]: 0
+histogram[249]: 0
+histogram[250]: 0
+histogram[251]: 0
+histogram[252]: 0
+histogram[253]: 0
+histogram[254]: 0
+histogram[255]: 0
+prefix sum[0]: 64
+prefix sum[1]: 128
+prefix sum[2]: 192
+prefix sum[3]: 256
+prefix sum[4]: 320
+prefix sum[5]: 384
+prefix sum[6]: 448
+prefix sum[7]: 512
+prefix sum[8]: 576
+prefix sum[9]: 640
+prefix sum[10]: 704
+prefix sum[11]: 768
+prefix sum[12]: 832
+prefix sum[13]: 896
+prefix sum[14]: 960
+prefix sum[15]: 1024
+prefix sum[16]: 1088
+prefix sum[17]: 1152
+prefix sum[18]: 1216
+prefix sum[19]: 1280
+prefix sum[20]: 1344
+prefix sum[21]: 1408
+prefix sum[22]: 1472
+prefix sum[23]: 1536
+prefix sum[24]: 1600
+prefix sum[25]: 1664
+prefix sum[26]: 1728
+prefix sum[27]: 1792
+prefix sum[28]: 1856
+prefix sum[29]: 1920
+prefix sum[30]: 1984
+prefix sum[31]: 2048
+prefix sum[32]: 2112
+prefix sum[33]: 2176
+prefix sum[34]: 2240
+prefix sum[35]: 2304
+prefix sum[36]: 2368
+prefix sum[37]: 2432
+prefix sum[38]: 2496
+prefix sum[39]: 2560
+prefix sum[40]: 2624
+prefix sum[41]: 2688
+prefix sum[42]: 2752
+prefix sum[43]: 2816
+prefix sum[44]: 2880
+prefix sum[45]: 2944
+prefix sum[46]: 3008
+prefix sum[47]: 3072
+prefix sum[48]: 3136
+prefix sum[49]: 3200
+prefix sum[50]: 3264
+prefix sum[51]: 3328
+prefix sum[52]: 3392
+prefix sum[53]: 3456
+prefix sum[54]: 3520
+prefix sum[55]: 3584
+prefix sum[56]: 3648
+prefix sum[57]: 3712
+prefix sum[58]: 3776
+prefix sum[59]: 3840
+prefix sum[60]: 3904
+prefix sum[61]: 3968
+prefix sum[62]: 4032
+prefix sum[63]: 4096
+prefix sum[64]: 4096
+prefix sum[65]: 4096
+prefix sum[66]: 4096
+prefix sum[67]: 4096
+prefix sum[68]: 4096
+prefix sum[69]: 4096
+prefix sum[70]: 4096
+prefix sum[71]: 4096
+prefix sum[72]: 4096
+prefix sum[73]: 4096
+prefix sum[74]: 4096
+prefix sum[75]: 4096
+prefix sum[76]: 4096
+prefix sum[77]: 4096
+prefix sum[78]: 4096
+prefix sum[79]: 4096
+prefix sum[80]: 4096
+prefix sum[81]: 4096
+prefix sum[82]: 4096
+prefix sum[83]: 4096
+prefix sum[84]: 4096
+prefix sum[85]: 4096
+prefix sum[86]: 4096
+prefix sum[87]: 4096
+prefix sum[88]: 4096
+prefix sum[89]: 4096
+prefix sum[90]: 4096
+prefix sum[91]: 4096
+prefix sum[92]: 4096
+prefix sum[93]: 4096
+prefix sum[94]: 4096
+prefix sum[95]: 4096
+prefix sum[96]: 4096
+prefix sum[97]: 4096
+prefix sum[98]: 4096
+prefix sum[99]: 4096
+prefix sum[100]: 4096
+prefix sum[101]: 4096
+prefix sum[102]: 4096
+prefix sum[103]: 4096
+prefix sum[104]: 4096
+prefix sum[105]: 4096
+prefix sum[106]: 4096
+prefix sum[107]: 4096
+prefix sum[108]: 4096
+prefix sum[109]: 4096
+prefix sum[110]: 4096
+prefix sum[111]: 4096
+prefix sum[112]: 4096
+prefix sum[113]: 4096
+prefix sum[114]: 4096
+prefix sum[115]: 4096
+prefix sum[116]: 4096
+prefix sum[117]: 4096
+prefix sum[118]: 4096
+prefix sum[119]: 4096
+prefix sum[120]: 4096
+prefix sum[121]: 4096
+prefix sum[122]: 4096
+prefix sum[123]: 4096
+prefix sum[124]: 4096
+prefix sum[125]: 4096
+prefix sum[126]: 4096
+prefix sum[127]: 4096
+prefix sum[128]: 4096
+prefix sum[129]: 4096
+prefix sum[130]: 4096
+prefix sum[131]: 4096
+prefix sum[132]: 4096
+prefix sum[133]: 4096
+prefix sum[134]: 4096
+prefix sum[135]: 4096
+prefix sum[136]: 4096
+prefix sum[137]: 4096
+prefix sum[138]: 4096
+prefix sum[139]: 4096
+prefix sum[140]: 4096
+prefix sum[141]: 4096
+prefix sum[142]: 4096
+prefix sum[143]: 4096
+prefix sum[144]: 4096
+prefix sum[145]: 4096
+prefix sum[146]: 4096
+prefix sum[147]: 4096
+prefix sum[148]: 4096
+prefix sum[149]: 4096
+prefix sum[150]: 4096
+prefix sum[151]: 4096
+prefix sum[152]: 4096
+prefix sum[153]: 4096
+prefix sum[154]: 4096
+prefix sum[155]: 4096
+prefix sum[156]: 4096
+prefix sum[157]: 4096
+prefix sum[158]: 4096
+prefix sum[159]: 4096
+prefix sum[160]: 4096
+prefix sum[161]: 4096
+prefix sum[162]: 4096
+prefix sum[163]: 4096
+prefix sum[164]: 4096
+prefix sum[165]: 4096
+prefix sum[166]: 4096
+prefix sum[167]: 4096
+prefix sum[168]: 4096
+prefix sum[169]: 4096
+prefix sum[170]: 4096
+prefix sum[171]: 4096
+prefix sum[172]: 4096
+prefix sum[173]: 4096
+prefix sum[174]: 4096
+prefix sum[175]: 4096
+prefix sum[176]: 4096
+prefix sum[177]: 4096
+prefix sum[178]: 4096
+prefix sum[179]: 4096
+prefix sum[180]: 4096
+prefix sum[181]: 4096
+prefix sum[182]: 4096
+prefix sum[183]: 4096
+prefix sum[184]: 4096
+prefix sum[185]: 4096
+prefix sum[186]: 4096
+prefix sum[187]: 4096
+prefix sum[188]: 4096
+prefix sum[189]: 4096
+prefix sum[190]: 4096
+prefix sum[191]: 4096
+prefix sum[192]: 4096
+prefix sum[193]: 4096
+prefix sum[194]: 4096
+prefix sum[195]: 4096
+prefix sum[196]: 4096
+prefix sum[197]: 4096
+prefix sum[198]: 4096
+prefix sum[199]: 4096
+prefix sum[200]: 4096
+prefix sum[201]: 4096
+prefix sum[202]: 4096
+prefix sum[203]: 4096
+prefix sum[204]: 4096
+prefix sum[205]: 4096
+prefix sum[206]: 4096
+prefix sum[207]: 4096
+prefix sum[208]: 4096
+prefix sum[209]: 4096
+prefix sum[210]: 4096
+prefix sum[211]: 4096
+prefix sum[212]: 4096
+prefix sum[213]: 4096
+prefix sum[214]: 4096
+prefix sum[215]: 4096
+prefix sum[216]: 4096
+prefix sum[217]: 4096
+prefix sum[218]: 4096
+prefix sum[219]: 4096
+prefix sum[220]: 4096
+prefix sum[221]: 4096
+prefix sum[222]: 4096
+prefix sum[223]: 4096
+prefix sum[224]: 4096
+prefix sum[225]: 4096
+prefix sum[226]: 4096
+prefix sum[227]: 4096
+prefix sum[228]: 4096
+prefix sum[229]: 4096
+prefix sum[230]: 4096
+prefix sum[231]: 4096
+prefix sum[232]: 4096
+prefix sum[233]: 4096
+prefix sum[234]: 4096
+prefix sum[235]: 4096
+prefix sum[236]: 4096
+prefix sum[237]: 4096
+prefix sum[238]: 4096
+prefix sum[239]: 4096
+prefix sum[240]: 4096
+prefix sum[241]: 4096
+prefix sum[242]: 4096
+prefix sum[243]: 4096
+prefix sum[244]: 4096
+prefix sum[245]: 4096
+prefix sum[246]: 4096
+prefix sum[247]: 4096
+prefix sum[248]: 4096
+prefix sum[249]: 4096
+prefix sum[250]: 4096
+prefix sum[251]: 4096
+prefix sum[252]: 4096
+prefix sum[253]: 4096
+prefix sum[254]: 4096
+prefix sum[255]: 4096
+Calculating: 11008
+Calculating: 11009
+Calculating: 11010
+Calculating: 11011
+Calculating: 11012
+Calculating: 11013
+Calculating: 11014
+Calculating: 11015
+Calculating: 11016
+Calculating: 11017
+Calculating: 11018
+Calculating: 11019
+Calculating: 11020
+Calculating: 11021
+Calculating: 11022
+Calculating: 11023
+Calculating: 11024
+Calculating: 11025
+Calculating: 11026
+Calculating: 11027
+Calculating: 11028
+Calculating: 11029
+Calculating: 11030
+Calculating: 11031
+Calculating: 11032
+Calculating: 11033
+Calculating: 11034
+Calculating: 11035
+Calculating: 11036
+Calculating: 11037
+Calculating: 11038
+Calculating: 11039
+Calculating: 11040
+Calculating: 11041
+Calculating: 11042
+Calculating: 11043
+Calculating: 11044
+Calculating: 11045
+Calculating: 11046
+Calculating: 11047
+Calculating: 11048
+Calculating: 11049
+Calculating: 11050
+Calculating: 11051
+Calculating: 11052
+Calculating: 11053
+Calculating: 11054
+Calculating: 11055
+Calculating: 11056
+Calculating: 11057
+Calculating: 11058
+Calculating: 11059
+Calculating: 11060
+Calculating: 11061
+Calculating: 11062
+Calculating: 11063
+Calculating: 11064
+Calculating: 11065
+Calculating: 11066
+Calculating: 11067
+Calculating: 11068
+Calculating: 11069
+Calculating: 11070
+Calculating: 11071
+Calculating: 11072
+Calculating: 11073
+Calculating: 11074
+Calculating: 11075
+Calculating: 11076
+Calculating: 11077
+Calculating: 11078
+Calculating: 11079
+Calculating: 11080
+Calculating: 11081
+Calculating: 11082
+Calculating: 11083
+Calculating: 11084
+Calculating: 11085
+Calculating: 11086
+Calculating: 11087
+Calculating: 11088
+Calculating: 11089
+Calculating: 11090
+Calculating: 11091
+Calculating: 11092
+Calculating: 11093
+Calculating: 11094
+Calculating: 11095
+Calculating: 11096
+Calculating: 11097
+Calculating: 11098
+Calculating: 11099
+Calculating: 11100
+Calculating: 11101
+Calculating: 11102
+Calculating: 11103
+Calculating: 11104
+Calculating: 11105
+Calculating: 11106
+Calculating: 11107
+Calculating: 11108
+Calculating: 11109
+Calculating: 11110
+Calculating: 11111
+Calculating: 11112
+Calculating: 11113
+Calculating: 11114
+Calculating: 11115
+Calculating: 11116
+Calculating: 11117
+Calculating: 11118
+Calculating: 11119
+Calculating: 11120
+Calculating: 11121
+Calculating: 11122
+Calculating: 11123
+Calculating: 11124
+Calculating: 11125
+Calculating: 11126
+Calculating: 11127
+Calculating: 11128
+Calculating: 11129
+Calculating: 11130
+Calculating: 11131
+Calculating: 11132
+Calculating: 11133
+Calculating: 11134
+Calculating: 11135
+Calculating: 11136
+Calculating: 11137
+Calculating: 11138
+Calculating: 11139
+Calculating: 11140
+Calculating: 11141
+Calculating: 11142
+Calculating: 11143
+Calculating: 11144
+Calculating: 11145
+Calculating: 11146
+Calculating: 11147
+Calculating: 11148
+Calculating: 11149
+Calculating: 11150
+Calculating: 11151
+Calculating: 11152
+Calculating: 11153
+Calculating: 11154
+Calculating: 11155
+Calculating: 11156
+Calculating: 11157
+Calculating: 11158
+Calculating: 11159
+Calculating: 11160
+Calculating: 11161
+Calculating: 11162
+Calculating: 11163
+Calculating: 11164
+Calculating: 11165
+Calculating: 11166
+Calculating: 11167
+Calculating: 11168
+Calculating: 11169
+Calculating: 11170
+Calculating: 11171
+Calculating: 11172
+Calculating: 11173
+Calculating: 11174
+Calculating: 11175
+Calculating: 11176
+Calculating: 11177
+Calculating: 11178
+Calculating: 11179
+Calculating: 11180
+Calculating: 11181
+Calculating: 11182
+Calculating: 11183
+Calculating: 11184
+Calculating: 11185
+Calculating: 11186
+Calculating: 11187
+Calculating: 11188
+Calculating: 11189
+Calculating: 11190
+Calculating: 11191
+Calculating: 11192
+Calculating: 11193
+Calculating: 11194
+Calculating: 11195
+Calculating: 11196
+Calculating: 11197
+Calculating: 11198
+Calculating: 11199
+Calculating: 11200
+Calculating: 11201
+Calculating: 11202
+Calculating: 11203
+Calculating: 11204
+Calculating: 11205
+Calculating: 11206
+Calculating: 11207
+Calculating: 11208
+Calculating: 11209
+Calculating: 11210
+Calculating: 11211
+Calculating: 11212
+Calculating: 11213
+Calculating: 11214
+Calculating: 11215
+Calculating: 11216
+Calculating: 11217
+Calculating: 11218
+Calculating: 11219
+Calculating: 11220
+Calculating: 11221
+Calculating: 11222
+Calculating: 11223
+Calculating: 11224
+Calculating: 11225
+Calculating: 11226
+Calculating: 11227
+Calculating: 11228
+Calculating: 11229
+Calculating: 11230
+Calculating: 11231
+Calculating: 11232
+Calculating: 11233
+Calculating: 11234
+Calculating: 11235
+Calculating: 11236
+Calculating: 11237
+Calculating: 11238
+Calculating: 11239
+Calculating: 11240
+Calculating: 11241
+Calculating: 11242
+Calculating: 11243
+Calculating: 11244
+Calculating: 11245
+Calculating: 11246
+Calculating: 11247
+Calculating: 11248
+Calculating: 11249
+Calculating: 11250
+Calculating: 11251
+Calculating: 11252
+Calculating: 11253
+Calculating: 11254
+Calculating: 11255
+Calculating: 11256
+Calculating: 11257
+Calculating: 11258
+Calculating: 11259
+Calculating: 11260
+Calculating: 11261
+Calculating: 11262
+Calculating: 11263
+maps[0]: 175
+maps[1]: 179
+maps[2]: 183
+maps[3]: 187
+maps[4]: 191
+maps[5]: 195
+maps[6]: 199
+maps[7]: 203
+maps[8]: 207
+maps[9]: 211
+maps[10]: 215
+maps[11]: 219
+maps[12]: 223
+maps[13]: 227
+maps[14]: 231
+maps[15]: 235
+maps[16]: 239
+maps[17]: 243
+maps[18]: 247
+maps[19]: 251
+maps[20]: 255
+maps[21]: 255
+maps[22]: 255
+maps[23]: 255
+maps[24]: 255
+maps[25]: 255
+maps[26]: 255
+maps[27]: 255
+maps[28]: 255
+maps[29]: 255
+maps[30]: 255
+maps[31]: 255
+maps[32]: 255
+maps[33]: 255
+maps[34]: 255
+maps[35]: 255
+maps[36]: 255
+maps[37]: 255
+maps[38]: 255
+maps[39]: 255
+maps[40]: 255
+maps[41]: 255
+maps[42]: 255
+maps[43]: 255
+maps[44]: 255
+maps[45]: 255
+maps[46]: 255
+maps[47]: 255
+maps[48]: 255
+maps[49]: 255
+maps[50]: 255
+maps[51]: 255
+maps[52]: 255
+maps[53]: 255
+maps[54]: 255
+maps[55]: 255
+maps[56]: 255
+maps[57]: 255
+maps[58]: 255
+maps[59]: 255
+maps[60]: 255
+maps[61]: 255
+maps[62]: 255
+maps[63]: 255
+maps[64]: 255
+maps[65]: 255
+maps[66]: 255
+maps[67]: 255
+maps[68]: 255
+maps[69]: 255
+maps[70]: 255
+maps[71]: 255
+maps[72]: 255
+maps[73]: 255
+maps[74]: 255
+maps[75]: 255
+maps[76]: 255
+maps[77]: 255
+maps[78]: 255
+maps[79]: 255
+maps[80]: 255
+maps[81]: 255
+maps[82]: 255
+maps[83]: 255
+maps[84]: 255
+maps[85]: 255
+maps[86]: 255
+maps[87]: 255
+maps[88]: 255
+maps[89]: 255
+maps[90]: 255
+maps[91]: 255
+maps[92]: 255
+maps[93]: 255
+maps[94]: 255
+maps[95]: 255
+maps[96]: 255
+maps[97]: 255
+maps[98]: 255
+maps[99]: 255
+maps[100]: 255
+maps[101]: 255
+maps[102]: 255
+maps[103]: 255
+maps[104]: 255
+maps[105]: 255
+maps[106]: 255
+maps[107]: 255
+maps[108]: 255
+maps[109]: 255
+maps[110]: 255
+maps[111]: 255
+maps[112]: 255
+maps[113]: 255
+maps[114]: 255
+maps[115]: 255
+maps[116]: 255
+maps[117]: 255
+maps[118]: 255
+maps[119]: 255
+maps[120]: 255
+maps[121]: 255
+maps[122]: 255
+maps[123]: 255
+maps[124]: 255
+maps[125]: 255
+maps[126]: 255
+maps[127]: 255
+maps[128]: 255
+maps[129]: 255
+maps[130]: 255
+maps[131]: 255
+maps[132]: 255
+maps[133]: 255
+maps[134]: 255
+maps[135]: 255
+maps[136]: 255
+maps[137]: 255
+maps[138]: 255
+maps[139]: 255
+maps[140]: 255
+maps[141]: 255
+maps[142]: 255
+maps[143]: 255
+maps[144]: 255
+maps[145]: 255
+maps[146]: 255
+maps[147]: 255
+maps[148]: 255
+maps[149]: 255
+maps[150]: 255
+maps[151]: 255
+maps[152]: 255
+maps[153]: 255
+maps[154]: 255
+maps[155]: 255
+maps[156]: 255
+maps[157]: 255
+maps[158]: 255
+maps[159]: 255
+maps[160]: 255
+maps[161]: 255
+maps[162]: 255
+maps[163]: 255
+maps[164]: 255
+maps[165]: 255
+maps[166]: 255
+maps[167]: 255
+maps[168]: 255
+maps[169]: 255
+maps[170]: 255
+maps[171]: 255
+maps[172]: 255
+maps[173]: 255
+maps[174]: 255
+maps[175]: 255
+maps[176]: 255
+maps[177]: 255
+maps[178]: 255
+maps[179]: 255
+maps[180]: 255
+maps[181]: 255
+maps[182]: 255
+maps[183]: 255
+maps[184]: 255
+maps[185]: 255
+maps[186]: 255
+maps[187]: 255
+maps[188]: 255
+maps[189]: 255
+maps[190]: 255
+maps[191]: 255
+maps[192]: 255
+maps[193]: 255
+maps[194]: 255
+maps[195]: 255
+maps[196]: 255
+maps[197]: 255
+maps[198]: 255
+maps[199]: 255
+maps[200]: 255
+maps[201]: 255
+maps[202]: 255
+maps[203]: 255
+maps[204]: 255
+maps[205]: 255
+maps[206]: 255
+maps[207]: 255
+maps[208]: 255
+maps[209]: 255
+maps[210]: 255
+maps[211]: 255
+maps[212]: 255
+maps[213]: 3
+maps[214]: 7
+maps[215]: 11
+maps[216]: 15
+maps[217]: 19
+maps[218]: 23
+maps[219]: 27
+maps[220]: 31
+maps[221]: 35
+maps[222]: 39
+maps[223]: 43
+maps[224]: 47
+maps[225]: 51
+maps[226]: 55
+maps[227]: 59
+maps[228]: 63
+maps[229]: 67
+maps[230]: 71
+maps[231]: 75
+maps[232]: 79
+maps[233]: 83
+maps[234]: 87
+maps[235]: 91
+maps[236]: 95
+maps[237]: 99
+maps[238]: 103
+maps[239]: 107
+maps[240]: 111
+maps[241]: 115
+maps[242]: 119
+maps[243]: 123
+maps[244]: 127
+maps[245]: 131
+maps[246]: 135
+maps[247]: 139
+maps[248]: 143
+maps[249]: 147
+maps[250]: 151
+maps[251]: 155
+maps[252]: 159
+maps[253]: 163
+maps[254]: 167
+maps[255]: 171
+total time 31.109669 [msec]  distance from baseline 5652776364 (should be zero)
 
 === GPU Bulk ===
-total time 0.000063 [msec]  distance from baseline 5653159932 (should be zero)
+total time 0.000044 [msec]  distance from baseline 5653159932 (should be zero)

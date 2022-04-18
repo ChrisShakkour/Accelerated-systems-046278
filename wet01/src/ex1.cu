@@ -22,13 +22,30 @@ void prefix_sum(int arr[], int arr_size)
     for (int i = 1 ; i < arr_size ; i++)
     {
         arr[i] += arr[i-1];
-        printf("Arr i: %d\n", arr[i]);
     }
 }
+
+__device__
+void test_maps(int* cdf, uchar* maps, int tile_x, int tile_y)
+{
+    int maps_start_index = ((tile_x * TILE_COUNT) + tile_y) * COLOR_COUNT;
+    int i = 0;    
+    
+    for (i = 0 ; i < COLOR_COUNT ; i++)
+    {
+        maps[maps_start_index + i] = cdf[i] * (COLOR_COUNT - 1) / (TILE_WIDTH * TILE_WIDTH);
+        if (tile_x == 5 && tile_y == 3)
+        {
+            printf("cdf[%d]: %d maps: %d\n", i, cdf[i], maps[maps_start_index + i]);
+        }
+    }
+}
+
 
 __global__
 void calc_maps(int* cdf, uchar* maps, int tile_x, int tile_y)
 {   
+    // todo: check this
     int index = tile_x * TILE_COUNT + tile_y;
     int tid_x = threadIdx.x;    
 
@@ -46,7 +63,7 @@ void calc_maps(int* cdf, uchar* maps, int tile_x, int tile_y)
  * @param out_img single output buffer, in global memory.
  */
 __device__ 
-void interpolate_device(uchar* maps ,uchar *in_img, uchar* out_img);
+void interpolate_device(uchar* maps , uchar *in_img, uchar* out_img);
 
 
 
@@ -73,41 +90,91 @@ __global__ void calc_histogram(int* hist, uchar* all_in, int tile_tid_x, int til
 }
 
 
+__device__
+void test_histogram(int* hist, uchar* all_in, int tile_tid_x, int tile_tid_y)
+{
+    int color_value = 0;
+    int index = 0;
+    int x_index = 0;
+    int y_index = 0;
+
+    for (int i = 0 ; i < TILE_WIDTH ; i++)
+    {
+        for(int j = 0 ; j < TILE_WIDTH ; j++)
+        {
+            x_index = TILE_WIDTH * tile_tid_x + i;
+            y_index = TILE_WIDTH * tile_tid_y + j;
+            index = x_index * IMG_WIDTH + y_index;
+
+            color_value = all_in[index];
+            atomicAdd(&hist[color_value], 1);
+        }
+    }   
+}
+
 __global__ void process_image_kernel(uchar *all_in, uchar *all_out, uchar *maps) 
 {
     int tile_tid_x = threadIdx.x;
     int tile_tid_y = threadIdx.y;
-    int hist_sum = 0;
 
     int* hist = (int*) malloc(COLOR_COUNT * sizeof(int));
     memset(hist, 0, COLOR_COUNT * sizeof(int));
 
-    dim3 threads_count(TILE_WIDTH, TILE_HALF_WIDTH / 2);
-    calc_histogram<<<1, threads_count>>>(hist, all_in, tile_tid_x, tile_tid_y);
+    // dim3 threads_count(TILE_WIDTH, TILE_HALF_WIDTH / 2);
+    // calc_histogram<<<1, threads_count>>>(hist, all_in, tile_tid_x, tile_tid_y);
+    test_histogram(hist, all_in, tile_tid_x, tile_tid_y);
+    if (tile_tid_x == 5 && tile_tid_y == 3)
+    {
+        for (int i = 0 ; i < 256 ; i++)
+        {
+            printf("histogram[%d]: %d\n", i, hist[i]);
+        }
+    }
     
     __syncthreads();
-    
-    
+  
     prefix_sum(hist, COLOR_COUNT); 
-    printf("LAST HISTOGRAM: %d\n", hist[255]);
 
-    calc_maps<<<1, COLOR_COUNT>>>(hist, maps, tile_tid_x, tile_tid_y);
+    if (tile_tid_x == 5 && tile_tid_y == 3)
+    {
+        for (int i = 0 ; i < 256 ; i++)
+        {
+            printf("prefix sum[%d]: %d\n", i, hist[i]);
+        }
+    }
+
+    int maps_start_index = tile_tid_x * TILE_COUNT + tile_tid_y;
     
+    // calc_maps<<<1, COLOR_COUNT>>>(hist, maps, tile_tid_x, tile_tid_y);
+    test_maps(hist, maps, tile_tid_x, tile_tid_y);
+    if (tile_tid_x == 5 && tile_tid_y == 3)
+    {
+        for (int i = 0 ; i < 256 ; i++)
+        {
+            printf("maps[%d]: %d\n", i, maps[maps_start_index + i]);
+        }
+    }
+
     free(hist);
 
     __syncthreads();
 
     if (tile_tid_x == 0 && tile_tid_y == 0)
     {
+
         for (int i = 0 ; i < 256 ; i++)
         {
-            //printf("maps: %d\n", maps[i]);
+            //printf("Histogram[%d]: %d\n", i, hist[i]);
         }
         interpolate_device(maps, all_in, all_out);
-        // for (int i = 0 ; i < 1 * IMG_WIDTH * IMG_HEIGHT ; i++)
-        // {
-        //     printf("img_in: %d\n img_out: %d maps: %d\n", all_in[i], all_out[i], maps[i % 256]);
-        // }
+        for (int j = 0 ; j < 8 * 8 * 256 ; j++)
+        {
+            printf("maps[%d] = %d\n", j, maps[j]);
+        }
+        for (int i = 0 ; i < 1 * IMG_WIDTH * IMG_HEIGHT ; i++)
+        {
+            //printf("img_in: %d\n img_out: %d maps: %d\n", all_in[i], all_out[i], maps[i % 256]);
+        }
     }
 
     return; 
@@ -141,12 +208,22 @@ struct task_serial_context *task_serial_init()
  * provided output host array */
 void task_serial_process(struct task_serial_context *context, uchar *images_in, uchar *images_out)
 {
+    // uchar test_image_in[512][512];
+    // for (int j = 0 ; j < 512 ; j++)
+    // {
+    //     for (int k = 0 ; k < 512 ; k++)
+    //     {
+    //         test_image_in[j][k] = k % 64;
+    //     }
+    // }
     //for (int i = 0 ; i < N_IMAGES ; i++)
     for (int i = 0 ; i < 1 ; i++)
     {
         uchar* cur_images_in = &images_in[i * IMG_WIDTH * IMG_HEIGHT];
         uchar* cur_images_out = &images_out[i * IMG_WIDTH * IMG_HEIGHT];
+        // TODO: restore this line
         cudaMemcpy(context->in_img, cur_images_in, IMG_HEIGHT * IMG_WIDTH * sizeof(uchar), cudaMemcpyHostToDevice);
+        //cudaMemcpy(context->in_img, test_image_in, IMG_HEIGHT * IMG_WIDTH * sizeof(uchar), cudaMemcpyHostToDevice);
 
         // add GPU kernel invokation here
         dim3 tiles_count(TILE_COUNT, TILE_COUNT, 1);
