@@ -4,7 +4,7 @@
 __device__
 void get_histogram(int* hist, uchar* all_in, int tile_row, int tile_col)
 {
-    int tid = threadIdx.x;
+    const int tid = threadIdx.x;
 
     int color_value = 0;
     int index = 0;
@@ -23,9 +23,9 @@ void get_histogram(int* hist, uchar* all_in, int tile_row, int tile_col)
 __device__
 void prefix_sum(int arr[], int arr_size) 
 {
-    int tid = threadIdx.x; 
+    const int tid = threadIdx.x; 
     int increment;
-    // TODO: check if blockdim.x should be arr_size
+
     for (int stride = 1 ; stride < blockDim.x ; stride *= 2)
     {
         if (tid >= stride)
@@ -46,7 +46,8 @@ __device__
 void get_maps(int* cdf, uchar* maps, int tile_row, int tile_col)
 {
     const int tile_size = TILE_WIDTH*TILE_WIDTH;
-    int tid = threadIdx.x;
+    const int tid = threadIdx.x;
+    
     int maps_start_index = ((tile_row * TILE_COUNT) + tile_col) * COLOR_COUNT;
 
     maps[maps_start_index + tid] = (float(cdf[tid]) * (COLOR_COUNT - 1)) / (tile_size);
