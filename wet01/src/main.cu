@@ -55,8 +55,7 @@ int main() {
     // CPU computation. For reference. Do not change
     printf("\n=== CPU ===\n");
     t_start = get_time_msec();
-    //for (int i = 0; i < N_IMAGES; i++) 
-    for (int i = 0; i < 1; i++) 
+    for (int i = 0; i < N_IMAGES; i++) 
     {
         uchar *img_in = &images_in[i * IMG_WIDTH * IMG_HEIGHT];
         uchar *img_out = &images_out_cpu[i * IMG_WIDTH * IMG_HEIGHT];
