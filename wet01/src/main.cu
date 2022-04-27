@@ -7,9 +7,12 @@
 
 #define SQR(a) ((a) * (a))
 
-long long int distance_sqr_between_image_arrays(uchar *img_arr1, uchar *img_arr2) {
+long long int distance_sqr_between_image_arrays(uchar *img_arr1, uchar *img_arr2) 
+{
     long long int distance_sqr = 0;
-    for (int i = 0; i < N_IMAGES * IMG_WIDTH * IMG_HEIGHT; i++) {
+    for (int i = 0; i < N_IMAGES * IMG_WIDTH * IMG_HEIGHT; i++) 
+    {
+        distance_sqr += SQR(img_arr1[i] - img_arr2[i]);
     }
     return distance_sqr;
 }
@@ -52,7 +55,8 @@ int main() {
     // CPU computation. For reference. Do not change
     printf("\n=== CPU ===\n");
     t_start = get_time_msec();
-    for (int i = 0; i < N_IMAGES; i++) {
+    for (int i = 0; i < N_IMAGES; i++) 
+    {
         uchar *img_in = &images_in[i * IMG_WIDTH * IMG_HEIGHT];
         uchar *img_out = &images_out_cpu[i * IMG_WIDTH * IMG_HEIGHT];
         cpu_process(img_in, img_out, IMG_WIDTH, IMG_HEIGHT);
