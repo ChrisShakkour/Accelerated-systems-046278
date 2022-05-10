@@ -106,36 +106,68 @@ class streams_server : public image_processing_server
 {
 private:
     // TODO define stream server context (memory buffers, streams, etc...)
+    static const int available_stream = -1;
+    cudaStream_t streams[STREAM_COUNT];
+    int stream_to_image[STREAM_COUNT];
+    uchar* stream_to_map[STREAM_COUNT];
+    uchar* stream_to_imgin[STREAM_COUNT];
+    uchar* stream_to_imgout[STREAM_COUNT];
 
 public:
     streams_server()
     {
         // TODO initialize context (memory buffers, streams, etc...)
+        for (int i = 0 ; i < STREAM_COUNT ; i++)
+        {
+            stream_to_image[i] = available_stream;
+            CUDA_CHECK(cudaStreamCreate(&streams[i]));
+            CUDA_CHECK(cudaMalloc(&stream_to_map[i], TILE_COUNT * TILE_COUNT * COLOR_COUNT));
+            CUDA_CHECK(cudaMalloc(&stream_to_imgin[i], IMG_WIDTH * IMG_HEIGHT));
+            CUDA_CHECK(cudaMalloc(&stream_to_imgout[i], IMG_WIDTH * IMG_HEIGHT));
+        }
     }
 
     ~streams_server() override
     {
         // TODO free resources allocated in constructor
+        for (int i = 0 ; i < STREAM_COUNT ; i++)
+        {
+            CUDA_CHECK(cudaFree(&stream_to_map[i]));
+            CUDA_CHECK(cudaFree(&stream_to_imgin[i]));
+            CUDA_CHECK(cudaFree(&stream_to_imgout[i]));
+            CUDA_CHECK(cudaStreamDestroy(streams[i]));
+        }
     }
 
     bool enqueue(int img_id, uchar *img_in, uchar *img_out) override
     {
         // TODO place memory transfers and kernel invocation in streams if possible.
+        for (int i = 0 ; i < STREAM_COUNT ; i++)
+        {
+            if (stream_to_image[i] == available_stream)
+            {
+                stream_to_image[i] = img_id;
+                CUDA_CHECK(cudaMemcpyAsync(stream_to_imgin[i], img_in, IMG_WIDTH * IMG_HEIGHT, cudaMemcpyHostToDevice, streams[i]));
+                process_image_kernel<<<1, 1024, 0, streams[i]>>>(stream_to_imgin[i], stream_to_imgout[i], stream_to_map[i]);
+                CUDA_CHECK(cudaMemcpyAsync(img_out, stream_to_imgout[i], IMG_WIDTH * IMG_HEIGHT, cudaMemcpyDeviceToHost, streams[i]));
+                return true;
+            }
+        }
+
         return false;
     }
 
     bool dequeue(int *img_id) override
     {
-        return false;
-
         // TODO query (don't block) streams for any completed requests.
-        //for ()
-        //{
-            cudaError_t status = cudaStreamQuery(0); // TODO query diffrent stream each iteration
+        for (int i = 0 ; i < STREAM_COUNT ; i++)
+        {
+            cudaError_t status = cudaStreamQuery(streams[i]); // TODO query diffrent stream each iteration
             switch (status) {
             case cudaSuccess:
                 // TODO return the img_id of the request that was completed.
-                //*img_id = ...
+                *img_id = stream_to_image[i];
+                stream_to_image[i] = available_stream;
                 return true;
             case cudaErrorNotReady:
                 return false;
@@ -143,7 +175,8 @@ public:
                 CUDA_CHECK(status);
                 return false;
             }
-        //}
+        }
+        return false;
     }
 };
 
