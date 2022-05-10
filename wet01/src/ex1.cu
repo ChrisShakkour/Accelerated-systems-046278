@@ -25,7 +25,6 @@ __device__
 void prefix_sum(int arr[], int arr_size) 
 {
     const int tid = threadIdx.x; 
-
     int increment;
 
     for (int stride = 1 ; stride < blockDim.x ; stride *= 2)
