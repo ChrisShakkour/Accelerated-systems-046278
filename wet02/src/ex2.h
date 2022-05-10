@@ -15,6 +15,7 @@
 #define TILE_COUNT (IMG_WIDTH / TILE_WIDTH)
 #define STREAM_COUNT 64
 #define COLOR_COUNT 256
+#define THREADS_COUNT 1024
 
 typedef unsigned char uchar;
 

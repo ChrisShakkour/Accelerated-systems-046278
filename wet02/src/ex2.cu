@@ -132,9 +132,9 @@ public:
         // TODO free resources allocated in constructor
         for (int i = 0 ; i < STREAM_COUNT ; i++)
         {
-            CUDA_CHECK(cudaFree(&stream_to_map[i]));
-            CUDA_CHECK(cudaFree(&stream_to_imgin[i]));
-            CUDA_CHECK(cudaFree(&stream_to_imgout[i]));
+            CUDA_CHECK(cudaFree(stream_to_map[i]));
+            CUDA_CHECK(cudaFree(stream_to_imgin[i]));
+            CUDA_CHECK(cudaFree(stream_to_imgout[i]));
             CUDA_CHECK(cudaStreamDestroy(streams[i]));
         }
     }
@@ -148,7 +148,7 @@ public:
             {
                 stream_to_image[i] = img_id;
                 CUDA_CHECK(cudaMemcpyAsync(stream_to_imgin[i], img_in, IMG_WIDTH * IMG_HEIGHT, cudaMemcpyHostToDevice, streams[i]));
-                process_image_kernel<<<1, 1024, 0, streams[i]>>>(stream_to_imgin[i], stream_to_imgout[i], stream_to_map[i]);
+                process_image_kernel<<<1, THREADS_COUNT, 0, streams[i]>>>(img_in, stream_to_imgout[i], stream_to_map[i]);
                 CUDA_CHECK(cudaMemcpyAsync(img_out, stream_to_imgout[i], IMG_WIDTH * IMG_HEIGHT, cudaMemcpyDeviceToHost, streams[i]));
                 return true;
             }
@@ -162,6 +162,8 @@ public:
         // TODO query (don't block) streams for any completed requests.
         for (int i = 0 ; i < STREAM_COUNT ; i++)
         {
+            if (stream_to_image[i] != available_stream)
+            {
             cudaError_t status = cudaStreamQuery(streams[i]); // TODO query diffrent stream each iteration
             switch (status) {
             case cudaSuccess:
@@ -174,6 +176,7 @@ public:
             default:
                 CUDA_CHECK(status);
                 return false;
+            }
             }
         }
         return false;
