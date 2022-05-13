@@ -5,14 +5,14 @@ __device__ void prefix_sum(int arr[], int arr_size) {
     const int tid = threadIdx.x; 
     int increment;
 
-    for (int stride = 1 ; stride < blockDim.x ; stride *= 2)
+    for (int stride = 1 ; stride < arr_size ; stride *= 2)
     {
-        if (tid >= stride)
+        if (tid >= stride && tid < arr_size)
         {
             increment = arr[tid - stride];
         }
         __syncthreads();
-        if (tid >= stride)
+        if (tid >= stride && tid < arr_size)
         {
             arr[tid] += increment;
         }
@@ -68,7 +68,7 @@ void get_maps(int* cdf, uchar* maps, int tile_row, int tile_col)
 __device__
 void process_image(uchar *in, uchar *out, uchar* maps) 
 {
-    __shared__ int hist[COLOR_COUNT * sizeof(int)];
+    __shared__ int hist[COLOR_COUNT];
     const int image_offset = IMG_HEIGHT * IMG_WIDTH * blockIdx.x;
     const int maps_offset = COLOR_COUNT * TILE_COUNT * TILE_COUNT * blockIdx.x;
 
@@ -105,7 +105,6 @@ void process_image_kernel(uchar *in, uchar *out, uchar* maps){
 class streams_server : public image_processing_server
 {
 private:
-    // TODO define stream server context (memory buffers, streams, etc...)
     static const int available_stream = -1;
     cudaStream_t streams[STREAM_COUNT];
     int stream_to_image[STREAM_COUNT];
@@ -116,7 +115,6 @@ private:
 public:
     streams_server()
     {
-        // TODO initialize context (memory buffers, streams, etc...)
         for (int i = 0 ; i < STREAM_COUNT ; i++)
         {
             stream_to_image[i] = available_stream;
@@ -141,7 +139,6 @@ public:
 
     bool enqueue(int img_id, uchar *img_in, uchar *img_out) override
     {
-        // TODO place memory transfers and kernel invocation in streams if possible.
         for (int i = 0 ; i < STREAM_COUNT ; i++)
         {
             if (stream_to_image[i] == available_stream)
@@ -159,15 +156,13 @@ public:
 
     bool dequeue(int *img_id) override
     {
-        // TODO query (don't block) streams for any completed requests.
         for (int i = 0 ; i < STREAM_COUNT ; i++)
         {
             if (stream_to_image[i] != available_stream)
             {
-            cudaError_t status = cudaStreamQuery(streams[i]); // TODO query diffrent stream each iteration
+            cudaError_t status = cudaStreamQuery(streams[i]); 
             switch (status) {
             case cudaSuccess:
-                // TODO return the img_id of the request that was completed.
                 *img_id = stream_to_image[i];
                 stream_to_image[i] = available_stream;
                 return true;
@@ -190,16 +185,54 @@ std::unique_ptr<image_processing_server> create_streams_server()
 
 // TODO implement a lock
 // TODO implement a MPMC queue
-// TODO implement the persistent kernel
-// TODO implement a function for calculating the threadblocks count
+// TODO implement the persistent kernel - Done
+// TODO implement a function for calculating the threadblocks count - Doing
 
 class queue_server : public image_processing_server
 {
 private:
     // TODO define queue server context (memory buffers, etc...)
+
+private:
+    static uint32_t get_threadblock_count()
+    {
+        /*
+        The GPU supports up to <> threads on all thread blocks. 
+        Moreover, the amount of possible shared mem is <>. Each TB uses 2KB shared mem.
+        According to nvcc nvlink-options: our implementation uses 29 regs, 40 stack, 160B gmem, 2KB smem, 376B cmem, 0B lmem
+        According to nvcc ptxas-options: 29 regs, 32B stack frame, 28Bytes spill stores & loads. 
+        We can assume each thread uses 32 register. 
+        */
+        const uint32_t regs_per_thread = 32;
+        const uint32_t threads_per_block = THREADS_COUNT;
+        const uint32_t used_smem_per_block = 2048;
+        cudaDeviceProp prop; 
+        CUDA_CHECK(cudaGetDeviceProperties(&prop, 0));
+
+        const uint32_t smem_per_block = prop.sharedMemPerBlock;
+        const uint32_t regs_per_block = prop.regsPerBlock;
+
+        const uint32_t sm_count = prop.multiProcessorCount;
+        const uint32_t threads_per_sm = prop.maxThreadsPerMultiProcessor;
+        const uint32_t smem_per_sm = prop.sharedMemPerMultiprocessor;
+        const uint32_t regs_per_sm = prop.regsPerMultiprocessor;
+
+
+        const uint32_t thread_block_count_smem_criteria = 
+        printf("smem_per_block: %d, regs_per_block: %d\n", smem_per_block, regs_per_block);
+        printf("sm_count: %d, threads_per_sm: %d, smem_per_sm: %d, regs_per_sm: %d\n", 
+        sm_count,
+        threads_per_sm,
+        smem_per_sm,
+        regs_per_sm);
+
+        return 0;
+    }
+
 public:
     queue_server(int threads)
     {
+        get_threadblock_count();
         // TODO initialize host state
         // TODO launch GPU persistent kernel with given number of threads, and calculated number of threadblocks
     }
