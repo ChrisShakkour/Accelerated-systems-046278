@@ -183,63 +183,149 @@ std::unique_ptr<image_processing_server> create_streams_server()
     return std::make_unique<streams_server>();
 }
 
-// TODO implement a lock
-// TODO implement a MPMC queue
-// TODO implement the persistent kernel - Done
-// TODO implement a function for calculating the threadblocks count - Doing
+
+
+
+class TASLock 
+{
+private:
+    cuda::atomic<int> _lock;
+
+public:
+__device__ void lock() 
+{
+    while (_lock.exchange(1, cuda::memory_order_relaxed))
+    {
+        ;
+    }
+    cuda::atomic_thread_fence(cuda::memory_order_acquire, cuda::thread_scope_device);
+ }
+ 
+ __device__ void unlock() 
+ {
+    _lock.store(0, cuda::memory_order_release);
+ }
+};
+
+
+template <typename T, uint8_t size> 
+class RingBuffer 
+{
+private:
+    static const size_t N = size;
+    T _mailbox[N];
+    cuda::atomic<size_t> _head{0};
+    cuda::atomic<size_t> _tail{0};
+
+public:
+ void push(const T &data, TASLock* pusher_lock) 
+ {
+    int tail = _tail.load(cuda::memory_order_relaxed);
+    while ((tail - _head.load(cuda::memory_order_acquire)) % (2 * N) == N)
+    {
+         ;
+    }
+
+    // critical section
+    pusher_lock->lock();
+    _mailbox[_tail % N] = data;
+    _tail.store(tail + 1, cuda::memory_order_release);
+    pusher_lock->unlock();
+ }
+
+ T pop(TASLock* popper_lock) 
+ {
+    int head = _head.load(cuda::memory_order_relaxed);
+    // TODO: check this
+    while ((_tail.load(cuda::memory_order_acquire) - head) % (2 * N) == 0)
+    {
+         ;
+    }
+
+    // critical section
+    popper_lock->lock();
+    T item = _mailbox[_head % N];
+    _head.store(head + 1, cuda::memory_order_release);
+    popper_lock->unlock();
+    return item;
+ }
+};
+
+
+
+// TODO implement a lock - Done
+// TODO implement a MPMC queue - Done
+// TODO implement the persistent kernel
+// TODO implement a function for calculating the threadblocks count - Done
 
 class queue_server : public image_processing_server
 {
 private:
     // TODO define queue server context (memory buffers, etc...)
+    uint32_t blocks_count;
+    RingBuffer<int, 16 * 4>* cpu_to_gpu_queue;
+    RingBuffer<int, 16 * 4>* gpu_to_cpu_queue;
+    TASLock* gpu_lock;
+    TASLock* cpu_lock;
 
 private:
-    static uint32_t get_threadblock_count()
+    static uint32_t get_threadblock_count(int threads_per_block)
     {
         /*
-        The GPU supports up to <> threads on all thread blocks. 
-        Moreover, the amount of possible shared mem is <>. Each TB uses 2KB shared mem.
-        According to nvcc nvlink-options: our implementation uses 29 regs, 40 stack, 160B gmem, 2KB smem, 376B cmem, 0B lmem
-        According to nvcc ptxas-options: 29 regs, 32B stack frame, 28Bytes spill stores & loads. 
-        We can assume each thread uses 32 register. 
+        For our GPU setup (sm-75):
+        The GPU supports up to 65536 threads on all thread blocks. 
+        Moreover, the amount of possible shared mem is 64KB. Since each TB uses 2KB shared mem, this constraint leaders to 32 TBs. 
+        The last constraint is the regs count - total of 65536 regs are available for each SM. 
+        According to nvcc nvlink-options: our implementation uses 29 regs (we can assume it rounds up to 32, due makefile), 40 stack, 160B gmem, 2KB smem, 376B cmem, 0B lmem
+        According to nvcc ptxas-options: 29 regs, 32B stack frame, 28B spill stores & loads. 
+        
+        Therefore, the limit for our setup is 65536 registers / 32 (threads count) / threads_per_block
         */
-        const uint32_t regs_per_thread = 32;
-        const uint32_t threads_per_block = THREADS_COUNT;
-        const uint32_t used_smem_per_block = 2048;
         cudaDeviceProp prop; 
         CUDA_CHECK(cudaGetDeviceProperties(&prop, 0));
+        struct cudaFuncAttributes func;
+		CUDA_CHECK(cudaFuncGetAttributes(&func,process_image_kernel));
 
-        const uint32_t smem_per_block = prop.sharedMemPerBlock;
-        const uint32_t regs_per_block = prop.regsPerBlock;
-
-        const uint32_t sm_count = prop.multiProcessorCount;
+        const uint32_t regs_per_thread = 32;                          // upper bound of func.numRegs, as stated by makefile
+        const uint32_t used_smem_per_block = func.sharedSizeBytes;    // 2KB - 1KB of our shared mem, 1KB of the given interpolate_device function
+        //const uint32_t regs_per_block = prop.regsPerBlock;          // this value must be above threads_per_block (max 1024) * regs_per_thread (32), it is 65536
+        //const uint32_t smem_per_block = prop.sharedMemPerBlock;     // this value must be above used_smem_per_block, it is 49152 
+        //const uint32_t sm_count = prop.multiProcessorCount;
         const uint32_t threads_per_sm = prop.maxThreadsPerMultiProcessor;
         const uint32_t smem_per_sm = prop.sharedMemPerMultiprocessor;
         const uint32_t regs_per_sm = prop.regsPerMultiprocessor;
 
-
-        const uint32_t thread_block_count_smem_criteria = 
-        printf("smem_per_block: %d, regs_per_block: %d\n", smem_per_block, regs_per_block);
-        printf("sm_count: %d, threads_per_sm: %d, smem_per_sm: %d, regs_per_sm: %d\n", 
-        sm_count,
-        threads_per_sm,
-        smem_per_sm,
-        regs_per_sm);
-
-        return 0;
+        const uint32_t max_threads_count = min(regs_per_sm / regs_per_thread, threads_per_sm);       // hides the thread count constraint
+        const uint32_t thread_block_count_regs = max_threads_count / threads_per_block; 
+        const uint32_t thread_block_count_smem = smem_per_sm / used_smem_per_block;  
+        
+        return min(thread_block_count_regs, thread_block_count_smem);
     }
 
 public:
     queue_server(int threads)
     {
-        get_threadblock_count();
         // TODO initialize host state
+        blocks_count = get_threadblock_count(threads);    
+
+        cpu_lock = new TASLock();
+        CUDA_CHECK(cudaMalloc(&gpu_lock, sizeof(TASLock)));
+        CUDA_CHECK(cudaMallocHost(&cpu_to_gpu_queue, sizeof(RingBuffer<int, 16 * 4>)));
+        CUDA_CHECK(cudaMallocHost(&gpu_to_cpu_queue, sizeof(RingBuffer<int, 16 * 4>)));
+        new(cpu_to_gpu_queue) RingBuffer<int, 16 * 4>();
+        new(gpu_to_cpu_queue) RingBuffer<int, 16 * 4>();
         // TODO launch GPU persistent kernel with given number of threads, and calculated number of threadblocks
     }
 
     ~queue_server() override
     {
         // TODO free resources allocated in constructor
+        cpu_to_gpu_queue->~RingBuffer<int, 16 * 4>();
+        gpu_to_cpu_queue->~RingBuffer<int, 16 * 4>();
+        CUDA_CHECK(cudaFreeHost(cpu_to_gpu_queue));
+        CUDA_CHECK(cudaFreeHost(gpu_to_cpu_queue));
+        delete(cpu_lock);
+        CUDA_CHECK(cudaFree(gpu_lock));
     }
 
     bool enqueue(int img_id, uchar *img_in, uchar *img_out) override
