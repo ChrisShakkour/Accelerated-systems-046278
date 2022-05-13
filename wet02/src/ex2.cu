@@ -186,6 +186,15 @@ std::unique_ptr<image_processing_server> create_streams_server()
 
 
 
+
+struct ImageRequest
+{
+    int img_id;
+    uchar *img_in;
+    uchar *img_out;
+};
+
+
 class TASLock 
 {
 private:
@@ -218,7 +227,7 @@ private:
     cuda::atomic<size_t> _tail{0};
 
 public:
- void push(const T &data, TASLock* pusher_lock) 
+ void push(const T &data) 
  {
     int tail = _tail.load(cuda::memory_order_relaxed);
     while ((tail - _head.load(cuda::memory_order_acquire)) % (2 * N) == N)
@@ -227,13 +236,11 @@ public:
     }
 
     // critical section
-    pusher_lock->lock();
     _mailbox[_tail % N] = data;
     _tail.store(tail + 1, cuda::memory_order_release);
-    pusher_lock->unlock();
  }
 
- T pop(TASLock* popper_lock) 
+ T pop() 
  {
     int head = _head.load(cuda::memory_order_relaxed);
     // TODO: check this
@@ -243,10 +250,8 @@ public:
     }
 
     // critical section
-    popper_lock->lock();
     T item = _mailbox[_head % N];
     _head.store(head + 1, cuda::memory_order_release);
-    popper_lock->unlock();
     return item;
  }
 };
@@ -258,14 +263,30 @@ public:
 // TODO implement the persistent kernel
 // TODO implement a function for calculating the threadblocks count - Done
 
+__global__ void persistent_gpu_kernel(RingBuffer<ImageRequest, 16 * 4>* cpu_to_gpu_queue, RingBuffer<ImageRequest, 16 * 4>* gpu_to_cpu_queue)
+{
+    // TODO - implement a kernel that simply listens to the cpu_to_gpu queue, pops any pending requests, and executes it on a single TB. 
+    // After its completion, writes the result back to the gpu_to_cpu queue
+    // __shared__ TASLock gpu_lock;
+
+    // while(true)
+    // {
+    //     gpu_lock.lock();
+    //     ImageRequest req = cpu_to_gpu_queue->pop();
+    //     gpu_lock.unlock();
+    //     process_image(req.img_in)
+    // }
+
+}
+
 class queue_server : public image_processing_server
 {
 private:
     // TODO define queue server context (memory buffers, etc...)
     uint32_t blocks_count;
-    RingBuffer<int, 16 * 4>* cpu_to_gpu_queue;
-    RingBuffer<int, 16 * 4>* gpu_to_cpu_queue;
-    TASLock* gpu_lock;
+    RingBuffer<ImageRequest, 16 * 4>* cpu_to_gpu_queue;
+    RingBuffer<ImageRequest, 16 * 4>* gpu_to_cpu_queue;
+    // TASLock* gpu_lock;
     TASLock* cpu_lock;
 
 private:
@@ -309,23 +330,24 @@ public:
         blocks_count = get_threadblock_count(threads);    
 
         cpu_lock = new TASLock();
-        CUDA_CHECK(cudaMalloc(&gpu_lock, sizeof(TASLock)));
-        CUDA_CHECK(cudaMallocHost(&cpu_to_gpu_queue, sizeof(RingBuffer<int, 16 * 4>)));
-        CUDA_CHECK(cudaMallocHost(&gpu_to_cpu_queue, sizeof(RingBuffer<int, 16 * 4>)));
-        new(cpu_to_gpu_queue) RingBuffer<int, 16 * 4>();
-        new(gpu_to_cpu_queue) RingBuffer<int, 16 * 4>();
+        // CUDA_CHECK(cudaMalloc(&gpu_lock, sizeof(TASLock))); - we should allocate and initialize this lock on the GPU side.
+        CUDA_CHECK(cudaMallocHost(&cpu_to_gpu_queue, sizeof(RingBuffer<ImageRequest, 16 * 4>)));
+        CUDA_CHECK(cudaMallocHost(&gpu_to_cpu_queue, sizeof(RingBuffer<ImageRequest, 16 * 4>)));
+        new(cpu_to_gpu_queue) RingBuffer<ImageRequest, 16 * 4>();
+        new(gpu_to_cpu_queue) RingBuffer<ImageRequest, 16 * 4>();
         // TODO launch GPU persistent kernel with given number of threads, and calculated number of threadblocks
+        persistent_gpu_kernel<<<blocks_count, threads>>>(cpu_to_gpu_queue, gpu_to_cpu_queue);
     }
 
     ~queue_server() override
     {
         // TODO free resources allocated in constructor
-        cpu_to_gpu_queue->~RingBuffer<int, 16 * 4>();
-        gpu_to_cpu_queue->~RingBuffer<int, 16 * 4>();
+        cpu_to_gpu_queue->~RingBuffer<ImageRequest, 16 * 4>();
+        gpu_to_cpu_queue->~RingBuffer<ImageRequest, 16 * 4>();
         CUDA_CHECK(cudaFreeHost(cpu_to_gpu_queue));
         CUDA_CHECK(cudaFreeHost(gpu_to_cpu_queue));
         delete(cpu_lock);
-        CUDA_CHECK(cudaFree(gpu_lock));
+        //CUDA_CHECK(cudaFree(gpu_lock));
     }
 
     bool enqueue(int img_id, uchar *img_in, uchar *img_out) override
