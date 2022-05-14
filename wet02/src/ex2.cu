@@ -192,6 +192,7 @@ struct ImageRequest
     int img_id;
     uchar *img_in;
     uchar *img_out;
+    uchar *img_maps;
 };
 
 
@@ -227,30 +228,40 @@ private:
     cuda::atomic<size_t> _tail{0};
 
 public:
- void push(const T &data) 
- {
-    int tail = _tail.load(cuda::memory_order_relaxed);
-    while ((tail - _head.load(cuda::memory_order_acquire)) % (2 * N) == N)
-    {
-         ;
-    }
+    static const int32_t invalid_image = -1;
 
-    // critical section
-    _mailbox[_tail % N] = data;
-    _tail.store(tail + 1, cuda::memory_order_release);
- }
+public:
+RingBuffer() = default;
 
- T pop() 
+// In order to support non blocking enqueue, push must be non blocking too
+__device__ __host__ bool push(const T &data) 
+{
+   int tail = _tail.load(cuda::memory_order_relaxed);
+   if ((tail - _head.load(cuda::memory_order_acquire)) % (2 * N) == N)
+   {
+        return false;
+   }
+
+   // critical section
+   _mailbox[_tail % N] = data;
+   _tail.store(tail + 1, cuda::memory_order_release);
+   
+   return true;
+}
+
+__device__ __host__ T pop() 
  {
     int head = _head.load(cuda::memory_order_relaxed);
-    // TODO: check this
-    while ((_tail.load(cuda::memory_order_acquire) - head) % (2 * N) == 0)
+    T item;
+    // TODO: check this: head or _head
+    if((_tail.load(cuda::memory_order_acquire) - head) % (2 * N) == 0)
     {
-         ;
+        item.img_id = invalid_image;
+        return item;
     }
-
+    
     // critical section
-    T item = _mailbox[_head % N];
+    item = _mailbox[_head % N];
     _head.store(head + 1, cuda::memory_order_release);
     return item;
  }
@@ -268,15 +279,25 @@ __global__ void persistent_gpu_kernel(RingBuffer<ImageRequest, 16 * 4>* cpu_to_g
     // TODO - implement a kernel that simply listens to the cpu_to_gpu queue, pops any pending requests, and executes it on a single TB. 
     // After its completion, writes the result back to the gpu_to_cpu queue
     // __shared__ TASLock gpu_lock;
+    ImageRequest req;
 
-    // while(true)
-    // {
-    //     gpu_lock.lock();
-    //     ImageRequest req = cpu_to_gpu_queue->pop();
-    //     gpu_lock.unlock();
-    //     process_image(req.img_in)
-    // }
+    while(true)
+    {
+        //gpu_lock.lock();
+        req = cpu_to_gpu_queue->pop(); 
+        //gpu_lock.unlock();
 
+        if (req.img_id != RingBuffer<ImageRequest, 16 * 4>::invalid_image)
+        {
+            process_image(req.img_in, req.img_out, req.img_maps);
+            //gpu_lock.lock();
+            while(gpu_to_cpu_queue->push(req) == false)
+            {
+                ;
+            }
+            //gpu_lock.unlock();
+        }
+    }
 }
 
 class queue_server : public image_processing_server
@@ -287,7 +308,7 @@ private:
     RingBuffer<ImageRequest, 16 * 4>* cpu_to_gpu_queue;
     RingBuffer<ImageRequest, 16 * 4>* gpu_to_cpu_queue;
     // TASLock* gpu_lock;
-    TASLock* cpu_lock;
+    // TASLock* cpu_lock;
 
 private:
     static uint32_t get_threadblock_count(int threads_per_block)
@@ -329,7 +350,7 @@ public:
         // TODO initialize host state
         blocks_count = get_threadblock_count(threads);    
 
-        cpu_lock = new TASLock();
+        //cpu_lock = new TASLock();
         // CUDA_CHECK(cudaMalloc(&gpu_lock, sizeof(TASLock))); - we should allocate and initialize this lock on the GPU side.
         CUDA_CHECK(cudaMallocHost(&cpu_to_gpu_queue, sizeof(RingBuffer<ImageRequest, 16 * 4>)));
         CUDA_CHECK(cudaMallocHost(&gpu_to_cpu_queue, sizeof(RingBuffer<ImageRequest, 16 * 4>)));
@@ -346,23 +367,43 @@ public:
         gpu_to_cpu_queue->~RingBuffer<ImageRequest, 16 * 4>();
         CUDA_CHECK(cudaFreeHost(cpu_to_gpu_queue));
         CUDA_CHECK(cudaFreeHost(gpu_to_cpu_queue));
-        delete(cpu_lock);
+        //delete(cpu_lock);
         //CUDA_CHECK(cudaFree(gpu_lock));
     }
 
     bool enqueue(int img_id, uchar *img_in, uchar *img_out) override
     {
         // TODO push new task into queue if possible
-        return false;
+        ImageRequest req;
+        req.img_id = img_id;
+        req.img_in = img_in;
+        req.img_out = img_out;  // Already allocated as shared host memory by the caller
+        CUDA_CHECK(cudaMallocHost(&req.img_maps,  TILE_COUNT * TILE_COUNT * COLOR_COUNT));
+
+        bool result = cpu_to_gpu_queue->push(req);
+        if (result == false)
+        {
+            CUDA_CHECK(cudaFree(req.img_maps));
+        }
+
+        return result;
     }
 
     bool dequeue(int *img_id) override
     {
         // TODO query (don't block) the producer-consumer queue for any responses.
-        return false;
+        ImageRequest req = gpu_to_cpu_queue->pop();
+        if (req.img_id == RingBuffer<ImageRequest, 16 * 4>::invalid_image)
+        {
+            // must implement non blocking pop to support this
+            return false;
+        }
 
         // TODO return the img_id of the request that was completed.
-        //*img_id = ... 
+        *img_id = req.img_id;
+        // TODO: check this
+        CUDA_CHECK(cudaFreeHost(req.img_maps));
+
         return true;
     }
 };
