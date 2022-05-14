@@ -274,29 +274,42 @@ __device__ __host__ T pop()
 // TODO implement the persistent kernel
 // TODO implement a function for calculating the threadblocks count - Done
 
-__global__ void persistent_gpu_kernel(RingBuffer<ImageRequest, 16 * 4>* cpu_to_gpu_queue, RingBuffer<ImageRequest, 16 * 4>* gpu_to_cpu_queue)
+__global__ void persistent_gpu_kernel(RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>* cpu_to_gpu_queue, RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>* gpu_to_cpu_queue)
 {
     // TODO - implement a kernel that simply listens to the cpu_to_gpu queue, pops any pending requests, and executes it on a single TB. 
     // After its completion, writes the result back to the gpu_to_cpu queue
     // __shared__ TASLock gpu_lock;
-    ImageRequest req;
+    __shared__ ImageRequest req;
 
     while(true)
     {
+        printf("IM here!\n");
         //gpu_lock.lock();
-        req = cpu_to_gpu_queue->pop(); 
+        if (threadIdx.x == 0)
+        {
+            req = cpu_to_gpu_queue->pop(); 
+        }
+        __syncthreads();
         //gpu_lock.unlock();
 
-        if (req.img_id != RingBuffer<ImageRequest, 16 * 4>::invalid_image)
+        if (req.img_id != RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>::invalid_image)
         {
             process_image(req.img_in, req.img_out, req.img_maps);
             //gpu_lock.lock();
-            while(gpu_to_cpu_queue->push(req) == false)
+            if (threadIdx.x == 0)
             {
-                ;
+                while(gpu_to_cpu_queue->push(req) == false)
+                {
+                    ;
+                }
             }
             //gpu_lock.unlock();
         }
+        else
+        {
+            printf("invalid img\n");
+        }
+        __syncthreads();
     }
 }
 
@@ -304,9 +317,8 @@ class queue_server : public image_processing_server
 {
 private:
     // TODO define queue server context (memory buffers, etc...)
-    static const uint32_t QUEUE_SIZE_FACTOR = 16;
-    RingBuffer<ImageRequest, 16 * 4>* cpu_to_gpu_queue;
-    RingBuffer<ImageRequest, 16 * 4>* gpu_to_cpu_queue;
+    RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>* cpu_to_gpu_queue;
+    RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>* gpu_to_cpu_queue;
     uint32_t blocks_count;
     double queue_size;
     // TASLock* gpu_lock;
@@ -364,10 +376,10 @@ public:
 
         //cpu_lock = new TASLock();
         // CUDA_CHECK(cudaMalloc(&gpu_lock, sizeof(TASLock))); - we should allocate and initialize this lock on the GPU side.
-        CUDA_CHECK(cudaMallocHost(&cpu_to_gpu_queue, sizeof(RingBuffer<ImageRequest, 16 * 4>)));
-        CUDA_CHECK(cudaMallocHost(&gpu_to_cpu_queue, sizeof(RingBuffer<ImageRequest, 16 * 4>)));
-        new(cpu_to_gpu_queue) RingBuffer<ImageRequest, 16 * 4>();
-        new(gpu_to_cpu_queue) RingBuffer<ImageRequest, 16 * 4>();
+        CUDA_CHECK(cudaMallocHost(&cpu_to_gpu_queue, sizeof(RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>)));
+        CUDA_CHECK(cudaMallocHost(&gpu_to_cpu_queue, sizeof(RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>)));
+        new(cpu_to_gpu_queue) RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>();
+        new(gpu_to_cpu_queue) RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>();
         // TODO launch GPU persistent kernel with given number of threads, and calculated number of threadblocks
         persistent_gpu_kernel<<<blocks_count, threads>>>(cpu_to_gpu_queue, gpu_to_cpu_queue);
     }
@@ -375,8 +387,8 @@ public:
     ~queue_server() override
     {
         // TODO free resources allocated in constructor
-        cpu_to_gpu_queue->~RingBuffer<ImageRequest, 16 * 4>();
-        gpu_to_cpu_queue->~RingBuffer<ImageRequest, 16 * 4>();
+        cpu_to_gpu_queue->~RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>();
+        gpu_to_cpu_queue->~RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>();
         CUDA_CHECK(cudaFreeHost(cpu_to_gpu_queue));
         CUDA_CHECK(cudaFreeHost(gpu_to_cpu_queue));
         //delete(cpu_lock);
@@ -395,7 +407,7 @@ public:
         bool result = cpu_to_gpu_queue->push(req);
         if (result == false)
         {
-            CUDA_CHECK(cudaFree(req.img_maps));
+            CUDA_CHECK(cudaFreeHost(req.img_maps));
         }
 
         return result;
@@ -405,7 +417,7 @@ public:
     {
         // TODO query (don't block) the producer-consumer queue for any responses.
         ImageRequest req = gpu_to_cpu_queue->pop();
-        if (req.img_id == RingBuffer<ImageRequest, 16 * 4>::invalid_image)
+        if (req.img_id == RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>::invalid_image)
         {
             // must implement non blocking pop to support this
             return false;

@@ -16,6 +16,7 @@
 #define STREAM_COUNT 64
 #define COLOR_COUNT 256
 #define THREADS_COUNT 1024
+#define QUEUE_SIZE_FACTOR 16
 
 typedef unsigned char uchar;
 
