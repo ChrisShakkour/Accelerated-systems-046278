@@ -304,9 +304,11 @@ class queue_server : public image_processing_server
 {
 private:
     // TODO define queue server context (memory buffers, etc...)
-    uint32_t blocks_count;
+    static const uint32_t QUEUE_SIZE_FACTOR = 16;
     RingBuffer<ImageRequest, 16 * 4>* cpu_to_gpu_queue;
     RingBuffer<ImageRequest, 16 * 4>* gpu_to_cpu_queue;
+    uint32_t blocks_count;
+    double queue_size;
     // TASLock* gpu_lock;
     // TASLock* cpu_lock;
 
@@ -344,11 +346,21 @@ private:
         return min(thread_block_count_regs, thread_block_count_smem);
     }
 
+    static double get_queue_size(uint32_t tb_count)
+    {
+        const double num_1 = std::log(QUEUE_SIZE_FACTOR * tb_count); 
+        const double num_2 = std::ceil(num_1 / std::log(2));
+        const double queue_size = std::pow(2, num_2);
+
+        return queue_size;   
+    }
+
 public:
     queue_server(int threads)
     {
         // TODO initialize host state
         blocks_count = get_threadblock_count(threads);    
+        queue_size = get_queue_size(blocks_count);
 
         //cpu_lock = new TASLock();
         // CUDA_CHECK(cudaMalloc(&gpu_lock, sizeof(TASLock))); - we should allocate and initialize this lock on the GPU side.
