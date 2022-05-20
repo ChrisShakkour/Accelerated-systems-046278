@@ -17,6 +17,7 @@
 #define COLOR_COUNT 256
 #define THREADS_COUNT 1024
 #define QUEUE_SIZE_FACTOR 16
+#define MAP_SIZE (TILE_COUNT * TILE_COUNT * COLOR_COUNT)
 
 typedef unsigned char uchar;
 
