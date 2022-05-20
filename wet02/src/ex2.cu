@@ -35,7 +35,7 @@ __device__
 void get_histogram(int* hist, uchar* all_in, int tile_row, int tile_col)
 {
     const int tid = threadIdx.x;
-    const int thread_work = TILE_WIDTH * TILE_WIDTH / blockDim.x;
+    const int thread_work = (TILE_WIDTH * TILE_WIDTH) / blockDim.x;
     const int threads_per_row = TILE_WIDTH / thread_work;
     const int x_index = (TILE_WIDTH * tile_row) + (tid / threads_per_row);
     const int y_index = (TILE_WIDTH * tile_col) + ((tid % threads_per_row) * thread_work);
@@ -59,7 +59,7 @@ void get_maps(int* cdf, uchar* maps, int tile_row, int tile_col)
         return;
     }
 
-    const int tile_size = TILE_WIDTH*TILE_WIDTH;
+    const int tile_size = TILE_WIDTH * TILE_WIDTH;
     const int maps_start_index = ((tile_row * TILE_COUNT) + tile_col) * COLOR_COUNT;
 
     maps[maps_start_index + tid] = (float(cdf[tid]) * (COLOR_COUNT - 1)) / (tile_size);
@@ -69,8 +69,6 @@ __device__
 void process_image(uchar *in, uchar *out, uchar* maps) 
 {
     __shared__ int hist[COLOR_COUNT];
-    const int image_offset = IMG_HEIGHT * IMG_WIDTH * blockIdx.x;
-    const int maps_offset = COLOR_COUNT * TILE_COUNT * TILE_COUNT * blockIdx.x;
 
     for (int tile_row = 0 ; tile_row < TILE_COUNT ; tile_row++)
     {
@@ -79,20 +77,19 @@ void process_image(uchar *in, uchar *out, uchar* maps)
             memset(hist, 0, COLOR_COUNT * sizeof(int));
             __syncthreads();
 
-            get_histogram(hist, in + image_offset, tile_row, tile_col);
+            get_histogram(hist, in, tile_row, tile_col);
             __syncthreads();          
     
             prefix_sum(hist, COLOR_COUNT); 
             __syncthreads();            
-
-            get_maps(hist, maps + maps_offset, tile_row, tile_col);
-            __syncthreads();
-            
+        
+            get_maps(hist, maps, tile_row, tile_col); 
+            __syncthreads();    
         }
     }
     
-    interpolate_device(maps + maps_offset, in + image_offset, out + image_offset);
-    __syncthreads();    
+    __syncthreads();
+    interpolate_device(maps, in, out);
 
     return; 
 }
@@ -101,6 +98,10 @@ __global__
 void process_image_kernel(uchar *in, uchar *out, uchar* maps){
     process_image(in, out, maps);
 }
+
+/*
+************************************************************************************* PART 1 - STREAMS SERVER *************************************************************************************
+*/
 
 class streams_server : public image_processing_server
 {
@@ -183,12 +184,16 @@ std::unique_ptr<image_processing_server> create_streams_server()
     return std::make_unique<streams_server>();
 }
 
+/*
+************************************************************************************* PART 2 - QUEUES SERVER *************************************************************************************
+*/
 
-enum BadImages : int32_t
+enum ImageType : int32_t
 {
-    invalid_image = -1,
-    stopped_image = -2
+    BAD = -1,
+    STOPPED = -2
 };
+
 
 struct ImageRequest
 {
@@ -204,99 +209,124 @@ private:
     cuda::atomic<int, cuda::thread_scope_device> _lock;
 
 public:
+    __device__ TASLock() :
+        _lock(0)
+    {}
 
-__device__ TASLock() :
- _lock(0)
-{}
-
-__device__ void lock() 
-{
-    while (_lock.exchange(1, cuda::memory_order_relaxed))
+    __device__ void lock() 
     {
-        ;
+        while (_lock.exchange(1, cuda::memory_order_relaxed))
+        {
+            ;
+        }
+        cuda::atomic_thread_fence(cuda::memory_order_acquire, cuda::thread_scope_device);
     }
-    cuda::atomic_thread_fence(cuda::memory_order_acquire, cuda::thread_scope_device);
- }
  
- __device__ void unlock() 
- {
-    _lock.store(0, cuda::memory_order_release);
- }
+    __device__ void unlock() 
+    {
+        _lock.store(0, cuda::memory_order_release);
+    }
 };
 
 
 __device__ TASLock* gpu_lock;
 
 
-template <typename T, uint8_t size> 
+template <typename T> 
 class RingBuffer 
 {
 private:
-    static const size_t N = size;
-    T _mailbox[N];
-    cuda::atomic<size_t> _head{0};
-    cuda::atomic<size_t> _tail{0};
-
+    uint32_t N;
+    cuda::atomic<size_t> _head;
+    cuda::atomic<size_t> _tail;
+    T* _mailbox;
 
 public:
-RingBuffer() = default;
+    RingBuffer() = default;
+    explicit RingBuffer(int n):
+        N(n),
+        _head(0),
+        _tail(0),
+        _mailbox(nullptr)
+    {  
+        CUDA_CHECK(cudaMallocHost(&_mailbox, sizeof(T) * n));
+    }
+    ~RingBuffer()
+    {
+        CUDA_CHECK(cudaFreeHost(_mailbox));
+    }
 
 // In order to support non blocking enqueue, push must be non blocking too
-__device__ __host__ bool push(const T &data) 
-{
-   int tail = _tail.load(cuda::memory_order_relaxed);
-   if ((tail - _head.load(cuda::memory_order_acquire)) % (2 * N) == N)
-   {
-        return false;
-   }
+    __device__ __host__ bool push(const T &data) 
+    {
+        int tail = _tail.load(cuda::memory_order_relaxed);
+        if ((tail - _head.load(cuda::memory_order_acquire)) % (2 * N) == N)
+        {
+            return false;
+        }
 
-   // critical section
-   _mailbox[_tail % N] = data;
-   _tail.store(tail + 1, cuda::memory_order_release);
+        _mailbox[_tail % N] = data;
+        _tail.store(tail + 1, cuda::memory_order_release);
    
-   return true;
+        return true;
 }
 
-__device__ __host__ T pop() 
- {
-    int head = _head.load(cuda::memory_order_relaxed);
-    T item;
-    // TODO: check this: head or _head
-    if((_tail.load(cuda::memory_order_acquire) - head) % (2 * N) == 0)
+    __device__ __host__ T pop() 
     {
-        item.img_id = BadImages::invalid_image;
+        int head = _head.load(cuda::memory_order_relaxed);
+        T item;
+
+        if((_tail.load(cuda::memory_order_acquire) - head) % (2 * N) == 0)
+        {
+            item.img_id = ImageType::BAD;
+            return item;
+        }
+    
+        item = _mailbox[_head % N];
+        _head.store(head + 1, cuda::memory_order_release);
+
         return item;
     }
-    
-    // critical section
-    item = _mailbox[_head % N];
-    _head.store(head + 1, cuda::memory_order_release);
-    return item;
- }
 };
 
 
+__global__ void alloc_gpu_lock()
+{
+    const uint32_t tid = threadIdx.x;
+    const uint32_t bid = blockIdx.x;
+
+    // allocate and initialize the gpu lock
+    if (tid == 0 && bid == 0)
+    {
+        gpu_lock = new TASLock();
+    }
+}
+
+__global__ void free_gpu_lock()
+{
+    const uint32_t tid = threadIdx.x;
+    const uint32_t bid = blockIdx.x;
+
+    // free the gpu lock
+    if (tid == 0 && bid == 0)
+    {
+        delete gpu_lock;
+    }
+}
 
 // TODO implement a lock - Done
 // TODO implement a MPMC queue - Done
-// TODO implement the persistent kernel
+// TODO implement the persistent kernel - Done
 // TODO implement a function for calculating the threadblocks count - Done
 
-__global__ void persistent_gpu_kernel(RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>* cpu_to_gpu_queue, RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>* gpu_to_cpu_queue, uchar* maps)
+__global__ void persistent_gpu_kernel(RingBuffer<ImageRequest>* cpu_to_gpu_queue, RingBuffer<ImageRequest>* gpu_to_cpu_queue, uchar* maps)
 {
     // TODO - implement a kernel that simply listens to the cpu_to_gpu queue, pops any pending requests, and executes it on a single TB. 
     // After its completion, writes the result back to the gpu_to_cpu queue
-    __shared__ ImageRequest req;
     const uint32_t tid = threadIdx.x;
     const uint32_t bid = blockIdx.x;
     uchar* tb_map = maps + bid * MAP_SIZE; 
-
-    if (tid == 0)
-    {
-        // TODO: free this
-        gpu_lock = new TASLock();
-    }
-    __syncthreads();
+    __shared__ ImageRequest req;
 
     while(true)
     {
@@ -308,15 +338,14 @@ __global__ void persistent_gpu_kernel(RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR
         }
         __syncthreads();
 
-        if (req.img_id == BadImages::stopped_image)
+        // Halt all threads within this thread block
+        if (req.img_id == ImageType::STOPPED)
         {
-            return;
+            return; 
         }
 
-        if (req.img_id != BadImages::invalid_image)
+        if (req.img_id != ImageType::BAD)
         {
-            // TODO: delete this sync
-            __syncthreads();
             process_image(req.img_in, req.img_out, tb_map);
             __syncthreads();
             if (tid == 0)
@@ -329,7 +358,6 @@ __global__ void persistent_gpu_kernel(RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR
                 gpu_lock->unlock();
             }
         }
-
     }
 }
 
@@ -337,13 +365,12 @@ class queue_server : public image_processing_server
 {
 private:
     // TODO define queue server context (memory buffers, etc...)
+    RingBuffer<ImageRequest>* cpu_to_gpu_queue;
+    RingBuffer<ImageRequest>* gpu_to_cpu_queue;
     uchar* maps;
-    RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>* cpu_to_gpu_queue;
-    RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>* gpu_to_cpu_queue;
     uint32_t blocks_count;
     double queue_size;
-    // TASLock* gpu_lock;
-    // TASLock* cpu_lock;
+
 
 private:
     static uint32_t get_threadblock_count(int threads_per_block)
@@ -395,31 +422,35 @@ public:
         blocks_count = get_threadblock_count(threads);    
         queue_size = get_queue_size(blocks_count);
 
-        //cpu_lock = new TASLock();
         CUDA_CHECK(cudaMalloc(&maps, blocks_count * MAP_SIZE));
-        CUDA_CHECK(cudaMallocHost(&cpu_to_gpu_queue, sizeof(RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>)));
-        CUDA_CHECK(cudaMallocHost(&gpu_to_cpu_queue, sizeof(RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>)));
-        new(cpu_to_gpu_queue) RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>();
-        new(gpu_to_cpu_queue) RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>();
+        CUDA_CHECK(cudaMallocHost(&cpu_to_gpu_queue, sizeof(RingBuffer<ImageRequest>)));
+        CUDA_CHECK(cudaMallocHost(&gpu_to_cpu_queue, sizeof(RingBuffer<ImageRequest>)));
+        new(cpu_to_gpu_queue) RingBuffer<ImageRequest>(queue_size);
+        new(gpu_to_cpu_queue) RingBuffer<ImageRequest>(queue_size);
+        // create gpu lock
+        alloc_gpu_lock<<<1, 1>>>();
+        CUDA_CHECK(cudaDeviceSynchronize());
         // TODO launch GPU persistent kernel with given number of threads, and calculated number of threadblocks
         persistent_gpu_kernel<<<blocks_count, threads>>>(cpu_to_gpu_queue, gpu_to_cpu_queue, maps);
     }
 
     ~queue_server() override
     {
-        for (uint32_t i = 0 ; i < blocks_count ; i++)
+        // Kill all working blocks. Factor 2 for "vidue hariga"
+        for (uint32_t i = 0 ; i < blocks_count * 2 ; i++)
         {
-            enqueue(BadImages::stopped_image, nullptr, nullptr);
+            enqueue(ImageType::STOPPED, nullptr, nullptr);
         }
         CUDA_CHECK(cudaDeviceSynchronize()); 
-
         // TODO free resources allocated in constructor
-        cpu_to_gpu_queue->~RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>();
-        gpu_to_cpu_queue->~RingBuffer<ImageRequest, QUEUE_SIZE_FACTOR * 4>();
+        cpu_to_gpu_queue->~RingBuffer<ImageRequest>();
+        gpu_to_cpu_queue->~RingBuffer<ImageRequest>();
         CUDA_CHECK(cudaFree(maps));
         CUDA_CHECK(cudaFreeHost(cpu_to_gpu_queue));
         CUDA_CHECK(cudaFreeHost(gpu_to_cpu_queue));
-        // TODO: still need to free the gpu lock memory
+        // free gpu lock
+        free_gpu_lock<<<1, 1>>>();
+        CUDA_CHECK(cudaDeviceSynchronize());
     }
 
     bool enqueue(int img_id, uchar *img_in, uchar *img_out) override
@@ -439,7 +470,7 @@ public:
         // TODO query (don't block) the producer-consumer queue for any responses.
         // must implement non blocking pop to support this
         ImageRequest req = gpu_to_cpu_queue->pop();
-        if (req.img_id == BadImages::invalid_image)
+        if (req.img_id == ImageType::BAD)
         {
             return false;
         }
@@ -455,4 +486,3 @@ std::unique_ptr<image_processing_server> create_queues_server(int threads)
 {
     return std::make_unique<queue_server>(threads);
 }
-
