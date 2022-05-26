@@ -14,10 +14,6 @@
 #define TILE_HALF_WIDTH (TILE_WIDTH / 2)
 #define TILE_COUNT (IMG_WIDTH / TILE_WIDTH)
 #define STREAM_COUNT 64
-#define COLOR_COUNT 256
-#define THREADS_COUNT 1024
-#define QUEUE_SIZE_FACTOR 16
-#define MAP_SIZE (TILE_COUNT * TILE_COUNT * COLOR_COUNT)
 
 typedef unsigned char uchar;
 
