@@ -1,3 +1,7 @@
+/* This file should be almost identical to ex2.cu from homework 2. */
+/* once the TODOs in this file are complete, the RPC version of the server/client should work correctly. */
+
+#include "ex3.h"
 #include "ex2.h"
 #include <cuda/atomic>
 
@@ -7,6 +11,8 @@
 #define MAP_SIZE (TILE_COUNT * TILE_COUNT * COLOR_COUNT)
 
 __device__ void prefix_sum(int arr[], int arr_size) {
+    //TODO complete according to HW2
+    //(This file should be almost identical to ex2.cu from homework 2.)
     const int tid = threadIdx.x; 
     int increment;
 
@@ -24,6 +30,7 @@ __device__ void prefix_sum(int arr[], int arr_size) {
         __syncthreads();
     }
 }
+
 
 /**
  * Perform interpolation on a single image
@@ -70,9 +77,9 @@ void get_maps(int* cdf, uchar* maps, int tile_row, int tile_col)
     maps[maps_start_index + tid] = (float(cdf[tid]) * (COLOR_COUNT - 1)) / (tile_size);
 }
 
-__device__
-void process_image(uchar *in, uchar *out, uchar* maps) 
-{
+__device__ void process_image(uchar *all_in, uchar *all_out, uchar* maps) {
+    //TODO complete according to HW2
+    //(This file should be almost identical to ex2.cu from homework 2.)
     __shared__ int hist[COLOR_COUNT];
 
     for (int tile_row = 0 ; tile_row < TILE_COUNT ; tile_row++)
@@ -82,7 +89,7 @@ void process_image(uchar *in, uchar *out, uchar* maps)
             memset(hist, 0, COLOR_COUNT * sizeof(int));
             __syncthreads();
 
-            get_histogram(hist, in, tile_row, tile_col);
+            get_histogram(hist, all_in, tile_row, tile_col);
             __syncthreads();          
     
             prefix_sum(hist, COLOR_COUNT); 
@@ -94,104 +101,16 @@ void process_image(uchar *in, uchar *out, uchar* maps)
     }
     
     __syncthreads();
-    interpolate_device(maps, in, out);
+    interpolate_device(maps, all_in, all_out);
 
     return; 
 }
 
-__global__
-void process_image_kernel(uchar *in, uchar *out, uchar* maps){
-    process_image(in, out, maps);
-}
 
-/*
-************************************************************************************* PART 1 - STREAMS SERVER *************************************************************************************
-*/
-
-class streams_server : public image_processing_server
+__global__ void process_image_kernel(uchar *all_in, uchar *all_out, uchar* maps)
 {
-private:
-    static const int available_stream = -1;
-    cudaStream_t streams[STREAM_COUNT];
-    int stream_to_image[STREAM_COUNT];
-    uchar* stream_to_map[STREAM_COUNT];
-    uchar* stream_to_imgin[STREAM_COUNT];
-    uchar* stream_to_imgout[STREAM_COUNT];
-
-public:
-    streams_server()
-    {
-        for (int i = 0 ; i < STREAM_COUNT ; i++)
-        {
-            stream_to_image[i] = available_stream;
-            CUDA_CHECK(cudaStreamCreate(&streams[i]));
-            CUDA_CHECK(cudaMalloc(&stream_to_map[i], TILE_COUNT * TILE_COUNT * COLOR_COUNT));
-            CUDA_CHECK(cudaMalloc(&stream_to_imgin[i], IMG_WIDTH * IMG_HEIGHT));
-            CUDA_CHECK(cudaMalloc(&stream_to_imgout[i], IMG_WIDTH * IMG_HEIGHT));
-        }
-    }
-
-    ~streams_server() override
-    {
-        // TODO free resources allocated in constructor
-        for (int i = 0 ; i < STREAM_COUNT ; i++)
-        {
-            CUDA_CHECK(cudaFree(stream_to_map[i]));
-            CUDA_CHECK(cudaFree(stream_to_imgin[i]));
-            CUDA_CHECK(cudaFree(stream_to_imgout[i]));
-            CUDA_CHECK(cudaStreamDestroy(streams[i]));
-        }
-    }
-
-    bool enqueue(int img_id, uchar *img_in, uchar *img_out) override
-    {
-        for (int i = 0 ; i < STREAM_COUNT ; i++)
-        {
-            if (stream_to_image[i] == available_stream)
-            {
-                stream_to_image[i] = img_id;
-                CUDA_CHECK(cudaMemcpyAsync(stream_to_imgin[i], img_in, IMG_WIDTH * IMG_HEIGHT, cudaMemcpyHostToDevice, streams[i]));
-                process_image_kernel<<<1, THREADS_COUNT, 0, streams[i]>>>(img_in, stream_to_imgout[i], stream_to_map[i]);
-                CUDA_CHECK(cudaMemcpyAsync(img_out, stream_to_imgout[i], IMG_WIDTH * IMG_HEIGHT, cudaMemcpyDeviceToHost, streams[i]));
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    bool dequeue(int *img_id) override
-    {
-        for (int i = 0 ; i < STREAM_COUNT ; i++)
-        {
-            if (stream_to_image[i] != available_stream)
-            {
-            cudaError_t status = cudaStreamQuery(streams[i]); 
-            switch (status) {
-            case cudaSuccess:
-                *img_id = stream_to_image[i];
-                stream_to_image[i] = available_stream;
-                return true;
-            case cudaErrorNotReady:
-                return false;
-            default:
-                CUDA_CHECK(status);
-                return false;
-            }
-            }
-        }
-        return false;
-    }
-};
-
-std::unique_ptr<image_processing_server> create_streams_server()
-{
-    return std::make_unique<streams_server>();
+    process_image(all_in, all_out, maps);
 }
-
-/*
-************************************************************************************* PART 2 - QUEUES SERVER *************************************************************************************
-*/
 
 enum ImageType : int32_t
 {
@@ -487,7 +406,63 @@ public:
     }
 };
 
+std::unique_ptr<queue_server> create_queues_server(int threads)
+{
+    return std::make_unique<queue_server>(threads);
+};
+
+/*
 std::unique_ptr<image_processing_server> create_queues_server(int threads)
 {
     return std::make_unique<queue_server>(threads);
+};
+*/
+
+/*
+// TODO complete according to HW2:
+//          implement a lock,
+//          implement a MPMC queue,
+//          implement the persistent kernel,
+//          implement a function for calculating the threadblocks count
+// (This file should be almost identical to ex2.cu from homework 2.)
+
+
+class queue_server : public image_processing_server
+{
+public:
+    //TODO complete according to HW2
+    //(This file should be almost identical to ex2.cu from homework 2.)
+
+    queue_server(int threads)
+    {
+        //TODO complete according to HW2
+        //(This file should be almost identical to ex2.cu from homework 2.)
+    }
+
+    ~queue_server() override
+    {
+        //TODO complete according to HW2
+        //(This file should be almost identical to ex2.cu from homework 2.)
+    }
+
+    bool enqueue(int img_id, uchar *img_in, uchar *img_out) override
+    {
+        //TODO complete according to HW2
+        //(This file should be almost identical to ex2.cu from homework 2.)
+        return false;
+    }
+
+    bool dequeue(int *img_id) override
+    {
+        //TODO complete according to HW2
+        //(This file should be almost identical to ex2.cu from homework 2.)
+        return false;
+    }
+};
+
+
+std::unique_ptr<queue_server> create_queues_server(int threads)
+{
+    return std::make_unique<queue_server>(threads);
 }
+*/
