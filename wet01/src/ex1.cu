@@ -5,13 +5,14 @@ __device__
 void get_histogram(int* hist, uchar* all_in, int tile_row, int tile_col)
 {
     const int tid = threadIdx.x;
-
+    const int thread_work = TILE_WIDTH * TILE_WIDTH / blockDim.x;
+    const int threads_per_row = TILE_WIDTH / thread_work;
+    const int x_index = (TILE_WIDTH * tile_row) + (tid / threads_per_row);
+    const int y_index = (TILE_WIDTH * tile_col) + ((tid % threads_per_row) * thread_work);
     int color_value = 0;
     int index = 0;
-    int x_index = (TILE_WIDTH * tile_row) + (tid / THREADS_PER_ROW);
-    int y_index = (TILE_WIDTH * tile_col) + ((tid % THREADS_PER_ROW) * THREAD_WORK);
-
-    for(int j = 0 ; j < THREAD_WORK ; j++)
+    
+    for(int j = 0 ; j < thread_work ; j++)
     {
         index = x_index * IMG_WIDTH + y_index + j;
         color_value = all_in[index];
@@ -45,10 +46,14 @@ void prefix_sum(int arr[], int arr_size)
 __device__
 void get_maps(int* cdf, uchar* maps, int tile_row, int tile_col)
 {
-    const int tile_size = TILE_WIDTH*TILE_WIDTH;
     const int tid = threadIdx.x;
-    
-    int maps_start_index = ((tile_row * TILE_COUNT) + tile_col) * COLOR_COUNT;
+    if (tid >= COLOR_COUNT)
+    {
+        return;
+    }
+
+    const int tile_size = TILE_WIDTH*TILE_WIDTH;
+    const int maps_start_index = ((tile_row * TILE_COUNT) + tile_col) * COLOR_COUNT;
 
     maps[maps_start_index + tid] = (float(cdf[tid]) * (COLOR_COUNT - 1)) / (tile_size);
 }
@@ -82,7 +87,7 @@ __global__ void process_image_kernel(uchar *all_in, uchar *all_out, uchar *maps)
             __syncthreads();          
     
             prefix_sum(hist, COLOR_COUNT); 
-            __syncthreads();
+            __syncthreads();            
 
             get_maps(hist, maps + maps_offset, tile_row, tile_col);
             __syncthreads();

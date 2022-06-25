@@ -6,17 +6,14 @@
 #include <stdio.h>
 #include <time.h>
 
+#include <memory>
 
-#define IMG_HEIGHT 512
-#define IMG_WIDTH 512
-#define TILE_WIDTH_LOG2 6
+#define IMG_HEIGHT 128
+#define IMG_WIDTH 128
 #define TILE_WIDTH 64
 #define TILE_HALF_WIDTH (TILE_WIDTH / 2)
 #define TILE_COUNT (IMG_WIDTH / TILE_WIDTH)
-#define N_IMAGES 1000
-#define COLOR_COUNT 256
-#define THREADS_PER_BLOCK 1024
-
+#define STREAM_COUNT 64
 
 typedef unsigned char uchar;
 
@@ -27,6 +24,12 @@ typedef unsigned char uchar;
         exit(1);                                                                            \
     }                                                                                       \
 } while (0)
+
+#ifndef DEBUG
+#define dbg_printf(...)
+#else
+#define dbg_printf(...) do { printf(__VA_ARGS__); } while (0)
+#endif
 
 double static inline get_time_msec(void) {
     struct timespec t;
@@ -40,17 +43,24 @@ double static inline get_time_msec(void) {
 
 void cpu_process(uchar *img_in, uchar *img_out, int width, int height);
 
-struct task_serial_context;
+/* Abstract base class for both parts of the exercise */
+class image_processing_server
+{
+public:
+    virtual ~image_processing_server() {}
 
-struct task_serial_context *task_serial_init();
-void task_serial_process(struct task_serial_context *context, uchar *images_in, uchar *images_out);
-void task_serial_free(struct task_serial_context *context);
+    /* Enqueue an image for processing. Receives pointers to pinned host
+     * memory. Return false if there is no room for image (caller will try again).
+     */
+    virtual bool enqueue(int img_id, uchar *img_in, uchar *img_out) = 0;
 
-struct gpu_bulk_context;
+    /* Checks whether an image has completed processing. If so, set img_id
+     * accordingly, and return true. */
+    virtual bool dequeue(int *img_id) = 0;
+};
 
-struct gpu_bulk_context *gpu_bulk_init();
-void gpu_bulk_process(struct gpu_bulk_context *context, uchar *images_in, uchar *images_out);
-void gpu_bulk_free(struct gpu_bulk_context *context);
+std::unique_ptr<image_processing_server> create_streams_server();
+std::unique_ptr<image_processing_server> create_queues_server(int threads);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
